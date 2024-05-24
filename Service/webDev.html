@@ -346,14 +346,13 @@
                                 <h5 class="mb-4"><i class="fa fa-phone-alt text-primary me-3"></i>24 hrs telephone support</h5>
                             </div>
                         </div>
-                        <p class="mb-4">Eirmod sed tempor lorem ut dolores. Aliquyam sit sadipscing kasd ipsum. Dolor ea et dolore et at sea ea at dolor, justo ipsum duo rebum sea invidunt voluptua. Eos vero eos vero ea et dolore eirmod et. Dolores diam duo invidunt lorem. Elitr ut dolores magna sit. Sea dolore sanctus sed et. Takimata takimata sanctus sed.</p>
-                        <div class="d-flex align-items-center mt-2 wow zoomIn" data-wow-delay="0.6s">
+                      <div class="d-flex align-items-center mt-2 wow zoomIn" data-wow-delay="0.6s">
                             <div class="bg-primary d-flex align-items-center justify-content-center rounded" style="width: 60px; height: 60px;">
                                 <i class="fa fa-phone-alt text-white"></i>
                             </div>
                             <div class="ps-4">
                                 <h5 class="mb-2">Call to ask any question</h5>
-                                <h4 class="text-primary mb-0">+012 345 6789</h4>
+                                <h4 class="text-primary mb-0">+961 70 677 712</h4>
                             </div>
                         </div>
                     </div>
@@ -370,9 +369,12 @@
                                     <div class="col-12">
                                         <select class="form-select bg-light border-0" style="height: 55px;">
                                             <option selected>Select A Service</option>
-                                            <option value="1">Service 1</option>
-                                            <option value="2">Service 2</option>
-                                            <option value="3">Service 3</option>
+                                            <option value="1">Consulting</option>
+                                            <option value="2">Hardware</option>
+                                            <option value="3">Software</option>
+                                            <option value="4">Contraction</option>
+                                            <option value="5">Web Development</option>
+                                            <option value="6">App Development</option>
                                         </select>
                                     </div>
                                     <div class="col-12">
@@ -407,19 +409,19 @@
         var carouselElement = document.getElementById('header-carousel');
         var carousel = new bootstrap.Carousel(carouselElement);
     
-        carouselElement.addEventListener('slide.bs.carousel', function(event) {
-          var video = event.relatedTarget.querySelector('video');
-          if (video) {
-            video.play();
-          }
-          var videos = carouselElement.querySelectorAll('video');
-          videos.forEach(function(vid) {
-            if (vid !== video) {
-              vid.pause();
-              vid.currentTime = 0;
-            }
-          });
-        });
+        // carouselElement.addEventListener('slide.bs.carousel', function(event) {
+        //   var video = event.relatedTarget.querySelector('video');
+        //   if (video) {
+        //     video.play();
+        //   }
+        //   var videos = carouselElement.querySelectorAll('video');
+        //   videos.forEach(function(vid) {
+        //     if (vid !== video) {
+        //       vid.pause();
+        //       vid.currentTime = 0;
+        //     }
+        //   });
+        // });
     
         var activeVideo = carouselElement.querySelector('.carousel-item.active video');
         if (activeVideo) {
