@@ -2,13 +2,17 @@
     font-size: 30px;
     color: white;
 }
-/* Ensure the dropdown menu spans the full width of the viewport */
+.bus .description {
+    color: #757575; 
+    font-size: 0.8rem; 
+    max-width: 50px;
+}
 .bus .dropdown-menu {
     display: none;
     position: fixed;
-    top: 100px; /* Adjust this value based on your navbar height */
+    top: 100px; 
     left: 50%;
-    transform: translateX(-65%);
+    transform: translateX(-52%);
     width: 90vw;
     padding: 0;
     font-size: 1rem;
@@ -23,24 +27,20 @@
     
 }
 
-
-/* Hide dropdown on small screens (phones) */
 @media (max-width: 768px) {
-    /* Remove browser-generated arrow indicator */
+  
     .bus .dropdown-toggle::after {
         display: none;
     }
 
     .bus .dropdown-menu {
-        display: none !important; /* Forcefully hide it on small screens */
+        display: none !important; 
     }
     .back-to-top{
         display: none !important;
     }
 }
-/* Adjustments for medium screens */
 
-/* Adjustments for large screens */
 
 .bus .nav-item:hover .dropdown-menu,
 .bus .dropdown-menu.show {
@@ -50,7 +50,8 @@
 .bus .dropdown-item {
     display: flex;
     align-items: center;
-    padding: 10px 15px;
+    padding: 20px ;
+    
 }
 
 .bus .dropdown-item span {
@@ -82,17 +83,30 @@
     align-items: center;
     padding: 10px 15px;
 }
-
+.products .dropdown-item span{
+    margin-right: 10px;
+    font-size: 35px;
+    color: rgb(6, 163, 218);
+}
+.products .dropdown-item{
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+}
 .logo{
-    width: 97px;
-    height: 97px;
+    width: 80px;
+    height: 80px;
     border-radius: 8%;
    }
 .software{
 width:100%;
-height:30%;
+height: 45%;
 }
 .hardware{
     width: 100%;
-    height: 30%;
+    
+}
+.botPics{
+   height: 45%;
+   border-top: 8%;
 }
