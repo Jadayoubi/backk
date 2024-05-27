@@ -3,32 +3,40 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Startup - Startup Website Template</title>
+    <title>SecoFleet</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="Free HTML Templates" name="keywords">
-    <meta content="Free HTML Templates" name="description">
-
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  
     <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+    <link href="../img/favicon.ico" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@400&display=swap" rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
     <!-- Libraries Stylesheet -->
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="../lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="../lib/animate/animate.min.css" rel="stylesheet">
 
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Template Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/index.css" rel="stylesheet"/>
 </head>
 
 <body>
@@ -44,8 +52,8 @@
         <div class="row gx-0">
             <div class="col-lg-8 text-center text-lg-start mb-2 mb-lg-0">
                 <div class="d-inline-flex align-items-center" style="height: 45px;">
-                    <small class="me-3 text-light"><i class="fa fa-map-marker-alt me-2"></i>123 Street, New York, USA</small>
-                    <small class="me-3 text-light"><i class="fa fa-phone-alt me-2"></i>+012 345 6789</small>
+                    <small class="me-3 text-light"><i class="fa fa-map-marker-alt me-2"></i>Beirut,Lebanon</small>
+                    <small class="me-3 text-light"><i class="fa fa-phone-alt me-2"></i>+961 70 677 712</small>
                     <small class="text-light"><i class="fa fa-envelope-open me-2"></i>info@example.com</small>
                 </div>
             </div>
@@ -66,17 +74,195 @@
     <!-- Navbar Start -->
     <div class="container-fluid position-relative p-0">
         <nav class="navbar navbar-expand-lg navbar-dark px-5 py-3 py-lg-0">
-            <a href="index.html" class="navbar-brand p-0">
-                <h1 class="m-0"><i class="fa fa-user-tie me-2"></i>Startup</h1>
+            <a href="../Home/index.html" class="navbar-brand p-0">
+                
+                <h1 class="m-0"><img src="../img/images/logo/LogoNew.jpeg" alt="logo" class="logo" /></h1>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                 <span class="fa fa-bars"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav ms-auto py-0">
-                    <a href="index.html" class="nav-item nav-link">Home</a>
-                    <a href="about.html" class="nav-item nav-link">About</a>
-                    <a href="service.html" class="nav-item nav-link">Services</a>
+                    <a href="../Home/index.html" class="nav-item nav-link ">Home</a>
+                   
+                    <div class="about">
+                    <div class="nav-item dropdown">      
+                        <a href="../About/about.html" class="nav-link dropdown-toggle active"  data-bs-toggle="dropdown">About</a>
+                        <div class="dropdown-menu m-0">
+                            <a href="#" class="dropdown-item">
+                                <span class="material-symbols-outlined">
+                                    apartment
+                                    </span>
+                               About Us</a>
+                            <a href="../About/about.html" class="dropdown-item">
+                                
+                                <span class="material-symbols-outlined">
+                                    work
+                                    </span>
+                                Careers</a>
+                            <a href="../About/contact.html" class="dropdown-item" style="background-color: lightgrey;">
+                                <span class="material-symbols-outlined">
+                                    contact_page
+                                    </span>
+                                Contact Us</a>
+                            
+                        </div>
+                    </div>
+                </div>
+                   
+                    <div class="bus">
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" id="businessDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                            Business
+                        </a>
+                        <div class="dropdown-menu dropdown-full-width" aria-labelledby="businessDropdown" >
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-md-4" >
+                                        <div class="dropdown-item" >
+                                            <span class="material-icons">local_gas_station</span>
+                                            <p>Fuel Management</p>
+                                        </div>
+                                        <div class="dropdown-item">
+                                            <span class="material-icons">build</span>
+                                            <p>Fleet Management</p>
+                                        </div>
+                                        <div class="dropdown-item">
+                                            <span class="material-icons">search</span>
+                                            <p>Vehicle Inspection</p>
+                                        </div>
+                                        <div class="dropdown-item">
+                                            <span class="material-icons">map</span>
+                                            <p>Route Planning</p>
+                                        </div>
+                                        <div class="dropdown-item">
+                                            <span class="material-icons">description</span>
+                                            <p>Digital Forms</p>
+                                        </div>
+                                        <div class="dropdown-item">
+                                            <span class="material-icons">satellite</span>
+                                            <p>Asset Tracking</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="dropdown-item">
+                                            <span class="material-icons">location_on</span>
+                                            <p>GPS Tracking and Live Data</p>
+                                        </div>
+                                        <div class="dropdown-item">
+                                            <span class="material-icons">directions_car</span>
+                                            <p>Carsharing</p>
+                                        </div>
+                                        <div class="dropdown-item">
+                                            <span class="material-icons">bar_chart</span>
+                                            <p>Fleet Efficiency</p>
+                                        </div>
+                                        <div class="dropdown-item">
+                                            <span class="material-icons">schedule</span>
+                                            <p>Worktime</p>
+                                        </div>
+                                        <div class="dropdown-item">
+                                            <span class="material-icons">local_drink</span>
+                                            <p>Alcohol Interlocks</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="dropdown-item">
+                                            <span class="material-icons">emoji_people</span>
+                                            <p>Driver Behaviour</p>
+                                        </div>
+                                        <div class="dropdown-item">
+                                            <span class="material-icons">ac_unit</span>
+                                            <p>Cold Chain Monitoring</p>
+                                        </div>
+                                        <div class="dropdown-item">
+                                            <span class="material-icons">chat</span>
+                                            <p>Communication Tool</p>
+                                        </div>
+                                        <div class="dropdown-item">
+                                            <span class="material-icons">code</span>
+                                            <p>API Integrations</p>
+                                        </div>
+                                        <div class="dropdown-item">
+                                            <span class="material-icons">videocam</span>
+                                            <p>Camera Systems</p>
+                                        </div>
+                                        <div class="dropdown-item">
+                                            <span class="material-icons">cloud_download</span>
+                                            <p>Remote Tachograph Download</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="serv">
+                   <div class="nav-item dropdown">
+                    <a href="service.html" class="nav-link dropdown-toggle"  data-bs-toggle="dropdown">Services</a>
+                    <div class="dropdown-menu m-0">
+                        <a href="#" class="dropdown-item">
+                            <span class="material-symbols-outlined">
+                                travel_explore
+                                </span>
+                            Consulting</a>
+                        <a href="#" class="dropdown-item">
+                            
+                                <span >
+                                    <i class="bi bi-motherboard"></i>
+                                    </span>
+                            Hardware</a>
+                        <a href="#" class="dropdown-item">
+                            <span class="material-symbols-outlined">cloud_download</span>
+                            Software</a>
+                        <a href="#" class="dropdown-item">
+                            <span class="material-symbols-outlined">
+                                contract_edit
+                                </span>
+                            Contracting</a>
+                        <a href="../Service/webDev.html" class="dropdown-item"><span><i class="bi bi-code-slash"></i></span>
+                            Web Development</a>
+                        <a href="#" class="dropdown-item">
+                            <span><i class="bi bi-phone"></i></span>
+                            App Development</a>
+                    </div>
+                </div>
+            </div>
+            <div class="products">
+                <div class="nav-item dropdown">      
+                    <a href="../About/about.html" class="nav-link dropdown-toggle"  data-bs-toggle="dropdown">Products</a>
+                    <div class="dropdown-menu m-0">
+                        <a href="#" class="dropdown-item">
+                            <span class="material-symbols-outlined">
+                                code
+                                </span>
+                           Platform Overview</a>
+                        <a href="../About/about.html" class="dropdown-item">
+                            
+                            <span class="material-symbols-outlined">
+                                local_shipping
+                                </span>
+                            Vehicle Telematics</a>
+                        <a href="#" class="dropdown-item">
+                            <span class="material-symbols-outlined">
+                                rebase
+                                </span>
+                             App and driver work flow</a>
+
+                             <a href="#" class="dropdown-item">
+                                <span class="material-symbols-outlined">
+                                    construction
+                                    </span>
+                                 Equipment monitoring</a>
+                                
+                                 <a href="#" class="dropdown-item">
+                                    <span class="material-symbols-outlined">
+                                        integration_instructions
+                                        </span>
+                                     OEM Integrations</a>
+                    </div>
+                </div>
+            </div>
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Blog</a>
                         <div class="dropdown-menu m-0">
@@ -94,10 +280,11 @@
                             <a href="quote.html" class="dropdown-item">Free Quote</a>
                         </div>
                     </div>
-                    <a href="contact.html" class="nav-item nav-link active">Contact</a>
+                    <a href="../About/contact.html" class="nav-item nav-link">Contact</a>
                 </div>
                 <butaton type="button" class="btn text-primary ms-3" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fa fa-search"></i></butaton>
-                <a href="https://htmlcodex.com/startup-company-website-template" class="btn btn-primary py-2 px-4 ms-3">Download Pro Version</a>
+                <a href="https://htmlcodex.com/startup-company-website-template" class="btn btn-primary py-2 px-4 ms-3">login</a>
+            
             </div>
         </nav>
 
@@ -105,9 +292,9 @@
             <div class="row py-5">
                 <div class="col-12 pt-lg-5 mt-lg-5 text-center">
                     <h1 class="display-4 text-white animated zoomIn">Contact Us</h1>
-                    <a href="" class="h5 text-white">Home</a>
+                    <a href="../Home/index.html" class="h5 text-white">Home</a>
                     <i class="far fa-circle text-white px-2"></i>
-                    <a href="" class="h5 text-white">Contact</a>
+                    <a href="../About/contact.html" class="h5 text-white">Contact us</a>
                 </div>
             </div>
         </div>
@@ -149,7 +336,7 @@
                         </div>
                         <div class="ps-4">
                             <h5 class="mb-2">Call to ask any question</h5>
-                            <h4 class="text-primary mb-0">+012 345 6789</h4>
+                            <h4 class="text-primary mb-0">+961 70 677 712</h4>
                         </div>
                     </div>
                 </div>
@@ -171,7 +358,7 @@
                         </div>
                         <div class="ps-4">
                             <h5 class="mb-2">Visit our office</h5>
-                            <h4 class="text-primary mb-0">123 Street, NY, USA</h4>
+                            <h4 class="text-primary mb-0">Beirut,Lebanon</h4>
                         </div>
                     </div>
                 </div>
@@ -215,15 +402,15 @@
         <div class="container py-5 mb-5">
             <div class="bg-white">
                 <div class="owl-carousel vendor-carousel">
-                    <img src="img/vendor-1.jpg" alt="">
-                    <img src="img/vendor-2.jpg" alt="">
-                    <img src="img/vendor-3.jpg" alt="">
-                    <img src="img/vendor-4.jpg" alt="">
-                    <img src="img/vendor-5.jpg" alt="">
-                    <img src="img/vendor-6.jpg" alt="">
-                    <img src="img/vendor-7.jpg" alt="">
-                    <img src="img/vendor-8.jpg" alt="">
-                    <img src="img/vendor-9.jpg" alt="">
+                    <img src="../img/vendor-1.jpg" alt="">
+                    <img src="../img/vendor-2.jpg" alt="">
+                    <img src="../img/vendor-3.jpg" alt="">
+                    <img src="../img/vendor-4.jpg" alt="">
+                    <img src="../img/vendor-5.jpg" alt="">
+                    <img src="../img/vendor-6.jpg" alt="">
+                    <img src="../img/vendor-7.jpg" alt="">
+                    <img src="../img/vendor-8.jpg" alt="">
+                    <img src="../img/vendor-9.jpg" alt="">
                 </div>
             </div>
         </div>
@@ -312,9 +499,7 @@
                     <div class="d-flex align-items-center justify-content-center" style="height: 75px;">
                         <p class="mb-0">&copy; <a class="text-white border-bottom" href="#">Your Site Name</a>. All Rights Reserved. 
 						
-						<!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-						Designed by <a class="text-white border-bottom" href="https://htmlcodex.com">HTML Codex</a></p>
-                    </div>
+					 </div>
                 </div>
             </div>
         </div>
@@ -329,14 +514,14 @@
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/counterup/counterup.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="../lib/wow/wow.min.js"></script>
+    <script src="../lib/easing/easing.min.js"></script>
+    <script src="../lib/waypoints/waypoints.min.js"></script>
+    <script src="../lib/counterup/counterup.min.js"></script>
+    <script src="../lib/owlcarousel/owl.carousel.min.js"></script>
 
     <!-- Template Javascript -->
-    <script src="js/main.js"></script>
+    <script src="../js/main.js"></script>
 </body>
 
 </html>
