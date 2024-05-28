@@ -1,3 +1,23 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url('../Roboto/Roboto-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../Roboto/Roboto-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* Add more @font-face rules for different font weights and styles if needed */
+
+body{
+    font-family: 'Roboto', sans-serif; 
+}
+
 .w3-xxlarge{
     font-size: 30px;
     color: white;
@@ -27,19 +47,7 @@
     
 }
 
-@media (max-width: 768px) {
-  
-    .bus .dropdown-toggle::after {
-        display: none;
-    }
 
-    .bus .dropdown-menu {
-        display: none !important; 
-    }
-    .back-to-top{
-        display: none !important;
-    }
-}
 
 
 .bus .nav-item:hover .dropdown-menu,
@@ -109,4 +117,61 @@ height: 45%;
 .botPics{
    height: 45%;
    border-top: 8%;
+}
+
+.services-menu span{
+    margin-right: 10px;
+    font-size: 35px;
+    color: rgb(6, 163, 218);
+}
+.services-menu .dropdown-item {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+}
+.services-menu-content {
+    display: none;
+    position: absolute;
+    left: 55%;
+    top: 0;
+    background-color: white; 
+    padding: 10px;
+    min-width: 200px;
+    z-index: 1;
+}
+.services-menu-content a {
+    color: #091E3E;
+    text-decoration: none;
+    display: block;
+    padding: 5px 0;
+}
+.services-menu-content a:hover {
+    background-color: #495057; 
+}
+.services-menu:hover .services-menu-content {
+    display: block;
+}
+
+@media (max-width: 768px) {
+  
+    .bus .dropdown-toggle::after {
+        display: none;
+    }
+
+    .bus .dropdown-menu {
+        display: none !important; 
+    }
+    .back-to-top{
+        display: none !important;
+    }
+    .services-menu-content {
+        display: none;
+        position: absolute;
+        left: 35%;
+        top: 0;
+        background-color: white; 
+        padding: 10px;
+        min-width: 200px;
+        z-index: 1;
+    }
 }
