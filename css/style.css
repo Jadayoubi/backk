@@ -471,6 +471,10 @@ h6,
     bottom: 45px;
     z-index: 99;
 }
+.bg-headerApp {
+    background: linear-gradient(rgba(9, 30, 62, .7), rgba(9, 30, 62, .7)), url(../img/images/works/app/AppDevBack.png) center center no-repeat;
+    background-size: cover;
+}
 
 .bg-header {
     background: linear-gradient(rgba(9, 30, 62, .7), rgba(9, 30, 62, .7)), url(../img/carousel-1.jpg) center center no-repeat;
