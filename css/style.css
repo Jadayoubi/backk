@@ -477,7 +477,7 @@ h6,
     background-size: cover;
 }
 .bg-header1 {
-    background: linear-gradient(rgba(9, 30, 62, .7), rgba(9, 30, 62, .7)), url(../img/images/works/webBack.jpg) center center no-repeat;
+    background: linear-gradient(rgba(9, 30, 62, .7), rgba(9, 30, 62, .7)), url(../img/images/works/web/webBack.jpg) center center no-repeat;
     background-size: cover;
 }
 .link-animated a {
