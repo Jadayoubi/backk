@@ -21,6 +21,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@400&display=swap" rel="stylesheet">
+    <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,600;1,200;1,400;1,600&display=swap"
+    rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
@@ -35,8 +38,12 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Template Stylesheet -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
     <link href="../css/style.css" rel="stylesheet">
     <link href="../css/index.css" rel="stylesheet"/>
+    <link href="../css/Web.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+  
     <style>
  nav::before{
     background-color: white;
@@ -52,7 +59,6 @@
     </div>
     <!-- Spinner End -->
 
-
     <!-- Topbar Start -->
     <div class="container-fluid bg-dark px-5 d-none d-lg-block">
         <div class="row gx-0">
@@ -65,25 +71,23 @@
             </div>
             <div class="col-lg-4 text-center text-lg-end">
                 <div class="d-inline-flex align-items-center" style="height: 45px;">
-                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-twitter fw-normal"></i></a>
                     <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-facebook-f fw-normal"></i></a>
-                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-linkedin-in fw-normal"></i></a>
-                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-instagram fw-normal"></i></a>
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href="https://www.linkedin.com/company/secufleet/" target="_blank"><i class="fab fa-linkedin-in fw-normal"></i></a>
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href="https://www.instagram.com/secufleet?igsh=MTVybWJoM21vcjFodw==" target="_blank"><i class="fab fa-instagram fw-normal"></i></a>
                     <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle" href=""><i class="fab fa-youtube fw-normal"></i></a>
-                    <button class="btn btn-primary" style="margin-left: 10px;">Login</button>
+                   
                 </div>
             </div>
         </div>
     </div>
     <!-- Topbar End -->
 
-
     <!-- Navbar & Carousel Start -->
     <div class="container-fluid position-relative p-0">
-        <nav class="navbar navbar-expand-lg navbar-dark px-5 py-3 py-lg-0" >
-            <a href="../Home/index.html" class="navbar-brand p-0">
+        <nav class="navbar navbar-expand-lg navbar-dark px-5 py-3 py-lg-0">
+            <a href="index.html" class="navbar-brand p-0">
                 
-                <h1 class="m-0"><img src="../img/images/logo/LogoNew.jpeg" alt="logo" class="logo" /></h1>
+                <h1 class="m-0"><img src="../img/images/logo/logo.jpg" alt="logo" class="logo" /></h1>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                 <span class="fa fa-bars"></span>
@@ -94,20 +98,20 @@
                    
                     <div class="about">
                     <div class="nav-item dropdown">      
-                        <a href="../about.html" class="nav-link dropdown-toggle"  data-bs-toggle="dropdown">About</a>
+                        <a href="#" class="nav-link dropdown-toggle"  data-bs-toggle="dropdown">About</a>
                         <div class="dropdown-menu m-0">
-                            <a href="#" class="dropdown-item">
+                            <a href="../About/about.html" class="dropdown-item">
                                 <span class="material-symbols-outlined">
                                     apartment
                                     </span>
                                About Us</a>
-                            <a href="#" class="dropdown-item">
+                            <a href="../About/Careers.html" class="dropdown-item">
                                 
                                 <span class="material-symbols-outlined">
                                     work
                                     </span>
                                 Careers</a>
-                            <a href="#" class="dropdown-item">
+                            <a href="../About/contact.html" class="dropdown-item">
                                 <span class="material-symbols-outlined">
                                     contact_page
                                     </span>
@@ -117,7 +121,7 @@
                     </div>
                 </div>
                    
-<div class="bus">
+                    <div class="bus">
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" id="businessDropdown" data-bs-toggle="dropdown" aria-expanded="false">
                             Business
@@ -126,78 +130,153 @@
                             <div class="container-fluid">
                                 <div class="row">
                                     <div class="col-md-4" >
-                                        <div class="dropdown-item" >
-                                            <span class="material-icons">local_gas_station</span>
-                                            <p>Fuel Management</p>
-                                        </div>
                                         <div class="dropdown-item">
                                             <span class="material-icons">build</span>
-                                            <p>Fleet Management</p>
+                                            <div>
+                                                <p>Fleet Management</p>
+                                                <p class="description">Efficiently manage your fleet of vehicles,</p>
+                                                   <p class="description"> including maintenance and scheduling.</p>
+                                            </div>
                                         </div>
+                                        
                                         <div class="dropdown-item">
                                             <span class="material-icons">search</span>
-                                            <p>Vehicle Inspection</p>
+                                            <div>
+                                                <p>Vehicle Inspection</p>
+                                                <p class="description">Conduct thorough inspections of vehicles
+                                                    <br> to ensure safety and compliance.</p>
+                                            </div>
                                         </div>
+                                        
                                         <div class="dropdown-item">
                                             <span class="material-icons">map</span>
-                                            <p>Route Planning</p>
+                                            <div>
+                                                <p>Route Planning</p>
+                                                <p class="description">Plan optimal routes for vehicles to save time and fuel.</p>
+                                            </div>
                                         </div>
+                                        
                                         <div class="dropdown-item">
                                             <span class="material-icons">description</span>
-                                            <p>Digital Forms</p>
+                                            <div>
+                                                <p>Digital Forms</p>
+                                                <p class="description">Digitize paperwork and streamline administrative
+                                                    <br> tasks with electronic forms.</p>
+                                            </div>
                                         </div>
+                                        
                                         <div class="dropdown-item">
                                             <span class="material-icons">satellite</span>
-                                            <p>Asset Tracking</p>
+                                            <div>
+                                                <p>Asset Tracking</p>
+                                                <p class="description">Track and manage your assets, such as
+                                                    <br> vehicles and equipment, in real-time.</p>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="col-md-4">
                                         <div class="dropdown-item">
                                             <span class="material-icons">location_on</span>
-                                            <p>GPS Tracking and Live Data</p>
+                                            <div>
+                                                <p>GPS Tracking and Live Data</p>
+                                                <p class="description">Track the location of vehicles in real-time
+                                                    <br> and access live data for efficient monitoring.</p>
+                                            </div>
                                         </div>
+                                        
                                         <div class="dropdown-item">
                                             <span class="material-icons">directions_car</span>
-                                            <p>Carsharing</p>
+                                            <div>
+                                                <p>Carsharing</p>
+                                                <p class="description">Facilitate carsharing services for efficient utilization
+                                                    <br> of vehicles and cost savings.</p>
+                                            </div>
                                         </div>
+                                        
                                         <div class="dropdown-item">
                                             <span class="material-icons">bar_chart</span>
-                                            <p>Fleet Efficiency</p>
+                                            <div>
+                                                <p>Fleet Efficiency</p>
+                                                <p class="description">Analyze fleet performance and optimize efficiency
+                                                    <br> to reduce costs and improve productivity.</p>
+                                            </div>
                                         </div>
+                                        
                                         <div class="dropdown-item">
                                             <span class="material-icons">schedule</span>
-                                            <p>Worktime</p>
-                                        </div>
-                                        <div class="dropdown-item">
-                                            <span class="material-icons">local_drink</span>
-                                            <p>Alcohol Interlocks</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="dropdown-item">
-                                            <span class="material-icons">emoji_people</span>
-                                            <p>Driver Behaviour</p>
-                                        </div>
-                                        <div class="dropdown-item">
-                                            <span class="material-icons">ac_unit</span>
-                                            <p>Cold Chain Monitoring</p>
-                                        </div>
-                                        <div class="dropdown-item">
-                                            <span class="material-icons">chat</span>
-                                            <p>Communication Tool</p>
-                                        </div>
-                                        <div class="dropdown-item">
-                                            <span class="material-icons">code</span>
-                                            <p>API Integrations</p>
+                                            <div>
+                                                <p>Worktime</p>
+                                                <p class="description">Track and manage work hours for drivers and employees
+                                                    <br> to ensure compliance and efficiency.</p>
+                                            </div>
                                         </div>
                                         <div class="dropdown-item">
                                             <span class="material-icons">videocam</span>
-                                            <p>Camera Systems</p>
+                                            <div>
+                                                <p>Camera Systems</p>
+                                                <p class="description">Install camera systems for enhanced security
+                                                    <br> and monitoring of vehicles and drivers.</p>
+                                            </div>
                                         </div>
+                                    </div>
+                                   
+                                    <div class="col-md-4">
+                                        <div class="dropdown-item">
+                                            <span class="material-icons">emoji_people</span>
+                                            <div>
+                                                <p>Driver Behaviour</p>
+                                                <p class="description">Monitor and analyze driver behavior
+                                                    <br> to improve safety and efficiency.</p>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="dropdown-item">
+                                            <span class="material-icons">ac_unit</span>
+                                            <div>
+                                                <p>Cold Chain Monitoring</p>
+                                                <p class="description">Ensure the integrity of temperature-sensitive products
+                                                    <br> during transportation.</p>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="dropdown-item">
+                                            <span class="material-icons">chat</span>
+                                            <div>
+                                                <p>Communication Tool</p>
+                                                <p class="description">Facilitate communication among team members
+                                                    <br> and drivers for better coordination.</p>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="dropdown-item">
+                                            <span class="material-icons">code</span>
+                                            <div>
+                                                <p>API Integrations</p>
+                                                <p class="description">Integrate with third-party systems and services
+                                                    <br> for enhanced functionality.</p>
+                                            </div>
+                                        </div>
+                                        
+                                     
+                                      <!-- 
                                         <div class="dropdown-item">
                                             <span class="material-icons">cloud_download</span>
-                                            <p>Remote Tachograph Download</p>
+                                            <div>
+                                                <p>Remote Tachograph Download</p>
+                                                <p class="description">Download tachograph data remotely for compliance and regulatory purposes.</p>
+                                            </div>
                                         </div>
+                                        --> 
+                                           <!--  
+                                        <div class="dropdown-item">
+                                            <span class="material-icons">local_drink</span>
+                                            <div>
+                                                <p>Alcohol Interlocks</p>
+                                                <p class="description">Install alcohol interlock devices to prevent
+                                                    <br> alcohol-impaired driving and ensure safety.</p>
+                                            </div>
+                                        </div>
+                                         --> 
                                     </div>
                                 </div>
                             </div>
@@ -206,7 +285,7 @@
                 </div>
                 <div class="serv">
                    <div class="nav-item dropdown">
-                    <a href="service.html" class="nav-link dropdown-toggle nav-item nav-link active"  data-bs-toggle="dropdown">Services</a>
+                    <a href="service.html" class="nav-link dropdown-toggle active"  data-bs-toggle="dropdown">Services</a>
                     <div class="dropdown-menu m-0">
                         <a href="#" class="dropdown-item">
                             <span class="material-symbols-outlined">
@@ -227,9 +306,9 @@
                                 contract_edit
                                 </span>
                             Contracting</a>
-                        <a href="#" class="dropdown-item " style="background-color: lightgrey;"><span><i class="bi bi-code-slash"></i></span>
+                        <a href="../Service/webDev.html" class="dropdown-item" style="background-color: lightgray;"><span><i class="bi bi-code-slash"></i></span>
                             Web Development</a>
-                        <a href="#" class="dropdown-item">
+                        <a href="../Service/AppDev.html" class="dropdown-item">
                             <span><i class="bi bi-phone"></i></span>
                             App Development</a>
                     </div>
@@ -237,7 +316,7 @@
             </div>
             <div class="products">
                 <div class="nav-item dropdown">      
-                    <a href="../About/about.html" class="nav-link dropdown-toggle"  data-bs-toggle="dropdown">Products</a>
+                    <a href="#" class="nav-link dropdown-toggle"  data-bs-toggle="dropdown">Products</a>
                     <div class="dropdown-menu m-0">
                         <a href="#" class="dropdown-item">
                             <span class="material-symbols-outlined">
@@ -290,8 +369,7 @@
                     <a href="contact.html" class="nav-item nav-link">Contact</a>
                 </div>
                 <butaton type="button" class="btn text-primary ms-3" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fa fa-search"></i></butaton>
-               <!-- <a href="https://htmlcodex.com/startup-company-website-template" class="btn btn-primary py-2 px-4 ms-3">Download Pro Version</a>
-            -->
+                <a href="https://htmlcodex.com/startup-company-website-template" class="btn btn-primary py-2 px-4 ms-3">login</a>
             </div>
         </nav>
         <div class="container-fluid bg-primary py-5 bg-header1" style="margin-bottom: 90px;">
@@ -303,6 +381,10 @@
                     <a href="../Service/webDev.html" class="h5 text-white">Web Development</a>
                 </div>
             </div>
+        </div>
+        <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
+            <h5 class="fw-bold text-primary text-uppercase">Our Portfolio</h5>
+            <h1 class="mb-0">Discover Our Impressive Projects and Success Stories</h1>
         </div>
         <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
             <div class="container py-5">
@@ -372,8 +454,39 @@
             </div>
         </div>
         <!-- Pricing Plan End -->
+    <!--Advantages Start-->
+    <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
+        <h5 class="fw-bold text-primary text-uppercase">Our Advanteges</h5>
+        <h1 class="mb-0">Discover the unique benefits we offer to enhance your business success.</h1>
+    </div>
+
+    <div class="row1-container">
+        <div class="box box-down cyan">
+          <h2>Individual Approach</h2>
+          <p>We use an individual approach to each client and we never offer you a set of standard decisions for your business.</p>
+          <img src="../img/images/works/web/individualCropped.png " alt="" >
+        </div>
     
+        <div class="box red">
+          <h2>24/7 Online Support</h2>
+          <p>We provide round-the-clock support to ensure your business operations run smoothly and efficiently.</p>
+          <img src="../img/images/works/web/support.png" alt="" >
+        </div>
     
+        <div class="box box-down blue">
+          <h2>Various Payment Methods</h2>
+          <p>We offer multiple payment options to make transactions convenient and secure for our clients.</p>
+          <img src="../img/images/works/web/payment.png" alt="">
+        </div>
+      </div>
+      <div class="row2-container">
+        <div class="box orange">
+          <h2>Qualified Employees</h2>
+          <p>We are a team of designers, developers, marketing experts and managers who are ready to work on a personalized web solution.</p>
+          <img src="https://assets.codepen.io/2301174/icon-supervisor.svg" alt="">
+        </div>
+      </div>
+            <!--Advantages End-->
         <!-- Quote Start -->
         <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
             <div class="container py-5">
@@ -417,7 +530,7 @@
                                             <option value="1">Consulting</option>
                                             <option value="2">Hardware</option>
                                             <option value="3">Software</option>
-                                            <option value="4">Contraction</option>
+                                            <option value="4">Contracting</option>                                            
                                             <option value="5">Web Development</option>
                                             <option value="6">App Development</option>
                                         </select>
@@ -436,6 +549,277 @@
             </div>
         </div>
         </div>
+        <!--Quote end-->
+               <!-- Testimonial Start -->
+       <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="section-title text-center position-relative pb-3 mb-4 mx-auto" style="max-width: 600px;">
+                <h5 class="fw-bold text-primary text-uppercase">Testimonial</h5>
+                <h1 class="mb-0">What Our Clients Say About Our Digital Services</h1>
+            </div>
+            <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.6s">
+                <div class="testimonial-item bg-light my-4">
+                    <div class="d-flex align-items-center border-bottom pt-5 pb-4 px-5">
+                        <img class="img-fluid rounded" src="../img/testimonial-1.jpg" style="width: 60px; height: 60px;" >
+                        <div class="ps-4">
+                            <h4 class="text-primary mb-1">Client Name</h4>
+                            <small class="text-uppercase">Profession</small>
+                        </div>
+                    </div>
+                    <div class="pt-4 pb-5 px-5">
+                        Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore diam
+                    </div>
+                </div>
+                <div class="testimonial-item bg-light my-4">
+                    <div class="d-flex align-items-center border-bottom pt-5 pb-4 px-5">
+                        <img class="img-fluid rounded" src="../img/testimonial-2.jpg" style="width: 60px; height: 60px;" >
+                        <div class="ps-4">
+                            <h4 class="text-primary mb-1">Client Name</h4>
+                            <small class="text-uppercase">Profession</small>
+                        </div>
+                    </div>
+                    <div class="pt-4 pb-5 px-5">
+                        Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore diam
+                    </div>
+                </div>
+                <div class="testimonial-item bg-light my-4">
+                    <div class="d-flex align-items-center border-bottom pt-5 pb-4 px-5">
+                        <img class="img-fluid rounded" src="../img/testimonial-3.jpg" style="width: 60px; height: 60px;" >
+                        <div class="ps-4">
+                            <h4 class="text-primary mb-1">Client Name</h4>
+                            <small class="text-uppercase">Profession</small>
+                        </div>
+                    </div>
+                    <div class="pt-4 pb-5 px-5">
+                        Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore diam
+                    </div>
+                </div>
+                <div class="testimonial-item bg-light my-4">
+                    <div class="d-flex align-items-center border-bottom pt-5 pb-4 px-5">
+                        <img class="img-fluid rounded" src="../img/testimonial-4.jpg" style="width: 60px; height: 60px;" >
+                        <div class="ps-4">
+                            <h4 class="text-primary mb-1">Client Name</h4>
+                            <small class="text-uppercase">Profession</small>
+                        </div>
+                    </div>
+                    <div class="pt-4 pb-5 px-5">
+                        Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore diam
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Testimonial End -->
+          <!-- Team Start -->
+    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
+                <h5 class="fw-bold text-primary text-uppercase">Team Members</h5>
+                <h1 class="mb-0">Professional Stuffs Ready to Help Your Business</h1>
+            </div>
+            <div class="row g-5">
+                <div class="col-lg-4 wow slideInUp" data-wow-delay="0.3s">
+                    <div class="team-item bg-light rounded overflow-hidden">
+                        <div class="team-img position-relative overflow-hidden">
+                            <img class="img-fluid w-100" src="../img/team-1.jpg" alt="">
+                            <div class="team-social">
+                                <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i class="fab fa-twitter fw-normal"></i></a>
+                                <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i class="fab fa-facebook-f fw-normal"></i></a>
+                                <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i class="fab fa-instagram fw-normal"></i></a>
+                                <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i class="fab fa-linkedin-in fw-normal"></i></a>
+                            </div>
+                        </div>
+                        <div class="text-center py-4">
+                            <h4 class="text-primary">Full Name</h4>
+                            <p class="text-uppercase m-0">Designation</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 wow slideInUp" data-wow-delay="0.6s">
+                    <div class="team-item bg-light rounded overflow-hidden">
+                        <div class="team-img position-relative overflow-hidden">
+                            <img class="img-fluid w-100" src="../img/team-2.jpg" alt="">
+                            <div class="team-social">
+                                <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i class="fab fa-twitter fw-normal"></i></a>
+                                <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i class="fab fa-facebook-f fw-normal"></i></a>
+                                <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i class="fab fa-instagram fw-normal"></i></a>
+                                <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i class="fab fa-linkedin-in fw-normal"></i></a>
+                            </div>
+                        </div>
+                        <div class="text-center py-4">
+                            <h4 class="text-primary">Full Name</h4>
+                            <p class="text-uppercase m-0">Designation</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 wow slideInUp" data-wow-delay="0.9s">
+                    <div class="team-item bg-light rounded overflow-hidden">
+                        <div class="team-img position-relative overflow-hidden">
+                            <img class="img-fluid w-100" src="../img/team-3.jpg" alt="">
+                            <div class="team-social">
+                                <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i class="fab fa-twitter fw-normal"></i></a>
+                                <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i class="fab fa-facebook-f fw-normal"></i></a>
+                                <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i class="fab fa-instagram fw-normal"></i></a>
+                                <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i class="fab fa-linkedin-in fw-normal"></i></a>
+                            </div>
+                        </div>
+                        <div class="text-center py-4">
+                            <h4 class="text-primary">Full Name</h4>
+                            <p class="text-uppercase m-0">Designation</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+     <!-- Team End -->
+
+
+   <!-- Footer Start -->
+   <div class="container-fluid bg-dark text-light mt-5 wow fadeInUp" data-wow-delay="0.1s">
+    <div class="container">
+        <div class="row gx-5">
+            <div class="col-lg-4 col-md-6 footer-about">
+                <div class="d-flex flex-column align-items-center justify-content-center text-center h-100 bg-primary p-4">
+                    <a href="../Home/index.html" class="navbar-brand">
+                      
+                            <img src="../img/images/logo/logo.jpg" class="logo"/>
+                           
+                    </a>
+                    <p class="mt-3 mb-4">Stay updated with the latest news and updates! Subscribe to our email list to receive
+                         exclusive content and important announcements directly in your inbox.</p>
+                    <form action="">
+                        <div class="input-group">
+                            <input type="text" class="form-control border-white p-3" placeholder="Your Email">
+                            <button class="btn btn-dark">Sign Up</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-lg-8 col-md-6">
+                <div class="row gx-5">
+                    <div class="col-lg-4 col-md-12 pt-5 mb-5">
+                        <div class="section-title section-title-sm position-relative pb-3 mb-4">
+                            <h3 class="text-light mb-0">Get In Touch</h3>
+                        </div>
+                        <div class="d-flex mb-2">
+                            <i class="bi bi-geo-alt text-primary me-2"></i>
+                            <p class="mb-0">Beirut, Lebanon</p>
+                        </div>
+                        <div class="d-flex mb-2">
+                            <i class="bi bi-envelope-open text-primary me-2"></i>
+                            <p class="mb-0">info@example.com</p>
+                        </div>
+                        <div class="d-flex mb-2">
+                            <i class="bi bi-telephone text-primary me-2"></i>
+                            <p class="mb-0">+961  70 677 712</p>
+                        </div>
+                        <div class="d-flex mt-4">
+                           
+                            <a class="btn btn-primary btn-square me-2" href="https://www.linkedin.com/company/secufleet/"><i class="fab fa-linkedin-in fw-normal"></i></a>
+                            <a class="btn btn-primary btn-square" href="https://www.instagram.com/secufleet?igsh=MTVybWJoM21vcjFodw=="><i class="fab fa-instagram fw-normal"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-12 pt-0 pt-lg-5 mb-5">
+                        <div class="section-title section-title-sm position-relative pb-3 mb-4">
+                            <h3 class="text-light mb-0">Quick Links</h3>
+                        </div>
+                        <div class="link-animated d-flex flex-column justify-content-start">
+                            <a class="text-light mb-2" href="../Home/index.html"><i class="bi bi-arrow-right text-primary me-2"></i>Home</a>
+                            <a class="text-light mb-2" href="../About/about.html"><i class="bi bi-arrow-right text-primary me-2"></i>About Us</a>
+                           <!--drop right service menu-->
+                            <div class="services-menu">
+                                <p class="text-light mb-2" ><i class="bi bi-arrow-right text-primary me-2"></i>Our Services</p>
+                                <div class="services-menu-content">
+                                    <a class="dropdown-item" href="#"><span class="material-symbols-outlined">
+                                        travel_explore
+                                        </span>
+                                    Consulting</a>
+                                    <a class="dropdown-item" href="#"><span >
+                                        <i class="bi bi-motherboard"></i>
+                                        </span>
+                                    Hardware</a>
+                                    <a class="dropdown-item" href="#"><span class="material-symbols-outlined">cloud_download</span>
+                                        Software</a>
+
+                                    <a class="dropdown-item" href="#">  <span class="material-symbols-outlined">
+                                        contract_edit
+                                        </span>
+                                    Contracting</a>
+                                    <a class="dropdown-item" href="#"><span><i class="bi bi-code-slash"></i></span>
+                                        
+                                        Web Development</a>
+                                        <a class="dropdown-item" href="#"> <span><i class="bi bi-phone"></i></span>
+                                            App Development</a>
+                                    
+                                </div>
+                            </div>
+                            <a class="text-light mb-2" href="../About/about.html"><i class="bi bi-arrow-right text-primary me-2"></i>Meet The Team</a>
+                            <a class="text-light mb-2" href="../About/Careers.html"><i class="bi bi-arrow-right text-primary me-2"></i>Careers</a>
+                            <a class="text-light" href="../About/contact.html"><i class="bi bi-arrow-right text-primary me-2"></i>Contact Us</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-12 pt-0 pt-lg-5 mb-5">
+                        <div class="section-title section-title-sm position-relative pb-3 mb-4">
+                            <h3 class="text-light mb-0">Popular Links</h3>
+                        </div>
+                        <div class="link-animated d-flex flex-column justify-content-start">
+                            <a class="text-light mb-2" href="../Home/index.html"><i class="bi bi-arrow-right text-primary me-2"></i>Home</a>
+                            <a class="text-light mb-2" href="../About/about.html"><i class="bi bi-arrow-right text-primary me-2"></i>About Us</a>
+                            <a class="text-light mb-2" href="../Service/webDev.html"><i class="bi bi-arrow-right text-primary me-2"></i>Web Development</a>
+                            <a class="text-light mb-2" href="../Service/AppDev.html"><i class="bi bi-arrow-right text-primary me-2"></i>App Development</a>
+                            <a class="text-light mb-2" href="../About/about.html"><i class="bi bi-arrow-right text-primary me-2"></i>Meet The Team</a>
+                            <a class="text-light" href="../About/contact.html"><i class="bi bi-arrow-right text-primary me-2"></i>Contact Us</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid text-white" style="background: #061429;">
+    <div class="container text-center">
+        <div class="row justify-content-end">
+            <div class="col-lg-8 col-md-6">
+                <div class="d-flex align-items-center justify-content-center" style="height: 75px;">
+                    <p class="mb-0">&copy; <a class="text-white border-bottom" href="#">SecuFleet</a>. All Rights Reserved. 
+                    
+
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Footer End -->
+
+
+<!-- Back to Top -->
+<a href="#" class="btn btn-lg btn-primary btn-lg-square rounded back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+   
+        <!-- Vendor Start -->
+        <!--
+        <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="container py-5 mb-5">
+                <div class="bg-white">
+                    <div class="owl-carousel vendor-carousel">
+                        <img src="../img/vendor-1.jpg" alt="">
+                        <img src="img/vendor-2.jpg" alt="">
+                        <img src="img/vendor-3.jpg" alt="">
+                        <img src="img/vendor-4.jpg" alt="">
+                        <img src="img/vendor-5.jpg" alt="">
+                        <img src="img/vendor-6.jpg" alt="">
+                        <img src="img/vendor-7.jpg" alt="">
+                        <img src="img/vendor-8.jpg" alt="">
+                        <img src="img/vendor-9.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Vendor End -->
+        
     </body>
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
@@ -473,5 +857,8 @@
           activeVideo.play();
         }
       });
+      
           </script>
+              
+
           </html>
