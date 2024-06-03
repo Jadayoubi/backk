@@ -153,7 +153,13 @@ height: 45%;
 }
 
 @media (max-width: 768px) {
-  
+    /* aboutSlider responsivness start */
+
+/* aboutSlider responsivness end */
+  video{
+    
+    display: none;
+  }
     .bus .dropdown-toggle::after {
         display: none;
     }
@@ -175,3 +181,6 @@ height: 45%;
         z-index: 1;
     }
 }
+/* AboutSlider css */
+
+
