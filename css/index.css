@@ -32,7 +32,7 @@ body{
     position: fixed;
     top: 100px; 
     left: 50%;
-    transform: translateX(-52%);
+    transform: translateX(-60%);
     width: 90vw;
     padding: 0;
     font-size: 1rem;
