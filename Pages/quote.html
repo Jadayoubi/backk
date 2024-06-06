@@ -88,7 +88,7 @@
         <nav class="navbar navbar-expand-lg navbar-dark px-5 py-3 py-lg-0">
             <a href="../Home/index.html" class="navbar-brand p-0">
                 
-                <h1 class="m-0"><img src="../img/images/logo/logo.jpg" alt="logo" class="logo" /></h1>
+                <h1 class="m-0"><img src="../images/logo/logo.jpg" alt="logo" class="logo" /></h1>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                 <span class="fa fa-bars"></span>
@@ -407,125 +407,273 @@
     </div>
     <!-- Full Screen Search End -->
 
-
+  
     <!-- Quote Start -->
-<section class="fleet" id="fleet">
-    
-    <div class="progress-container">
-        <span id="progress-text">0%</span>
-        <div class="progress">
-            <div id="progress-bar" class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+   
+   
+    <div class="service-container" id="service-container">
+        <div class="title">
+            <h1>Select a Service</h1>
         </div>
+        <div class="service" onclick="showQuestions('fleet')">
+          <div><img src="../images/quote/fleet-management.png" style="width: 60px;"></div>
+            Fleet Management</div>
+        <div class="service" onclick="showQuestions('webDev')">
+            <div><i class="fa-solid fa-laptop-code" style="font-size: 50px;"></i></div>
+            Web Development</div>
     </div>
-    <div id="question-container" class="text-center">
-        <div class="question" id="question-1">
-            <h2 class="text-center title">What types of vehicles do you have?</h2>
-            <div class="question-card" data-answer="cars">
-               
-                <i class="fa-solid fa-car-side"></i>
-                <p>Cars</p>
-            </div>
-            <div class="question-card" data-answer="trucks">
-                
-                <i class="fa-solid fa-truck-moving"></i>
-                <p>Trucks</p>
-            </div>
-            <div class="question-card" data-answer="bus">
-                <i class="fa-solid fa-bus"></i>
-                <p>Bus</p>
-            </div>
-            <div class="question-card" data-answer="semi-trailers">
-                <span class="material-symbols-outlined">
-                    rv_hookup
-                </span>
-                <p>Semi-trailers</p>
-            </div>
-            <div class="question-card" data-answer="others">
-                <span class="material-symbols-outlined">
-                    front_loader
-                </span>
-                <p>Others</p>
+
+    <section id="fleet" class="fleet-questions  hidden">
+        <div class="progress-container">
+            <span id="fleetprogress-text">0%</span>
+            <div class="progress">
+                <div id="fleetprogress-bar" class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
             </div>
         </div>
-        <div class="question" id="question-2" style="display:none;">
-            <h2 class="text-center">How many vehicles do you have?</h2>
-            <form>
-                <div class="radio-group">
-                    <label>
-                        <input type="radio" name="options" value="1-2">
-                        1 - 2
-                    </label>
+        <div id="fleet-question-container" class="text-center">
+            <div class="question" id="question-1">
+                <h2 class="text-center title">What types of vehicles do you have?</h2>
+                <div class="fleet-question-card question-card" data-answer="cars">
+                    <i class="fa-solid fa-car-side" style="font-size: 35px;"></i>
+                    <p>Cars</p>
                 </div>
-                <div class="radio-group">
-                    <label>
-                        <input type="radio" name="options" value="3-10">
-                        3 - 10
-                    </label>
+                <div class="fleet-question-card question-card" data-answer="trucks">
+                    <i class="fa-solid fa-truck-moving" style="font-size: 35px;"></i>
+                    <p>Trucks</p>
                 </div>
-                <div class="radio-group">
-                    <label>
-                        <input type="radio" name="options" value="11-50">
-                        11 - 50
-                    </label>
+                <div class="fleet-question-card question-card" data-answer="bus">
+                    <i class="fa-solid fa-bus" style="font-size: 35px;"></i>
+                    <p>Bus</p>
                 </div>
-                <div class="radio-group">
-                    <label>
-                        <input type="radio" name="options" value="50+">
-                        50+
-                    </label>
-                </div>
-            </form>
-        </div>
-        <div class="question" id="question-3" style="display: none;">
-            <h2 class="text-center">What features are you interested in?</h2>
-            <div class="question-card" data-answer="gps">
-                <i class="fa-solid fa-map-location"aria-hidden="true"></i>
-                <p>GPS</p>
-            </div>
-            <div class="question-card" data-answer="eld">
-                <span class="material-symbols-outlined">
-                    browse_activity
+                <div class="fleet-question-card question-card" data-answer="semi-trailers">
+                    <span class="material-symbols-outlined" style="font-size: 35px;">
+                        rv_hookup
                     </span>
-                <p>ELD</p>
+                    <p>Semi-trailers</p>
+                </div>
+                <div class="fleet-question-card question-card" data-answer="others">
+                    <span class="material-symbols-outlined" style="font-size: 35px;">
+                        front_loader
+                    </span>
+                    <p>Others</p>
+                </div>
             </div>
-            <div class="question-card cam" data-answer="cam" >
-                <i class="bi bi-webcam-fill" style="font-size: 28px;"></i>
-                <p>Dash Cams</p>
+            <div class="question" id="question-2" style="display:none;">
+                <h2 class="text-center">How many vehicles do you have?</h2>
+                <form>
+                    <div class="radio-group">
+                        <label>
+                            <input type="radio" name="options" value="1-2">
+                            1 - 2
+                        </label>
+                    </div>
+                    <div class="radio-group">
+                        <label>
+                            <input type="radio" name="options" value="3-10">
+                            3 - 10
+                        </label>
+                    </div>
+                    <div class="radio-group">
+                        <label>
+                            <input type="radio" name="options" value="11-50">
+                            11 - 50
+                        </label>
+                    </div>
+                    <div class="radio-group">
+                        <label>
+                            <input type="radio" name="options" value="50+">
+                            50+
+                        </label>
+                    </div>
+                </form>
             </div>
-            <div class="question-card" data-answer="maintenance">
-                <i class="fa-solid fa-oil-can"></i>
-                <p>Maintenance</p>
+            <div class="question" id="question-3" style="display: none;">
+                <h2 class="text-center">What features are you interested in?</h2>
+                <div class="fleet-question-card question-card" data-answer="gps">
+                    <i class="fa-solid fa-map-location"aria-hidden="true" style="font-size: 40px;"></i>
+                    <p>GPS</p>
+                </div>
+                <div class="fleet-question-card question-card" data-answer="eld">
+                    <span class="material-symbols-outlined" style="font-size: 35px;">
+                        browse_activity
+                    </span>
+                    <p>ELD</p>
+                </div>
+                <div class="fleet-question-card question-card cam" data-answer="cam">
+                    <i class="bi bi-webcam-fill" style="font-size: 28px;"></i>
+                    <p>Dash Cams</p>
+                </div>
+                <div class="fleet-question-card question-card" data-answer="maintenance">
+                    <i class="fa-solid fa-oil-can" style="font-size:40px;"></i>
+                    <p>Maintenance</p>
+                </div>
+                <div class="fleet-question-card question-card" data-answer="maintenance">
+                    <i class="fa-solid fa-route" style="font-size: 40px;"></i>
+                    <p>Routing</p>
+                </div>
+                <div class="fleet-question-card question-card" data-answer="others">
+                    <span class="material-symbols-outlined" style="font-size: 36px;">
+                        front_loader
+                    </span>
+                    <p>Others</p>
+                </div>
             </div>
-            <div class="question-card" data-answer="maintenance">
-                <i class="fa-solid fa-route"></i>
-                <p>Routing</p>
-            </div>
-            <div class="question-card" data-answer="others">
-                <span class="material-symbols-outlined">
-                    front_loader
-                </span>
-                <p>Others</p>
+            <div class="question" id="question-4" style="display:none;">
+                <h2 class="text-center">
+                    What is your email address?<br> This is the address to which we will send you all the information.
+                </h2>
+                <label class="emailLabel">Email:</label><br>
+                <input type="email" id="email" class="email" placeholder="Enter your email" required>
             </div>
         </div>
-        <div class="question" id="question-4" style="display:none;">
-            <h2 class="text-center">
-            What is your email address?<br> This is the address to which we will send you all the information.
-        </h2>
-            <label class="emailLabel">Email:</label><br>
-            <input type="email" id="email" class="email" placeholder="Enter your email" required>
+        <section id="fleetbuttons">
+        <button id="back-btn" class="btn btn-secondary submit-btn" disabled>Back</button>
+        <button id="next-btn" class="btn btn-primary submit-btn" disabled>Next</button>
+        <button id="submit-btn" class="btn btn-primary submit-btn" onclick="fleetsubmitForm()" style="display: none;">Submit</button>
+    </section>
+    <div id="confirmation-section" style="display: none;">
+        <h2 class="text-center">Thank you!</h2>
+        <p>We have received your quotation. We will get back to you shortly.</p>
+        <button id="submit-btn" class="btn btn-primary submit-btn" onclick="redirect()" >Home Page</button>
+    </div>
+    
+    </section>
+
+    <section id="webDev" class="webDev-questions  hidden">
+        <div class="progress-container">
+            <span id="webprogress-text">0%</span>
+            <div class="progress">
+                <div id="webprogress-bar" class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+        </div>
+        <div id="webdev-question-container" class="text-center">
+            <div class="question" id="webdev-question-1">
+                <h2 class="text-center">What kind of website do you need?</h2>
+                <div class="web-question-card question-card" data-answer="personal">
+                    <div><i class="bi bi-file-earmark-person" style="font-size: 28px;" ></i></div>
+                    <p>Personal Website</p>
+                </div>
+                <div class="web-question-card question-card" data-answer="business">
+                    <div><span class="material-symbols-outlined">
+                        add_business
+                        </span></div>
+                    <p>Business Website</p>
+                </div>
+                <div class="web-question-card question-card" data-answer="ecommerce">
+                    <div><img src="../images/quote/ecommerce.png" style="width: 40px;"></div>
+                    <p>E-commerce Store</p>
+                </div>
+                <div class="web-question-card question-card" data-answer="blog">
+                    <div><i class="fa-solid fa-blog" style="font-size: 35px;"></i></div>
+                    <p>Blog<br> Website</p>
+                   
+                </div>
+                <div class="web-question-card question-card" data-answer="portfolio">
+                    <div><img src="../images/quote/resume.png" style="width: 40px;"></div>
+                    <p>Portfolio Website</p>
+                   
+                </div>
+                <div class="web-question-card question-card" data-answer="landing">
+                    <div><img src="../images/quote/landingpage.png" style="width: 40px;"></div>
+                    <p>Landing Page Website</p>
+                  
+                </div>
+                <div class="web-question-card question-card" data-answer="other">
+                    <div><i class="fa-solid fa-code" style="width: 40px;"></i></div>
+                    <p>Other</p>
+                    <p>.</p>
+                </div>
+            </div>
+            <!-- Add more questions in similar format -->
+
+            <div class="question" id="webdev-question-2" style="display:none;">
+                <h2 class="text-center">Do you have a logo and branding guidelines?</h2>
+                <div class="web-question-card question-card" data-answer="yes">
+                    <div><i class="fa-regular fa-thumbs-up"style="font-size: 100px;" ></i></div>
+                    <p>Yes</p>
+                </div>
+                <div class="web-question-card question-card" data-answer="no">
+                    <div><i class="fa-solid fa-xmark" style="font-size: 100px;"></i></div>
+                    <p>No</p>
+                </div>
+                <div class="web-question-card question-card" data-answer="need-assistance">
+                    <div><i class="fa-solid fa-handshake-angle" style="font-size: 77px;"></i></div>
+                    <p>Need assistance </p>
+                </div>
+            </div>
+            <div class="question" id="webdev-question-3" style="display:none;">
+                <h2 class="text-center">Do you want the website to be single paged or multiple pages</h2>
+                <div class="web-question-card question-card" data-answer="Single">
+                    <div><span class="material-symbols-outlined" style="font-size: 50px;">
+                        article
+                        </span></div>
+                    <p>Single Page</p>
+                </div>
+                <div class="web-question-card question-card" data-answer="2-4">
+                    <div><i class="fa-regular fa-copy" style="font-size: 45px;"></i></div>
+                    <p>2-4 Pages</p>
+                   
+                </div>
+                <div class="web-question-card question-card" data-answer="5+">
+                    <div><span class="material-symbols-outlined" style="font-size:50px;">
+                        browse
+                        </span></div>
+                    <p>5+ Pages</p>
+                </div>
+
+            </div>
+            <div class="question" id="webdev-question-4" style="display:none;">
+                <h2 class="text-center">What do you need</h2>
+                <div class="web-question-card question-card" data-answer="front-end">
+                    <div><i class="fa-solid fa-code" style="font-size:30px;"></i></div>
+                    <p>Front end (client side )</p>
+                </div>
+                <div class="web-question-card question-card" data-answer="full-stack">
+                    <div><span class="material-symbols-outlined" style="font-size:50px;">
+                        database
+                        </span></div>
+                    <p>Full Stack (client and server side)</p>
+                </div>
+                <div class="web-question-card question-card" data-answer="done">
+                    <div><span class="material-symbols-outlined" style="font-size:50px;">
+                        deployed_code
+                        </span>
+                    </div>
+                    <p>Already have a website and need help</p>
+                </div>
+                <div class="web-question-card question-card" data-answer="idk">
+                    <div><img src="../images/quote/dont-know.png" style="width: 50px;"></div>
+                    <p>I dont Know</p>
+                </div>
+
+            </div>
+
+
+            <div class="question" id="webdev-question-5" style="display:none;">
+                <h2 class="text-center">
+                    What is your email address?<br> This is the address to which we will send you all the information.
+                </h2>
+                <label class="emailLabel">Email:</label><br>
+                <input type="email" id="webdev-email" class="email" placeholder="Enter your email" required>
+
+            </div>
+          
+
+        </div>
+        <section id="Webbuttons"> 
+        <button id="webdev-back-btn" class="btn btn-secondary submit-btn" disabled>Back</button>
+        <button id="webdev-next-btn" class="btn btn-primary submit-btn" disabled>Next</button>
+        <button id="webdev-submit-btn" class="btn btn-primary submit-btn" onclick="submitFormWeb()" style="display: none;">Submit</button>
+    </section>
+        <div id="confirmation-section" style="display: none;">
+            <h2 class="text-center">Thank you!</h2>
+            <p>We have received your quotation. We will get back to you shortly.</p>
+            <button  class="btn btn-primary submit-btn" onclick="redirect()" >Home Page</button>
+
         </div>
         
-
-    </div>
-    <button id="back-btn" class="btn btn-secondary submit-btn" disabled>Back</button>
-    <button id="next-btn" class="btn btn-primary submit-btn" disabled>Next</button>
-    <button id="submit-btn" class="btn btn-primary submit-btn" onclick="submitForm()" style="display: none;">Submit</button>
-
-
-</section>
-    <!-- Quote Start -->
- 
-                
+    </section>
+    
     <!-- Quote End -->
 
 
@@ -533,16 +681,18 @@
 
 
 
-    <!-- Footer Start -->
     <div class="container-fluid bg-dark text-light mt-5 wow fadeInUp" data-wow-delay="0.1s">
         <div class="container">
             <div class="row gx-5">
                 <div class="col-lg-4 col-md-6 footer-about">
                     <div class="d-flex flex-column align-items-center justify-content-center text-center h-100 bg-primary p-4">
-                        <a href="index.html" class="navbar-brand">
-                            <h1 class="m-0 text-white"><i class="fa fa-user-tie me-2"></i>Startup</h1>
+                        <a href="../Home/index.html" class="navbar-brand">
+                            <h1 class="m-0 text-white">
+                                <img src="../img/images/logo/LogoNew.jpeg" class="logo"/>
+                                SecuFleet</h1>
                         </a>
-                        <p class="mt-3 mb-4">Lorem diam sit erat dolor elitr et, diam lorem justo amet clita stet eos sit. Elitr dolor duo lorem, elitr clita ipsum sea. Diam amet erat lorem stet eos. Diam amet et kasd eos duo.</p>
+                        <p class="mt-3 mb-4">Stay updated with the latest news and updates! Subscribe to our email list to receive
+                             exclusive content and important announcements directly in your inbox.</p>
                         <form action="">
                             <div class="input-group">
                                 <input type="text" class="form-control border-white p-3" placeholder="Your Email">
@@ -559,7 +709,7 @@
                             </div>
                             <div class="d-flex mb-2">
                                 <i class="bi bi-geo-alt text-primary me-2"></i>
-                                <p class="mb-0">123 Street, New York, USA</p>
+                                <p class="mb-0">Beirut, Lebanon</p>
                             </div>
                             <div class="d-flex mb-2">
                                 <i class="bi bi-envelope-open text-primary me-2"></i>
@@ -567,13 +717,13 @@
                             </div>
                             <div class="d-flex mb-2">
                                 <i class="bi bi-telephone text-primary me-2"></i>
-                                <p class="mb-0">+012 345 67890</p>
+                                <p class="mb-0">+961  70 677 712</p>
                             </div>
                             <div class="d-flex mt-4">
-                                <a class="btn btn-primary btn-square me-2" href="#"><i class="fab fa-twitter fw-normal"></i></a>
+                               
                                 <a class="btn btn-primary btn-square me-2" href="#"><i class="fab fa-facebook-f fw-normal"></i></a>
-                                <a class="btn btn-primary btn-square me-2" href="#"><i class="fab fa-linkedin-in fw-normal"></i></a>
-                                <a class="btn btn-primary btn-square" href="#"><i class="fab fa-instagram fw-normal"></i></a>
+                                <a class="btn btn-primary btn-square me-2" href="https://www.linkedin.com/company/secufleet/"><i class="fab fa-linkedin-in fw-normal"></i></a>
+                                <a class="btn btn-primary btn-square" href="https://www.instagram.com/secufleet?igsh=MTVybWJoM21vcjFodw=="><i class="fab fa-instagram fw-normal"></i></a>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-12 pt-0 pt-lg-5 mb-5">
@@ -581,11 +731,36 @@
                                 <h3 class="text-light mb-0">Quick Links</h3>
                             </div>
                             <div class="link-animated d-flex flex-column justify-content-start">
-                                <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Home</a>
-                                <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>About Us</a>
-                                <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Our Services</a>
+                                <a class="text-light mb-2" href="../Home/index.html"><i class="bi bi-arrow-right text-primary me-2"></i>Home</a>
+                                <a class="text-light mb-2" href="../About/about.html"><i class="bi bi-arrow-right text-primary me-2"></i>About Us</a>
+                                <div class="services-menu">
+                                    <p class="text-light mb-2" ><i class="bi bi-arrow-right text-primary me-2"></i>Our Services</p>
+                                    <div class="services-menu-content">
+                                        <a class="dropdown-item" href="#"><span class="material-symbols-outlined">
+                                            travel_explore
+                                            </span>
+                                        Consulting</a>
+                                        <a class="dropdown-item" href="#"><span >
+                                            <i class="bi bi-motherboard"></i>
+                                            </span>
+                                        Hardware</a>
+                                        <a class="dropdown-item" href="#"><span class="material-symbols-outlined">cloud_download</span>
+                                            Software</a>
+
+                                        <a class="dropdown-item" href="#">  <span class="material-symbols-outlined">
+                                            contract_edit
+                                            </span>
+                                        Contracting</a>
+                                        <a class="dropdown-item" href="#"><span><i class="bi bi-code-slash"></i></span>
+                                            
+                                            Web Development</a>
+                                            <a class="dropdown-item" href="#"> <span><i class="bi bi-phone"></i></span>
+                                                App Development</a>
+                                        
+                                    </div>
+                                </div>
                                 <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Meet The Team</a>
-                                <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Latest Blog</a>
+                                <a class="text-light mb-2" href="../About/Careers.html"><i class="bi bi-arrow-right text-primary me-2"></i>Careers</a>
                                 <a class="text-light" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Contact Us</a>
                             </div>
                         </div>
@@ -612,8 +787,10 @@
             <div class="row justify-content-end">
                 <div class="col-lg-8 col-md-6">
                     <div class="d-flex align-items-center justify-content-center" style="height: 75px;">
-                        <p class="mb-0">&copy; <a class="text-white border-bottom" href="#">Your Site Name</a>. All Rights Reserved. 
+                        <p class="mb-0">&copy; <a class="text-white border-bottom" href="#">SecuFleet</a>. All Rights Reserved. 
+						
 
+						
                     </div>
                 </div>
             </div>
@@ -624,6 +801,7 @@
 
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded back-to-top"><i class="bi bi-arrow-up"></i></a>
+
 
 
     <!-- JavaScript Libraries -->
