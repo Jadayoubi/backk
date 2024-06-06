@@ -1,9 +1,16 @@
-.question-container{
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.question-container, .service-container{
     display: flex;
     flex-wrap: wrap;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     justify-content: center;
+
 }
 .question {
     display: flex;
@@ -13,7 +20,7 @@
 .question-card .cam i{
     font-size: 20px !important; 
 }
-.question-card {
+.question-card,  .service {
 
     display: inline-block;
     border: 1px solid #ddd;
@@ -26,24 +33,36 @@
     width: 150px;
     height: 150px;
 }
- .question-card span, .question-card i {
+.hidden {
+    display: none;
+}
+ .question-card span,  .service i {
     font-size: 35px;
     color:rgb(6, 163, 218)
 }
-.question-card p{
-    color: black;
-    font-weight: bold;
+.question-card i{
+    color: rgb(6, 163, 218);
 }
-.question-card.selected {
+.question-card p {
+    cursor: pointer;
+}
+
+.question-card.selected p {
+    cursor: default;
+}
+.question-card.selected, .service.selected {
     border-color:rgb(6, 163, 218);
     background-color: #f0f8ff;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Add shadow effect */
 }
+
 .title{
     text-align: center;
     width: 100%;
     margin: 20px 0;
 }
+
+
 .progress-container {
     margin: 20px 0;
     text-align: center;
@@ -96,19 +115,19 @@ input[type="email"] {
     display: flex;
     align-items: center;
     padding: 10px;
-  border: grey solid 1px;
+    border: grey solid 1px;
     border-radius: 5px;
     background-color: #fff;
     cursor: pointer;
-    /* transition: background-color 0.3s, border-color 0.3s; */
 }
+
 
 .radio-group input[type="radio"] {
     margin-right: 10px;
 }
 
 .radio-group label:hover {
-    background-color: rgb(6, 163, 218);;
+    background-color: rgb(6, 163, 218);
     border-color: #aaa;
     color: black;
 }
