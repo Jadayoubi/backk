@@ -6,6 +6,20 @@ let count = 0;
 document.getElementById('email').addEventListener('input', updateNextButtonState);
 document.getElementById('webdev-email').addEventListener('input', updateNextButtonStateWebdev);
 
+function validateEmail(emailInputId, errorId) {
+    const emailInput = document.getElementById(emailInputId);
+    const emailError = document.getElementById(errorId);
+    const email = emailInput.value;
+    const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+
+    if (emailPattern.test(email)) {
+        emailError.style.display = 'none';
+        return true;
+    } else {
+        emailError.style.display = 'block';
+        return false;
+    }
+}
 
 document.querySelectorAll('.fleet-question-card').forEach(card => {
     card.addEventListener('click', () => {
@@ -101,13 +115,17 @@ document.getElementById('webdev-question-container').addEventListener('click', e
         updateNextButtonStateWebdev(); // Call the function to update the next button state
     }
 });
-
+    document.getElementById('webdev-submit-btn').addEventListener('click', () => {
+            if (validateEmail('webdev-email', 'webdevEmailError')) {
+                submitFormWeb();
+            }
+        });
 function updateNextButtonStateWebdev() {
     let currentQuestionElement = document.getElementById(`webdev-question-${currentWebQuestion}`);
     let selectedCards = currentQuestionElement.querySelectorAll('.question-card.selected').length;
 
     // Check if it's the last question in the webdev section
-    if (currentWebQuestion === totalWebQuestions) { // Assuming the last question index is 6
+    if (currentWebQuestion === totalWebQuestions ) { // Assuming the last question index is 6
         let emailInput = document.getElementById('webdev-email').value.trim();
         document.getElementById('webdev-next-btn').style.display = 'none';
         document.getElementById('webdev-submit-btn').disabled = emailInput === '';
@@ -145,17 +163,24 @@ function updateBackButtonState() {
     }
 }
 function fleetsubmitForm(){
-    document.getElementById('fleet-question-container').style.display = 'none';
-    document.getElementById('fleetbuttons').style.display = 'none';
-    // Show confirmation section
-    document.getElementById('confirmation-section').style.display = 'block';
+    if(validateEmail('email','EmailError')){
+        document.getElementById('fleet-question-container').style.display = 'none';
+        document.getElementById('fleetbuttons').style.display = 'none';
+        // Show confirmation section
+        document.getElementById('confirmation-section').style.display = 'block';
+        
+        currentFleetQuestion++;
+        updateFleetProgressBar()
+    }else{
+        console.log('email error');
+    }
     
-    currentFleetQuestion++;
-    updateFleetProgressBar()
 }
-function submitFormWeb() {
-   
 
+
+function submitFormWeb() {
+   //console.log(validateEmail);
+if(validateEmail('webdev-email', 'webdevEmailError')){
     document.getElementById('webdev-question-container').style.display = 'none';
     document.getElementById('Webbuttons').style.display = 'none';
     // Show confirmation section
@@ -163,6 +188,12 @@ function submitFormWeb() {
     
     currentWebQuestion++;
     updateWebProgressBar()
+}else{
+    console.log("email error");
+}
+   
+
+  
 }
 function redirect(){
     window.location.href='../Home/index.html'
