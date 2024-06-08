@@ -415,10 +415,10 @@
         <div class="title">
             <h1>Select a Service</h1>
         </div>
-        <div class="service" onclick="showQuestions('fleet')">
+        <div class="service bounce-top" onclick="showQuestions('fleet')">
           <div><img src="../images/quote/fleet-management.png" style="width: 60px;"></div>
             Fleet Management</div>
-        <div class="service" onclick="showQuestions('webDev')">
+        <div class="service bounce-top" onclick="showQuestions('webDev')">
             <div><i class="fa-solid fa-laptop-code" style="font-size: 50px;"></i></div>
             Web Development</div>
     </div>
@@ -523,8 +523,8 @@
                     What is your email address?<br> This is the address to which we will send you all the information.
                 </h2>
                 <label class="emailLabel">Email:</label><br>
-                <input type="email" id="email" class="email" placeholder="Enter your email" required>
-                <span class="error" id="EmailError" style="color: red; font-size: large;">Please enter a valid email address.</span>
+                <input type="email" id="email" class="email" placeholder="Enter your email" required><br>
+                <span class="error" id="EmailError" style="color: red; font-size: large; display: none;">Please enter a valid email address.</span>
                 <br><br>
             </div>
         </div>
@@ -533,7 +533,7 @@
         <button id="next-btn" class="btn btn-primary submit-btn" disabled>Next</button>
         <button id="submit-btn" class="btn btn-primary submit-btn" onclick="fleetsubmitForm()" style="display: none;">Submit</button>
     </section>
-    <div id="confirmation-section" style="display: none;">
+    <div id="confirmation-section" class="confirmationSection" style="display: none;">
         <h2 class="text-center">Thank you!</h2>
         <p>We have received your quotation. We will get back to you shortly.</p>
         <button id="submit-btn" class="btn btn-primary submit-btn" onclick="redirect()" >Home Page</button>
@@ -542,10 +542,12 @@
     </section>
 
     <section id="webDev" class="webDev-questions  hidden">
-        <div class="progress-container">
+        <div class="progress-container" id="webprogress-container">
             <span id="webprogress-text">0%</span>
             <div class="progress">
-                <div id="webprogress-bar" class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                <div id="webprogress-bar" class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+
+                </div>
             </div>
         </div>
         <div id="webdev-question-container" class="text-center">
@@ -612,7 +614,7 @@
                     <p>Single Page</p>
                 </div>
                 <div class="web-question-card question-card" data-answer="2-4">
-                    <div><i class="fa-regular fa-copy" style="font-size: 45px;"></i></div>
+                    <div><i class="fa-regular fa-copy" style="font-size: 57px;"></i></div>
                     <p>2-4 Pages</p>
                    
                 </div>
@@ -627,25 +629,25 @@
             <div class="question" id="webdev-question-4" style="display:none;">
                 <h2 class="text-center">What do you need</h2>
                 <div class="web-question-card question-card" data-answer="front-end">
-                    <div><i class="fa-solid fa-code" style="font-size:30px;"></i></div>
-                    <p>Front end (client side )</p>
+                    <div><i class="fa-solid fa-code" style="font-size:40px;"></i></div>
+                    <p style="font-size: 17px;">Front end (client side)</p>
                 </div>
                 <div class="web-question-card question-card" data-answer="full-stack">
-                    <div><span class="material-symbols-outlined" style="font-size:50px;">
+                    <div><span class="material-symbols-outlined" style="font-size:38px;">
                         database
                         </span></div>
-                    <p>Full Stack (client and server side)</p>
+                    <p>Client and Server side</p>
                 </div>
                 <div class="web-question-card question-card" data-answer="done">
-                    <div><span class="material-symbols-outlined" style="font-size:50px;">
+                    <div><span class="material-symbols-outlined" style="font-size:40px;">
                         deployed_code
                         </span>
                     </div>
-                    <p>Already have a website and need help</p>
+                    <p>Already have a website?</p>
                 </div>
                 <div class="web-question-card question-card" data-answer="idk">
-                    <div><img src="../images/quote/dont-know.png" style="width: 50px;"></div>
-                    <p>I dont Know</p>
+                    <div><img src="../images/quote/dont-know.png" style="width: 47px;"></div>
+                    <p>I dont Know / Other</p>
                 </div>
 
             </div>
@@ -653,11 +655,11 @@
 
             <div class="question" id="webdev-question-5" style="display:none;">
                 <h2 class="text-center">
-                    What is your email address?<br> This is the address to which we will send you all the information.
+                    What is your email address?<br/> This is the address to which we will send you all the information.
                 </h2>
                 <label class="emailLabel">Email:</label><br>
-                <input type="email" id="webdev-email" class="email" placeholder="Enter your email" required>
-                <span class="error" id="webdevEmailError" style="color: red; font-size: large;">Please enter a valid email address.</span>
+                <input type="email" id="webdev-email" name="email" class="email" placeholder="Enter your email" required><br>
+                <span class="error" id="webdevEmailError" style="color: red; font-size: large; display: none;">Please enter a valid email address.</span>
         <br><br>
             </div>
           
@@ -666,9 +668,9 @@
         <section id="Webbuttons"> 
         <button id="webdev-back-btn" class="btn btn-secondary submit-btn" disabled>Back</button>
         <button id="webdev-next-btn" class="btn btn-primary submit-btn" disabled>Next</button>
-        <button id="webdev-submit-btn" class="btn btn-primary submit-btn" onclick="submitFormWeb()" style="display: none;">Submit</button>
+        <button id="webdev-submit-btn" class="btn btn-primary submit-btn bounce-top" onclick="submitFormWeb()" style="display: none;">Submit</button>
     </section>
-        <div id="confirmation-section" style="display: none;">
+        <div id="Webconfirmation-section" class="confirmationSection" style="display: none;">
             <h2 class="text-center">Thank you!</h2>
             <p>We have received your quotation. We will get back to you shortly.</p>
             <button  class="btn btn-primary submit-btn" onclick="redirect()" >Home Page</button>
