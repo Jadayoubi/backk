@@ -113,7 +113,7 @@ body{
     color: rgb(6, 163, 218);
 }
 
-.Products p span, .ourValue p span, .ourVision p span{
+.Products p span, .ourValue p span, .ourVision p span, .feature p span{
     color: rgb(6, 163, 218);
     font-size: 30px;
     
@@ -228,7 +228,15 @@ height: 45%;
 .services-menu:hover .services-menu-content {
     display: block;
 }
-
+.free-quote-btn {
+    margin-top: 42%; /* Adjust this value as needed */
+    margin-left: 10%;
+    padding: 10px 20px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    width: 200px;
+    
+}
 @media (max-width: 768px) {
     /* aboutSlider responsivness start */
 
