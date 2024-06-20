@@ -76,6 +76,7 @@ function deleteFleetQuotation(id) {
     .then(data => {
         console.log('Quotation deleted successfully:', data);
         fetchFleetQuotations(); // Refresh the list
+        alert("Quotation deleted successfully")
     })
     .catch(error => console.error('Error deleting quotation:', error));
 }
