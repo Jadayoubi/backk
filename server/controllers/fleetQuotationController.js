@@ -11,14 +11,21 @@ exports.submitFleetQuotation = async (req, res) => {
         if (!email || !phoneNumber || !companyName || !type || !vehicles || !features) {
             return res.status(400).json({ message: 'All fields are required.' });
         }
+        let featuresArray = [];
 
+        // Check if features is a string and split if necessary
+        if (typeof features === 'string') {
+            featuresArray = features.split(',').map(f => f.trim()); // Split and trim whitespace
+        } else if (Array.isArray(features)) {
+            featuresArray = features; // If already an array, use it directly
+        }
         const newQuotation = await FleetQuotation.create({
             email,
             phoneNumber,
             companyName,
             type,
             vehicles,
-            features
+            features:featuresArray
         });
 
         res.status(201).json({ message: 'Fleet quotation received successfully!', quotation: newQuotation });
