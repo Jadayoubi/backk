@@ -1,6 +1,6 @@
 let totalWebQuestions = 5;
 let currentWebQuestion = 1;
-let count = 0;
+
 
 let selectedAnswers = {
     type: '',
@@ -159,10 +159,11 @@ function redirect() {
     window.location.href = '../index.html';
 }
 
-function showQuestions(service) {
+function showWebQuestions(service) {
+    console.log("web clicked");
     document.getElementById('service-container').classList.add('hidden'); // Hide the service options
     document.getElementById(service).classList.remove('hidden'); // Show the selected service section
-    document.getElementById(`question-${currentFleetQuestion}`).style.display = 'block'; // Show the first question of Fleet
+   
     document.getElementById(`webdev-question-${currentWebQuestion}`).style.display = 'block'; // Show the first question of WebDev
 }
 

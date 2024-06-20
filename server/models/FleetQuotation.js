@@ -22,10 +22,10 @@ const fleetQuotationSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    features: {
+    features: [{
         type: String,
         required: true
-    },
+    }],
     status: {
         type: String,
         default: 'pending'

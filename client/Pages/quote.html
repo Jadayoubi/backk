@@ -415,12 +415,14 @@
         <div class="title">
             <h1>Select a Service</h1>
         </div>
-        <div class="service bounce-top" onclick="showQuestions('fleet')">
-          <div><img src="../images/quote/fleet-management.png" style="width: 60px;"></div>
-            Fleet Management</div>
-        <div class="service bounce-top" onclick="showQuestions('webDev')">
+        <div class="service bounce-top" id="fleet-service" onclick="showFleetQuestions('fleet')">
+            <div><img src="../images/quote/fleet-management.png" style="width: 60px;"></div>
+            Fleet Management
+        </div>
+        <div class="service bounce-top" id="web-service" onclick="showWebQuestions('webDev')">
             <div><i class="fa-solid fa-laptop-code" style="font-size: 50px;"></i></div>
-            Web Development</div>
+            Web Development
+        </div>
     </div>
 
     <section id="fleet" class="fleet-questions  hidden">
@@ -526,6 +528,11 @@
                 <input type="email" id="email" class="email" placeholder="Enter your email" required><br>
                 <span class="error" id="EmailError" style="color: red; font-size: large; display: none;">Please enter a valid email address.</span>
                 <br><br>
+                <label class="phoneLabel">Phone Number:</label><br>
+                <input type="tel" id="fleetphone" name="phone" class="phone" placeholder="Enter your phone number" required><br><br>
+            
+                <label class="companyLabel">Company Name:</label><br>
+                <input type="text" id="fleetcompany" name="company" class="company" placeholder="Enter your company name" required><br><br>
             </div>
         </div>
         <section id="fleetbuttons">
@@ -828,8 +835,10 @@
 
     <!-- Template Javascript -->
     <script src="../js/main.js"></script>
-    <!-- <script src="../js/quote.js"></script> -->
-    <script src="../js/webQuote.js"></script>
+    <script src="../js/quote.js"></script>
+    <!-- <script src="../js/fleetQuotation.js"></script> -->
+    <!-- <script src="../js/webQuote.js"></script> -->
+    
     <script>
  
     </script>
