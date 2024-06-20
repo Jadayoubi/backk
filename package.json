@@ -1,0 +1,26 @@
+{
+  "name": "secufleet",
+  "version": "1.0.0",
+  "description": "The Offical website of SecuFleet",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jadayoubi/SecuFleet.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jadayoubi/SecuFleet/issues"
+  },
+  "homepage": "https://github.com/Jadayoubi/SecuFleet#readme",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "mongoose": "^8.4.3"
+  }
+}
