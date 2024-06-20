@@ -2,6 +2,7 @@ const WebQuotation = require('../models/WebQuotation');
 // const AppQuotation = require('../models/AppQuotation');
 // const FleetQuotation = require('../models/FleetQuotation');
 
+const WebQuotationAdmin = require('../models/WebQuotation'); 
 exports.submitWebQuotation = async (req, res) => {
     try {
         const { email, phone, company, type, logo, branding, pages, requirements } = req.body;
@@ -22,9 +23,6 @@ exports.submitWebQuotation = async (req, res) => {
         if (!logo) {
             return res.status(400).json({ message: 'Logo is required.' });
         }
-        if (!branding) {
-            return res.status(400).json({ message: 'Branding details are required.' });
-        }
         if (!pages || typeof pages !== 'number') {
             return res.status(400).json({ message: 'Number of pages must be a valid number.' });
         }
@@ -34,8 +32,8 @@ exports.submitWebQuotation = async (req, res) => {
 
         const newQuotation = new WebQuotation({
             email,
-            phoneNumber: phone,
-            companyName: company,
+             phone,
+             company,
             type,
             logo,
             branding,
@@ -52,7 +50,46 @@ exports.submitWebQuotation = async (req, res) => {
     }
 };
 
+exports.getAllQuotations = async (req, res) => {
+    try {
+        const quotations = await WebQuotationAdmin.find(); // Fetch all quotations from the database
+        res.status(200).json(quotations);
+    } catch (error) {
+        res.status(500).json({ error: 'Failed to fetch quotations' });
+    }
+};
+exports.updateQuotationStatus = async (req, res) => {
+    try {
+        const { id } = req.params;
+        const { status } = req.body;
 
+        const updatedQuotation = await WebQuotation.findByIdAndUpdate(id, { status }, { new: true });
+
+        if (!updatedQuotation) {
+            return res.status(404).json({ error: 'Quotation not found' });
+        }
+
+        res.json(updatedQuotation);
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ error: 'Internal Server Error' });
+    }
+};
+
+exports.deleteQuotation = async (req, res) => {
+    try {
+        const { id } = req.params;
+        const deletedQuotation = await WebQuotation.findByIdAndDelete(id);
+
+        if (!deletedQuotation) {
+            return res.status(404).json({ error: 'Quotation not found' });
+        }
+
+        res.json({ message: 'Quotation deleted successfully' });
+    } catch (error) {
+        res.status(500).json({ error: 'Internal Server Error' });
+    }
+};
 // exports.submitAppQuotation = async (req, res) => {
 //     try {
 //         const { email, phone, company, type, features, platform } = req.body;

@@ -46,9 +46,10 @@ document.getElementById('webdev-next-btn').addEventListener('click', () => {
         updateWebProgressBar();
         updateNextButtonStateWebdev();
         updateBackButtonState();
-    } else {
-        submitFormWeb(); // Submit the form if it's the last question
-    }
+    } 
+    // else {
+    //     submitFormWeb(); // Submit the form if it's the last question
+    // }
 });
 
 document.getElementById('webdev-back-btn').addEventListener('click', () => {
@@ -69,11 +70,11 @@ document.getElementById('webdev-question-container').addEventListener('click', e
     }
 });
 
-document.getElementById('webdev-submit-btn').addEventListener('click', () => {
-    if (validateEmail('webdev-email', 'webdevEmailError')) {
-        submitFormWeb();
-    }
-});
+// document.getElementById('webdev-submit-btn').addEventListener('click', () => {
+//     if (validateEmail('webdev-email', 'webdevEmailError')) {
+//         submitFormWeb();
+//     }
+// });
 
 function updateNextButtonStateWebdev() {
     let currentQuestionElement = document.getElementById(`webdev-question-${currentWebQuestion}`);

@@ -1,10 +1,8 @@
 let totalFleetQuestions = 4; // Total number of questions
 let currentFleetQuestion = 1; // Current question index
-
 let count = 0;
 
 document.getElementById('email').addEventListener('input', updateNextButtonState);
-
 
 function validateEmail(emailInputId, errorId) {
     const emailInput = document.getElementById(emailInputId);
@@ -20,7 +18,6 @@ function validateEmail(emailInputId, errorId) {
         return false;
     }
 }
-
 document.querySelectorAll('.fleet-question-card').forEach(card => {
     card.addEventListener('click', () => {
         card.classList.toggle('selected');
@@ -63,10 +60,6 @@ document.getElementById('back-btn').addEventListener('click', () => {
     }
 });
 
-
-
-
-
 function updateNextButtonState() {
     if (currentFleetQuestion === totalFleetQuestions) { // Check if it's the email question
         let emailInput = document.getElementById('email').value.trim();
@@ -81,14 +74,11 @@ function updateNextButtonState() {
     }
 }
 
-
 function updateFleetProgressBar() {
     let progressPercentage = ((currentFleetQuestion - 1) / totalFleetQuestions) * 100;
     document.getElementById('fleetprogress-bar').style.width = `${progressPercentage}%`;
     document.getElementById('fleetprogress-text').innerText = `${Math.round(progressPercentage)}%`;
 }
-
-
 
 function updateBackButtonState() {
     const backButton = document.getElementById('back-btn');
@@ -116,8 +106,6 @@ function fleetsubmitForm() {
         console.log('email error');
     }
 }
-
-
 
 function redirect() {
     window.location.href = '../index.html';
