@@ -1,0 +1,65 @@
+const express = require("express");
+const mongoose = require("mongoose");
+const cors = require("cors");
+const router = require("./routes/router");
+
+const app = express();
+
+// MongoDB connection
+mongoose
+  .connect('mongodb://127.0.0.1:27017/secufleet')
+  .then(() => console.log("Connected to MongoDB!"))
+  .catch((err) => console.error("Error connecting to MongoDB!", err));
+
+// Middleware Section
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+const allowedOrigins = ['http://localhost:5500', 'http://192.168.0.110:3001'];
+
+app.use(cors({
+  origin: function(origin, callback) {
+    if (!origin) return callback(null, true);
+    if (allowedOrigins.indexOf(origin) === -1) {
+      const msg = 'The CORS policy for this site does not allow access from the specified origin.';
+      return callback(new Error(msg), false);
+    }
+    return callback(null, true);
+  },
+  credentials: false,  // If you're sending cookies or authorization headers
+}));
+
+app.use((req, res, next) => {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, PATCH");
+  res.header(
+    "Access-Control-Allow-Headers",
+    "Origin, X-Requested-With, Content-Type, Accept, Authorization"
+  );
+  next();
+});
+// Add additional middleware as needed
+
+// Routes
+app.use(router);
+
+// Error handling middleware (global)
+app.use((err, req, res, next) => {
+  console.error(err.stack);
+  res.status(500).json({ message: 'Internal Server Error' });
+});
+const quotationRoutes = require('./routes/api/quotation');
+app.use('/api/quotations', quotationRoutes);
+
+// Start the server
+const startApp = async () => {
+  try {
+    const port = process.env.PORT || 3000;
+    app.listen(port, () => {
+      console.log(`Server listening on port ${port}`);
+    });
+  } catch (error) {
+    console.error(`Error while starting application: ${error}`);
+  }
+};
+
+startApp();
