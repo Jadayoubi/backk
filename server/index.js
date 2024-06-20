@@ -41,6 +41,8 @@ app.use((req, res, next) => {
 
 // Routes
 app.use(router);
+// app.js or server.js
+
 
 // Error handling middleware (global)
 app.use((err, req, res, next) => {
@@ -49,6 +51,10 @@ app.use((err, req, res, next) => {
 });
 const quotationRoutes = require('./routes/api/quotation');
 app.use('/api/quotations', quotationRoutes);
+// app.js or server.js
+const fleetQuotationRoutes = require('./routes/api/fleetQuotation');
+
+app.use('/api/fleetQuotations', fleetQuotationRoutes);
 
 // Start the server
 const startApp = async () => {

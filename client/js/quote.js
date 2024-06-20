@@ -181,20 +181,20 @@ function fleetsubmitForm() {
     }
 }
 
-function submitFormWeb() {
-    if (validateEmail('webdev-email', 'webdevEmailError')) {
-        document.getElementById('webdev-question-container').style.display = 'none';
-        document.getElementById('Webbuttons').style.display = 'none';
-        // Show confirmation section
-        document.getElementById('Webconfirmation-section').style.display = 'block';
-        // Set progress to 100% explicitly
-        document.getElementById('webprogress-bar').style.width = '100%';
-        document.getElementById('webprogress-text').innerText = '100%';
-    } else {
-        document.getElementById('webdevEmailError').style.display = 'block';
-        console.log("email error");
-    }
-}
+// function submitFormWeb() {
+//     if (validateEmail('webdev-email', 'webdevEmailError')) {
+//         document.getElementById('webdev-question-container').style.display = 'none';
+//         document.getElementById('Webbuttons').style.display = 'none';
+//         // Show confirmation section
+//         document.getElementById('Webconfirmation-section').style.display = 'block';
+//         // Set progress to 100% explicitly
+//         document.getElementById('webprogress-bar').style.width = '100%';
+//         document.getElementById('webprogress-text').innerText = '100%';
+//     } else {
+//         document.getElementById('webdevEmailError').style.display = 'block';
+//         console.log("email error");
+//     }
+// }
 
 function redirect() {
     window.location.href = '../index.html';
