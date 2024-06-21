@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const verifyJWT = require("../../middleware/verifyjwt.js");
+const verifyJWT = require("../../middleware/authMiddleware");
 
 router.use("/auth", require("./authRoutes"));
 // router.use("/otp", require("./verifyOtpRoutes"));

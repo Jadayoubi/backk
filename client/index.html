@@ -89,8 +89,7 @@
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav ms-auto py-0">
                     <a href="index.html" class="nav-item nav-link active">Home</a>
-                    <a href="./admin/login.html" class="nav-item nav-link active">Admin Login</a>
-                    <a href="./admin/adminPage.html" class="nav-item nav-link active">Admin Page</a>
+                    
                     <div class="about">
                     <div class="nav-item dropdown">      
                         <a href="#" class="nav-link dropdown-toggle"  data-bs-toggle="dropdown">About</a>
@@ -430,6 +429,7 @@
                 <a href="./Pages/quote.html" class="btn btn-primary py-2 px-4 ms-3">Free Quote </a>
                 <!-- <butaton type="button" class="btn text-primary ms-3" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fa fa-search"></i></butaton> -->
                 <a href="http://fleet.activi.link/login/38" class="btn btn-primary py-2 px-4 ms-3" target="_blank">login</a>
+                <!-- <button id="logoutBtn">Logout</button> -->
             </div>
         </nav>
         <!--slider-->
@@ -991,7 +991,6 @@
                         <div class="team-img position-relative overflow-hidden">
                             <img class="img-fluid w-100" src="./img/images/team/team-img-01.jpg" alt="">
                             <div class="team-social">
-                                <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i class="fab fa-twitter fw-normal"></i></a>
                                 <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i class="fab fa-facebook-f fw-normal"></i></a>
                                 <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i class="fab fa-instagram fw-normal"></i></a>
                                 <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i class="fab fa-linkedin-in fw-normal"></i></a>
@@ -1292,6 +1291,29 @@
   });
 
       </script>
+       <!-- <script>
+      document.getElementById('logoutBtn').addEventListener('click', function() {
+  fetch('http://localhost:3000/secufleet/auth/logout', {
+    method: 'POST', // or 'GET' based on your backend route
+    credentials: 'same-origin', // include cookies or tokens if necessary
+  })
+  .then(response => {
+    if (response.ok) {
+      // Clear the JWT token from local storage
+      localStorage.removeItem('jwtToken');
+      // Redirect to login page
+      window.location.href = './admin/login.html'; // Replace with your login page URL
+    } else {
+      throw new Error('Logout failed');
+    }
+  })
+  .catch(error => {
+    console.error('Logout error:', error);
+    // Handle error (e.g., display message to user)
+  });
+});
+
+    </script> -->
 </body>
 
 </html>

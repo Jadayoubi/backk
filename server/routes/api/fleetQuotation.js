@@ -1,19 +1,12 @@
-// routes/api/fleetQuotation.js
-
 const express = require('express');
 const router = express.Router();
 const fleetQuotationController = require('../../controllers/fleetQuotationController');
+const verifyToken = require('../../middleware/authMiddleware'); // Import middleware function
 
-// Create a new Fleet Quotation
-router.post('/', fleetQuotationController.submitFleetQuotation);
-
-// Get all Fleet Quotations
-router.get('/', fleetQuotationController.getAllFleetQuotations);
-
-// Update Fleet Quotation status
-router.put('/:id', fleetQuotationController.updateFleetQuotationStatus);
-
-// Delete a specific Fleet Quotation by ID
-router.delete('/:id', fleetQuotationController.deleteFleetQuotation);
+// Apply the middleware to the routes
+router.post('/', verifyToken, fleetQuotationController.submitFleetQuotation);
+router.get('/', verifyToken, fleetQuotationController.getAllFleetQuotations);
+router.put('/:id', verifyToken, fleetQuotationController.updateFleetQuotationStatus);
+router.delete('/:id', verifyToken, fleetQuotationController.deleteFleetQuotation);
 
 module.exports = router;
