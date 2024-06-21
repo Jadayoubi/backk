@@ -2,8 +2,10 @@ const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
 const router = require("./routes/router");
-
+const jobListingRoutes = require('./routes/api/jobListing');
 const app = express();
+const careerRoutes = require('./routes/api/careerRoutes');
+const jobRoutes = require('./routes/api/jobRoute');
 
 // MongoDB connection
 mongoose
@@ -41,8 +43,10 @@ app.use((req, res, next) => {
 
 // Routes
 app.use(router);
+app.use('/api', careerRoutes);
 // app.js or server.js
-
+app.use('/api', jobRoutes);
+app.use('/api/jobListing', jobListingRoutes);
 
 // Error handling middleware (global)
 app.use((err, req, res, next) => {

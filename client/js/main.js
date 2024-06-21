@@ -165,7 +165,7 @@ function changeContent(section) {
             currentIndex = 1;
             break;
         case 'workflow':
-            image.src = './images/aboutSlider/flow.jpg';
+            image.src = './images/aboutSlider/truckFleetC.png';
             text.innerHTML = `
                 Streamline workflows and increase productivity. Establish benchmarks and make business decisions using 1.6 billion data points captured by Samsara.
                 <br>
@@ -225,6 +225,18 @@ function autoChangeContent() {
     currentIndex = (currentIndex + 1) % sections.length;
     changeContent(sections[currentIndex]);
 }
+// Show WhatsApp bubble for 10 seconds after page load
+document.addEventListener('DOMContentLoaded', () => {
+    const messageBubble = document.getElementById('message-bubble');
+    
+    // Show message bubble for 5 seconds after page load
+    messageBubble.style.display = 'block';
+
+    setTimeout(() => {
+        messageBubble.style.display = 'none';
+    }, 5000); // 5000 milliseconds = 5 seconds
+});
+
 
 setInterval(autoChangeContent, 7000); 
 
