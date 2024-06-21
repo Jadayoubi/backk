@@ -141,7 +141,7 @@ function changeContent(section) {
 
     switch (section) {
         case 'security':
-            image.src = '../images/aboutSlider/AI.jpg';
+            image.src = './images/aboutSlider/AI.jpg';
             text.innerHTML = `
                 Use AI-powered video technology to protect your most important assets, your employees. Capture and manage security risks in real time across your operations.
                 <br>
@@ -153,7 +153,7 @@ function changeContent(section) {
             currentIndex = 0;
             break;
         case 'ecosystem':
-            image.src = '../images/aboutSlider/eco.jpg';
+            image.src = './images/aboutSlider/eco.jpg';
             text.innerHTML = `
                 Run your business on one integrated platform. Unify data across maintenance, logistics, sales accounting, HR and more.
                 <br>
@@ -165,7 +165,7 @@ function changeContent(section) {
             currentIndex = 1;
             break;
         case 'workflow':
-            image.src = '../images/aboutSlider/flow.jpg';
+            image.src = './images/aboutSlider/flow.jpg';
             text.innerHTML = `
                 Streamline workflows and increase productivity. Establish benchmarks and make business decisions using 1.6 billion data points captured by Samsara.
                 <br>
@@ -177,7 +177,7 @@ function changeContent(section) {
             currentIndex = 2;
             break;
         case 'visibility':
-            image.src = '../images/aboutSlider/last.jpg';
+            image.src = './images/aboutSlider/last.jpg';
             text.innerHTML = `
                 Gain real-time visibility across production facilities, remote assets, fleets and services all the way to end customers to enable digital transformation at scale.
                 <br>
@@ -189,7 +189,7 @@ function changeContent(section) {
             currentIndex = 3;
             break;
         default:
-            image.src = '../images/aboutSlider/AI.jpg';
+            image.src = './images/aboutSlider/AI.jpg';
             text.innerHTML = `
                 Use AI-powered video technology to protect your most important assets, your employees. Capture and manage security risks in real time across your operations.
                 <br>
@@ -226,7 +226,6 @@ function autoChangeContent() {
     changeContent(sections[currentIndex]);
 }
 
-setInterval(autoChangeContent, 5000); // Change content every 5 seconds
+setInterval(autoChangeContent, 7000); 
 
-// Initialize the content and progress bar
 changeContent('ecosystem');

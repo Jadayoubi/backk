@@ -1,21 +1,18 @@
 const express = require('express');
 const router = express.Router();
-const quotationController = require('../../controllers/quotationController')
-const {
-    submitWebQuotation,
-    // submitAppQuotation,
-    // submitFleetQuotation
-} = require('../../controllers/quotationController');
+const quotationController = require('../../controllers/quotationController');
+const  verifyToken  = require('../../middleware/authMiddleware');
 
 // Routes for submitting quotations
-router.post('/web', submitWebQuotation);
-// router.post('/app', submitAppQuotation);
-// router.post('/fleet', submitFleetQuotation);
-router.get('/webQuotations', quotationController.getAllQuotations);
-// routes/api.js
+router.post('/web', verifyToken, quotationController.submitWebQuotation);
 
-router.put('/webQuotations/:id', quotationController.updateQuotationStatus);
+// Routes for retrieving all quotations
+router.get('/webQuotations', verifyToken, quotationController.getAllQuotations);
 
-router.delete('/webQuotations/:id', quotationController.deleteQuotation);
+// Routes for updating a quotation by ID
+router.put('/webQuotations/:id', verifyToken, quotationController.updateQuotationStatus);
+
+// Routes for deleting a quotation by ID
+router.delete('/webQuotations/:id', verifyToken, quotationController.deleteQuotation);
 
 module.exports = router;
