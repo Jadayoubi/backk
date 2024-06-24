@@ -3,7 +3,9 @@
 document.addEventListener('DOMContentLoaded', fetchCareers);
 const token = localStorage.getItem('jwtToken'); 
 function fetchCareers() {
-    fetch('http://localhost:3000/api/jobListing')
+    fetch('http://localhost:3000/api/jobListing',{ headers: {
+        'Authorization': `Bearer ${token}`
+    },})
         .then(response => response.json())
         .then(data => {
             const tableBody = document.getElementById('careers-table').querySelector('tbody');
