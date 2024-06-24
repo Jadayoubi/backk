@@ -70,7 +70,7 @@ body{
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.175);
     
 }
-.bus .nav-item:hover .dropdown-menu,
+
 .bus .dropdown-menu.show {
     display: block;
 }
@@ -119,10 +119,10 @@ body{
 .Products .right{
    margin-left: 20%;
 }
-.Products .nav-item:hover .dropdown-menu,
+/* .Products .nav-item:hover .dropdown-menu,
 .bus .dropdown-menu.show {
     display: block;
-}
+} */
 
 .Products .dropdown-item {
     display: flex;
@@ -234,7 +234,7 @@ height: 45%;
     display: none;
     position: absolute;
     left: 55%;
-    top: 0;
+    top: 10%;
     background-color: white; 
     padding: 10px;
     min-width: 200px;
@@ -250,6 +250,9 @@ height: 45%;
     background-color: #495057; 
 }
 .services-menu:hover .services-menu-content {
+    display: block;
+}
+.about:hover .services-menu-content {
     display: block;
 }
 .free-quote-btn {

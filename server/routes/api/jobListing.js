@@ -12,7 +12,7 @@ const verifyToken = require('../../middleware/authMiddleware'); // Adjust the pa
 // router.put('/:id', verifyToken, jobListingController.updateJobListing);
 // router.delete('/:id', verifyToken, jobListingController.deleteJobListing);
 router.post('/',verifyToken, jobListingController.createJobListing);
-router.get('/',verifyToken, jobListingController.getAllJobListings);
+router.get('/', jobListingController.getAllJobListings);
 router.get('/applicants', jobListingController.getApplicantsByJobTitle);
 // DELETE a job listing by ID
 router.delete('/:id',verifyToken, jobListingController.deleteJobListing);
