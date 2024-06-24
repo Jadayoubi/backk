@@ -4,7 +4,7 @@ const quotationController = require('../../controllers/quotationController');
 const  verifyToken  = require('../../middleware/authMiddleware');
 
 // Routes for submitting quotations
-router.post('/web', verifyToken, quotationController.submitWebQuotation);
+router.post('/web', quotationController.submitWebQuotation);
 
 // Routes for retrieving all quotations
 router.get('/webQuotations', verifyToken, quotationController.getAllQuotations);
