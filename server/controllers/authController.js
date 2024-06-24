@@ -9,36 +9,42 @@ const JWT_EXPIRATION = '60d'; // Token expiration time
 
 class Controller {
   hashPassword = async (password) => {
+    console.log('Password received:', password);
     try {
       const salt = await bcrypt.genSalt(12);
+      console.log('Generated salt:', salt);
       const hashedPassword = await bcrypt.hash(password, salt);
+      console.log('Hashed password:', hashedPassword);
       return hashedPassword;
     } catch (error) {
       throw new Error(`Hashing error: ${error.message}`);
     }
   };
+  
 
   signup = async (req, res) => {
     try {
       const hashedPassword = await this.hashPassword(req.body.password);
       const newUser = await user.create({
         ...req.body,
-        isVerified: false,
+        isVerified: true,
         password: hashedPassword,
       });
+  
       return res.status(201).json({
         message: "User created successfully",
         success: true,
         data: newUser,
       });
     } catch (error) {
+      console.error('Signup error:', error);
       return res.status(500).json({
         message: `Error: ${error.message}`,
         success: false,
       });
     }
   };
-
+  
   login = async (req, res) => {
     try {
         const { email, password } = req.body;
