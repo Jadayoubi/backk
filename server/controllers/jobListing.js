@@ -60,3 +60,30 @@ exports.deleteJobListing = async (req, res) => {
         res.status(500).json({ error: error.message });
     }
 };
+exports.getApplicantsByJobTitle = async (req, res) => {
+    try {
+        // Aggregate applicants grouped by job title
+        const applicants = await CareerApplication.aggregate([
+            {
+                $group: {
+                    _id: "$jobTitle",
+                    applicants: {
+                        $push: {
+                            firstName: "$firstName",
+                            lastName: "$lastName",
+                            email: "$email",
+                            phone: "$phone",
+                            cv: "$cv",
+                            appliedAt: "$appliedAt"
+                        }
+                    }
+                }
+            }
+        ]);
+
+        res.status(200).json(applicants);
+    } catch (error) {
+        console.error('Error fetching applicants:', error);
+        res.status(500).json({ error: 'Failed to fetch applicants. Please try again later.' });
+    }
+};

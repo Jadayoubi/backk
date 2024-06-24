@@ -6,6 +6,7 @@ const jobListingRoutes = require('./routes/api/jobListing');
 const app = express();
 const careerRoutes = require('./routes/api/careerRoutes');
 const jobRoutes = require('./routes/api/jobRoute');
+const adminRoutes = require('./routes/api/adminRoutes'); // Make sure to import adminRoutes
 
 // MongoDB connection
 mongoose
@@ -16,19 +17,19 @@ mongoose
 // Middleware Section
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-const allowedOrigins = ['http://localhost:5500', 'http://192.168.0.110:3001'];
+// const allowedOrigins = ['http://localhost:5500', 'http://192.168.0.110:3001'];
 
-app.use(cors({
-  origin: function(origin, callback) {
-    if (!origin) return callback(null, true);
-    if (allowedOrigins.indexOf(origin) === -1) {
-      const msg = 'The CORS policy for this site does not allow access from the specified origin.';
-      return callback(new Error(msg), false);
-    }
-    return callback(null, true);
-  },
-  credentials: false,  // If you're sending cookies or authorization headers
-}));
+// app.use(cors({
+//   origin: function(origin, callback) {
+//     if (!origin) return callback(null, true);
+//     if (allowedOrigins.indexOf(origin) === -1) {
+//       const msg = 'The CORS policy for this site does not allow access from the specified origin.';
+//       return callback(new Error(msg), false);
+//     }
+//     return callback(null, true);
+//   },
+//   credentials: false,  // If you're sending cookies or authorization headers
+// }));
 
 app.use((req, res, next) => {
   res.header("Access-Control-Allow-Origin", "*");
@@ -47,7 +48,7 @@ app.use('/api', careerRoutes);
 // app.js or server.js
 app.use('/api', jobRoutes);
 app.use('/api/jobListing', jobListingRoutes);
-
+app.use('/api', adminRoutes);
 // Error handling middleware (global)
 app.use((err, req, res, next) => {
   console.error(err.stack);
