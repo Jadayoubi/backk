@@ -1,18 +1,18 @@
 const express = require('express');
 const router = express.Router();
 const quotationController = require('../../controllers/quotationController');
-const  verifyToken  = require('../../middleware/authMiddleware');
+const verifyToken = require('../../middleware/authMiddleware');
 
-// Routes for submitting quotations
-router.post('/web', quotationController.submitWebQuotation);
+// Log each request to this router
+router.use((req, res, next) => {
+  console.log(`Received request: ${req.method} ${req.url}`);
+  next();
+});
 
-// Routes for retrieving all quotations
+// Routes for web quotations
 router.get('/webQuotations', verifyToken, quotationController.getAllQuotations);
-
-// Routes for updating a quotation by ID
+router.post('/web', quotationController.submitWebQuotation);
 router.put('/webQuotations/:id', verifyToken, quotationController.updateQuotationStatus);
-
-// Routes for deleting a quotation by ID
 router.delete('/webQuotations/:id', verifyToken, quotationController.deleteQuotation);
 
 module.exports = router;
