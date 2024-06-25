@@ -18,7 +18,7 @@ let selectedAnswers = {
 
 document.getElementById('webdev-email').addEventListener('input', updateNextButtonStateWebdev);
 
-document.getElementById('apdev-email').addEventListener('input', updateNextButtonStateAppdev);
+ document.getElementById('appdev-email').addEventListener('input', updateNextButtonStateAppdev);
 
 function validateEmail(emailInputId, errorId) {
     const emailInput = document.getElementById(emailInputId);
@@ -499,7 +499,7 @@ function updateAppBackButtonState() {
         appdevBackButton.classList.remove('enabled');
     }
 }
-document.querySelectorAll('#appdev-question-1 .app-question-card').forEach(card => {
+document.querySelectorAll('#ap[dev-question-1 .web-question-card').forEach(card => {
     card.addEventListener('click', function() {
         selectedAnswers.type = card.getAttribute('data-answer');
         console.log('Selected Type:', selectedAnswers.type);
@@ -562,6 +562,6 @@ updateWebBackButtonState()
 updateWebProgressBar();
 updateNextButtonStateWebdev();
 //////////////////////////
-updateAppBackButtonState()
-updateAppProgressBar();
-updateNextButtonStateAppdev();
+// updateAppBackButtonState()
+// updateAppProgressBar();
+// updateNextButtonStateAppdev();
