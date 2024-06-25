@@ -133,6 +133,7 @@ function submitFormWeb() {
 
         fetch('http://localhost:3000/api/quotations/web', {
             method: 'POST',
+            
             headers: {
                 'Content-Type': 'application/json',
             },
@@ -499,59 +500,124 @@ function updateAppBackButtonState() {
         appdevBackButton.classList.remove('enabled');
     }
 }
-document.querySelectorAll('#ap[dev-question-1 .web-question-card').forEach(card => {
+
+// Frontend fetch function for submitting app development quotation
+
+function submitFormApp() {
+    if (validateEmail('appdev-email', 'appdevEmailError')) {
+        const email = document.getElementById('appdev-email').value.trim();
+        const phone = document.getElementById('appdev-phone').value.trim();
+        const company = document.getElementById('appdev-company').value.trim();
+        const appType = selectedAnswers.appType;
+        const platforms = selectedAnswers.platforms;
+        const features = selectedAnswers.features;
+        const designBranding = selectedAnswers.designBranding;
+        const budgetTimeline = selectedAnswers.budgetTimeline;
+
+        const payload = {
+            email: email,
+            phone: phone,
+            company: company,
+            appType: appType,
+            platforms: platforms,
+            features: features,
+            designBranding: designBranding,
+            budgetTimeline: budgetTimeline
+        };
+        console.log(platforms);
+        console.log(payload)
+        fetch('http://localhost:3000/api/quotations', {
+            method: 'POST',
+            // mode: 'no-cors',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(payload),
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`Network response was not ok: ${response.statusText}`);
+            }
+            return response.json();
+        })
+        .then(data => {
+            console.log('Quotation submitted successfully:', data);
+            // Optionally show confirmation message or redirect
+            document.getElementById('appdev-question-container').style.display = 'none';
+            document.getElementById('Appconfirmation-section').style.display = 'block';
+            document.getElementById('Appbuttons').style.display = 'none';
+            //Appbuttons
+        })
+        .catch(error => {
+            console.error('Error submitting quotation:', error);
+            // Handle error: display message to user, retry, etc.
+        });
+    } else {
+        document.getElementById('appdevEmailError').style.display = 'block';
+        console.log("Email error");
+    }
+}
+
+// Event listeners for selecting answers
+
+document.querySelectorAll('#appdev-question-1 .app-question-card').forEach(card => {
     card.addEventListener('click', function() {
-        selectedAnswers.type = card.getAttribute('data-answer');
-        console.log('Selected Type:', selectedAnswers.type);
+        selectedAnswers.appType = card.getAttribute('data-answer');
+        console.log('Selected App Type:', selectedAnswers.appType);
     });
 });
 
-// function submitFormWeb() {
-//     if (validateEmail('webdev-email', 'webdevEmailError')) {
-//         const email = document.getElementById('webdev-email').value.trim();
-//         const phone = document.getElementById('webdev-phone').value.trim();
-//         const company = document.getElementById('webdev-company').value.trim();
-//         const requirements = selectedAnswers.requirements;
+document.querySelectorAll('#appdev-question-2 .app-question-card').forEach(card => {
+    card.addEventListener('click', function() {
+        const platform = card.getAttribute('data-answer');
+        
+        // Initialize selectedAnswers.platforms as an empty array if it's undefined
+        if (!selectedAnswers.platforms) {
+            selectedAnswers.platforms = [];
+        }
 
-//         const payload = {
-//             email: email,
-//             phone: phone,
-//             company: company,
-//             type: selectedAnswers.type,
-//             logo: selectedAnswers.logo,
-//             branding: selectedAnswers.branding,
-//             pages: 5,
-//             requirements: requirements
-//         };
+        if (!selectedAnswers.platforms.includes(platform)) {
+            selectedAnswers.platforms.push(platform);
+        } else {
+            selectedAnswers.platforms = selectedAnswers.platforms.filter(p => p !== platform);
+        }
+        console.log('Selected Platforms:', selectedAnswers.platforms);
+    });
+});
 
-//         fetch('http://localhost:3000/api/quotations/web', {
-//             method: 'POST',
-//             headers: {
-//                 'Content-Type': 'application/json',
-//             },
-//             body: JSON.stringify(payload),
-//         })
-//         .then(response => {
-//             if (!response.ok) {
-//                 throw new Error(`Network response was not ok: ${response.statusText}`);
-//             }
-//             return response.json();
-//         })
-//         .then(data => {
-//             console.log('Quotation submitted successfully:', data);
-//             // Optionally show confirmation message or redirect
-//             document.getElementById('webdev-question-container').style.display = 'none';
-//             document.getElementById('Webconfirmation-section').style.display = 'block';
-//         })
-//         .catch(error => {
-//             console.error('Error submitting quotation:', error);
-//             // Handle error: display message to user, retry, etc.
-//         });
-//     } else {
-//         document.getElementById('webdevEmailError').style.display = 'block';
-//         console.log("Email error");
-//     }
-// }
+
+document.querySelectorAll('#appdev-question-3 .app-question-card').forEach(card => {
+    card.addEventListener('click', function() {
+        const feature = card.getAttribute('data-answer');
+        
+        // Initialize selectedAnswers.features as an empty array if it's undefined
+        if (!selectedAnswers.features) {
+            selectedAnswers.features = [];
+        }
+
+        if (!selectedAnswers.features.includes(feature)) {
+            selectedAnswers.features.push(feature);
+        } else {
+            selectedAnswers.features = selectedAnswers.features.filter(f => f !== feature);
+        }
+        console.log('Selected Features:', selectedAnswers.features);
+    });
+});
+
+
+document.querySelectorAll('#appdev-question-4 .app-question-card').forEach(card => {
+    card.addEventListener('click', function() {
+        selectedAnswers.designBranding = card.getAttribute('data-answer');
+        console.log('Selected Design/Branding:', selectedAnswers.designBranding);
+    });
+});
+
+document.querySelectorAll('#appdev-question-5 .app-question-card').forEach(card => {
+    card.addEventListener('click', function() {
+        selectedAnswers.budgetTimeline = card.getAttribute('data-answer');
+        console.log('Selected Budget/Timeline:', selectedAnswers.budgetTimeline);
+    });
+});
 
 // Initial call to set progress and button state
 updateFleetProgressBar();
@@ -562,6 +628,6 @@ updateWebBackButtonState()
 updateWebProgressBar();
 updateNextButtonStateWebdev();
 //////////////////////////
-// updateAppBackButtonState()
-// updateAppProgressBar();
-// updateNextButtonStateAppdev();
+updateAppBackButtonState()
+updateAppProgressBar();
+updateNextButtonStateAppdev();
