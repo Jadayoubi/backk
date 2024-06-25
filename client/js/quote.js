@@ -1,9 +1,12 @@
 let totalFleetQuestions = 4; // Total number of questions
 let currentFleetQuestion = 1; // Current question index
 let count = 0;
+/////////////////////
 let totalWebQuestions = 5;
 let currentWebQuestion = 1;
-
+/////////////////////
+let totalAppQuestions=6;
+let currentAppQuestions=1;
 
 let selectedAnswers = {
     type: '',
@@ -14,6 +17,8 @@ let selectedAnswers = {
 };
 
 document.getElementById('webdev-email').addEventListener('input', updateNextButtonStateWebdev);
+
+document.getElementById('apdev-email').addEventListener('input', updateNextButtonStateAppdev);
 
 function validateEmail(emailInputId, errorId) {
     const emailInput = document.getElementById(emailInputId);
@@ -73,11 +78,7 @@ document.getElementById('webdev-question-container').addEventListener('click', e
     }
 });
 
-// document.getElementById('webdev-submit-btn').addEventListener('click', () => {
-//     if (validateEmail('webdev-email', 'webdevEmailError')) {
-//         submitFormWeb();
-//     }
-// });
+
 
 function updateNextButtonStateWebdev() {
     let currentQuestionElement = document.getElementById(`webdev-question-${currentWebQuestion}`);
@@ -205,8 +206,9 @@ document.querySelectorAll('#brandingSelection .web-question-card').forEach(card 
         console.log('Selected Branding:', selectedAnswers.branding);
     });
 });
-
-
+///////////////////////////////////////////////////////////////////////////////////
+//                                      Fleet
+//////////////////////////////////////////////////////////////////////////////////
 
 document.getElementById('email').addEventListener('input', updateNextButtonState);
 let fleetselectedAnswers = {
@@ -410,11 +412,156 @@ document.querySelectorAll('#question-3 .fleet-question-card').forEach(card => {
     });
 });
 
+/////////////////////////////////////////////////////////////////////////
+//                          APP
+//////////////////////////////////////////////////////////////////////////
+function showAppQuestions(service) {
+    console.log("app clicked");
+    document.getElementById('service-container').classList.add('hidden'); // Hide the service options
+    document.getElementById(service).classList.remove('hidden'); // Show the selected service section
+   
+    document.getElementById(`appdev-question-${currentAppQuestions}`).style.display = 'block'; // Show the first question of WebDev
+}
+
+
+document.querySelectorAll('.app-question-card').forEach(card => {
+    card.addEventListener('click', () => {
+        card.classList.toggle('selected');
+        card.classList.add('bounce-top');
+        updateNextButtonStateAppdev();
+        setTimeout(() => {
+            card.classList.remove('bounce-top');
+        }, 1000);
+    });
+});
+
+document.getElementById('appdev-next-btn').addEventListener('click', () => {
+    if (currentAppQuestions < totalAppQuestions) {
+        document.getElementById(`appdev-question-${currentAppQuestions}`).style.display = 'none';
+        currentAppQuestions++;
+        document.getElementById(`appdev-question-${currentAppQuestions}`).style.display = 'block';
+        updateAppProgressBar();
+        updateNextButtonStateAppdev();
+        updateAppBackButtonState();
+    } 
+    // else {
+    //     submitFormWeb(); // Submit the form if it's the last question
+    // }
+});
+
+document.getElementById('appdev-back-btn').addEventListener('click', () => {
+    if (currentAppQuestions > 1) {
+        document.getElementById(`appdev-question-${currentAppQuestions}`).style.display = 'none';
+        currentAppQuestions--;
+        document.getElementById(`appdev-question-${currentAppQuestions}`).style.display = 'block';
+        updateAppProgressBar();
+        updateNextButtonStateAppdev();
+        updateAppBackButtonState();
+    }
+});
+
+document.getElementById('appdev-question-container').addEventListener('click', event => {
+    const target = event.target;
+    if (target.classList.contains('question-card')) {
+        updateNextButtonStateAppdev(); 
+    }
+});
+
+
+function updateNextButtonStateAppdev() {
+    let currentQuestionElement = document.getElementById(`appdev-question-${currentAppQuestions}`);
+    let selectedCards = currentQuestionElement.querySelectorAll('.question-card.selected').length;
+
+    // Check if it's the last question in the webdev section
+    if (currentAppQuestions === totalAppQuestions) {
+        let emailInput = document.getElementById('appdev-email').value.trim();
+        document.getElementById('appdev-next-btn').style.display = 'none';
+        document.getElementById('appdev-submit-btn').disabled = emailInput === '';
+        document.getElementById('appdev-submit-btn').style.display = emailInput === '' ? 'none' : '';
+    } else {
+        document.getElementById('appdev-next-btn').disabled = selectedCards === 0;
+        document.getElementById('appdev-submit-btn').style.display = 'none';
+    }
+}
+
+function updateAppProgressBar() {
+    let progressPercentage = ((currentAppQuestions-1 ) / totalAppQuestions) * 100;
+    document.getElementById('appprogress-bar').style.width = `${progressPercentage}%`;
+    document.getElementById('appprogress-text').innerText = `${Math.round(progressPercentage)}%`;
+}
+
+function updateAppBackButtonState() {
+    const appdevBackButton = document.getElementById('appdev-back-btn');
+    appdevBackButton.disabled = currentAppQuestions === 1;
+    if (currentAppQuestions > 1) {
+        appdevBackButton.classList.add('enabled');
+    } else {
+        appdevBackButton.classList.remove('enabled');
+    }
+}
+document.querySelectorAll('#appdev-question-1 .app-question-card').forEach(card => {
+    card.addEventListener('click', function() {
+        selectedAnswers.type = card.getAttribute('data-answer');
+        console.log('Selected Type:', selectedAnswers.type);
+    });
+});
+
+// function submitFormWeb() {
+//     if (validateEmail('webdev-email', 'webdevEmailError')) {
+//         const email = document.getElementById('webdev-email').value.trim();
+//         const phone = document.getElementById('webdev-phone').value.trim();
+//         const company = document.getElementById('webdev-company').value.trim();
+//         const requirements = selectedAnswers.requirements;
+
+//         const payload = {
+//             email: email,
+//             phone: phone,
+//             company: company,
+//             type: selectedAnswers.type,
+//             logo: selectedAnswers.logo,
+//             branding: selectedAnswers.branding,
+//             pages: 5,
+//             requirements: requirements
+//         };
+
+//         fetch('http://localhost:3000/api/quotations/web', {
+//             method: 'POST',
+//             headers: {
+//                 'Content-Type': 'application/json',
+//             },
+//             body: JSON.stringify(payload),
+//         })
+//         .then(response => {
+//             if (!response.ok) {
+//                 throw new Error(`Network response was not ok: ${response.statusText}`);
+//             }
+//             return response.json();
+//         })
+//         .then(data => {
+//             console.log('Quotation submitted successfully:', data);
+//             // Optionally show confirmation message or redirect
+//             document.getElementById('webdev-question-container').style.display = 'none';
+//             document.getElementById('Webconfirmation-section').style.display = 'block';
+//         })
+//         .catch(error => {
+//             console.error('Error submitting quotation:', error);
+//             // Handle error: display message to user, retry, etc.
+//         });
+//     } else {
+//         document.getElementById('webdevEmailError').style.display = 'block';
+//         console.log("Email error");
+//     }
+// }
 
 // Initial call to set progress and button state
 updateFleetProgressBar();
 updateNextButtonState();
 updateFleetBackButtonState();
+////////////////////////
 updateWebBackButtonState()
 updateWebProgressBar();
 updateNextButtonStateWebdev();
+//////////////////////////
+updateAppBackButtonState()
+updateAppProgressBar();
+updateNextButtonStateAppdev();
