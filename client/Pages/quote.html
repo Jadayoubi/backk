@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Startup - Startup Website Template</title>
+    <title>Quotation</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
    
     <!-- Favicon -->
@@ -102,25 +102,6 @@
     <!-- Navbar End -->
 
 
-    <!-- Full Screen Search Start -->
-    <div class="modal fade" id="searchModal" tabindex="-1">
-        <div class="modal-dialog modal-fullscreen">
-            <div class="modal-content" style="background: rgba(9, 30, 62, .7);">
-                <div class="modal-header border-0">
-                    <button type="button" class="btn bg-white btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body d-flex align-items-center justify-content-center">
-                    <div class="input-group" style="max-width: 600px;">
-                        <input type="text" class="form-control bg-transparent border-primary p-3" placeholder="Type search keyword">
-                        <button class="btn btn-primary px-4"><i class="bi bi-search"></i></button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Full Screen Search End -->
-
-  
     <!-- Quote Start -->
    
    
@@ -135,6 +116,10 @@
         <div class="service bounce-top" id="web-service" onclick="showWebQuestions('webDev')">
             <div><i class="fa-solid fa-laptop-code" style="font-size: 50px;"></i></div>
             Web Development
+        </div>
+        <div class="service bounce-top" id="app-service" onclick="showAppQuestions('appDev')">
+            <div><i class="fa-solid fa-laptop-code" style="font-size: 50px;"></i></div>
+           App Development
         </div>
     </div>
 
@@ -405,24 +390,153 @@
         
     </section>
     
+    <section id="appDev" class="appDev-questions hidden">
+
+            <div class="progress-container" id="appprogress-container">
+                <span id="appprogress-text">0%</span>
+                <div class="progress">
+                    <div id="appprogress-bar" class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                    </div>
+                </div>
+            </div>
+            <div id="appdev-question-container" class="text-center">
+                <!-- Question 1: Type of App -->
+                <div class="question" id="appdev-question-1">
+                    <h2 class="text-center">What kind of app do you need?</h2>
+                    <div class="app-question-card question-card" data-answer="mobile">
+                        <div><i class="fa-solid fa-mobile-alt" style="font-size: 28px;"></i></div>
+                        <p>Mobile App</p>
+                    </div>
+                    <div class="app-question-card question-card" data-answer="web">
+                        <div><i class="fa-solid fa-globe" style="font-size: 28px;"></i></div>
+                        <p>Web App</p>
+                    </div>
+                    <div class="app-question-card question-card" data-answer="desktop">
+                        <div><i class="fa-solid fa-desktop" style="font-size: 28px;"></i></div>
+                        <p>Desktop App</p>
+                    </div>
+                </div>
+                
+                <!-- Question 2: Platform -->
+                <div class="question" id="appdev-question-2" style="display:none;">
+                    <h2 class="text-center">Which platform(s) should the app support?</h2>
+                    <div class="app-question-card question-card" data-answer="ios">
+                        <div><i class="fa-brands fa-apple" style="font-size: 28px;"></i></div>
+                        <p>iOS</p>
+                    </div>
+                    <div class="app-question-card question-card" data-answer="android">
+                        <div><i class="fa-brands fa-android" style="font-size: 28px;"></i></div>
+                        <p>Android</p>
+                    </div>
+                    <div class="app-question-card question-card" data-answer="both">
+                        <div><i class="fa-solid fa-mobile-alt" style="font-size: 28px;"></i></div>
+                        <p>Both</p>
+                    </div>
+                    <div class="app-question-card question-card" data-answer="other">
+                        <div><i class="fa-solid fa-code" style="font-size: 28px;"></i></div>
+                        <p>Other</p>
+                    </div>
+                </div>
+        
+                <!-- Question 3: Features -->
+                <div class="question" id="appdev-question-3" style="display:none;">
+                    <h2 class="text-center">What features do you need?</h2>
+                    <div class="app-question-card question-card" data-answer="user-authentication">
+                        <div><i class="fa-solid fa-user-lock" style="font-size: 28px;"></i></div>
+                        <p>User Authentication</p>
+                    </div>
+                    <div class="app-question-card question-card" data-answer="payment-integration">
+                        <div><i class="fa-solid fa-credit-card" style="font-size: 28px;"></i></div>
+                        <p>Payment Integration</p>
+                    </div>
+                    <div class="app-question-card question-card" data-answer="push-notifications">
+                        <div><i class="fa-solid fa-bell" style="font-size: 28px;"></i></div>
+                        <p>Push Notifications</p>
+                    </div>
+                    <div class="app-question-card question-card" data-answer="social-media-integration">
+                        <div><i class="fa-solid fa-share-alt" style="font-size: 28px;"></i></div>
+                        <p>Social Media Integration</p>
+                    </div>
+                    <div class="app-question-card question-card" data-answer="location-services">
+                        <div><i class="fa-solid fa-map-marker-alt" style="font-size: 28px;"></i></div>
+                        <p>Location Services</p>
+                    </div>
+                    <div class="app-question-card question-card" data-answer="other">
+                        <div><i class="fa-solid fa-code" style="font-size: 28px;"></i></div>
+                        <p>Other</p>
+                    </div>
+                </div>
+        
+                <!-- Question 4: Design and Branding -->
+                <div class="question" id="appdev-question-4" style="display:none;">
+                    <h2 class="text-center">Do you have a design or branding guidelines?</h2>
+                    <div class="app-question-card question-card" data-answer="yes">
+                        <div><i class="fa-regular fa-thumbs-up" style="font-size: 100px;"></i></div>
+                        <p>Yes</p>
+                    </div>
+                    <div class="app-question-card question-card" data-answer="no">
+                        <div><i class="fa-solid fa-xmark" style="font-size: 100px;"></i></div>
+                        <p>No</p>
+                    </div>
+                    <div class="app-question-card question-card" data-answer="need-assistance">
+                        <div><i class="fa-solid fa-handshake-angle" style="font-size: 77px;"></i></div>
+                        <p>Need assistance</p>
+                    </div>
+                </div>
+        
+                <!-- Question 5: Budget and Timeline -->
+                <div class="question" id="appdev-question-5" style="display:none;">
+                    <h2 class="text-center">What is your budget and timeline?</h2>
+                    <div class="app-question-card question-card" data-answer="low-budget">
+                        <div><i class="fa-solid fa-dollar-sign" style="font-size: 28px;"></i></div>
+                        <p>Low Budget (longer timeline)</p>
+                    </div>
+                    <div class="app-question-card question-card" data-answer="medium-budget">
+                        <div><i class="fa-solid fa-dollar-sign" style="font-size: 28px;"></i></div>
+                        <p>Medium Budget</p>
+                    </div>
+                    <div class="app-question-card question-card" data-answer="high-budget">
+                        <div><i class="fa-solid fa-dollar-sign" style="font-size: 28px;"></i></div>
+                        <p>High Budget (shorter timeline)</p>
+                    </div>
+                </div>
+        
+                <!-- Contact Information -->
+                <div class="question" id="appdev-question-6" style="display:none;">
+                    <h2 class="text-center">
+                        What is your email address?<br/> This is the address to which we will send you all the information.
+                    </h2>
+                    <label class="emailLabel">Email:</label><br>
+                    <input type="email" id="appdev-email" name="email" class="email" placeholder="Enter your email" required><br>
+                    <span class="error" id="appdevEmailError" style="color: red; font-size: large; display: none;">Please enter a valid email address.</span><br><br>
+                
+                    <label class="phoneLabel">Phone Number:</label><br>
+                    <input type="tel" id="appdev-phone" name="phone" class="phone email" placeholder="Enter your phone number" required><br><br>
+                
+                    <label class="companyLabel">Company Name:</label><br>
+                    <input type="text" id="appdev-company" name="company" class="company" placeholder="Enter your company name" required><br><br>
+                </div>
+            </div>
+            <section id="Appbuttons"> 
+                <button id="appdev-back-btn" class="btn btn-secondary submit-btn" disabled>Back</button>
+                <button id="appdev-next-btn" class="btn btn-primary submit-btn" disabled>Next</button>
+                <button id="appdev-submit-btn" class="btn btn-primary submit-btn bounce-top" onclick="submitFormApp()" style="display: none;">Submit</button>
+            </section>
+            <div id="Appconfirmation-section" class="confirmationSection" style="display: none;">
+                <h2 class="text-center">Thank you!</h2>
+                <p>We have received your quotation. We will get back to you shortly.</p>
+                <button class="btn btn-primary submit-btn" onclick="redirect()">Home Page</button>
+            </div>
+        
+    </section>
     <!-- Quote End -->
-
-
-    <!-- Quote End -->
-
-
 
     <script defer src="/client/js/footer.js"></script>
     <!-- Footer Start -->
     <div id="footer-container"></div>
     <!-- Footer End -->
-
-
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded back-to-top"><i class="bi bi-arrow-up"></i></a>
-
-
-
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -437,12 +551,7 @@
     <!-- Template Javascript -->
     <script src="../js/main.js"></script>
     <script src="../js/quote.js"></script>
-    <!-- <script src="../js/fleetQuotation.js"></script> -->
-    <!-- <script src="../js/webQuote.js"></script> -->
-    
-    <script>
- 
-    </script>
+
 </body>
 
 </html>
