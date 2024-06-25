@@ -7,7 +7,7 @@ const app = express();
 const careerRoutes = require('./routes/api/careerRoutes');
 const jobRoutes = require('./routes/api/jobRoute');
 const adminRoutes = require('./routes/api/adminRoutes'); // Make sure to import adminRoutes
-
+const quotationsRouter = require('./routes/api/appDevQuotationRoutes');
 // MongoDB connection
 mongoose
   .connect('mongodb://127.0.0.1:27017/secufleet')
@@ -30,7 +30,9 @@ app.use(express.urlencoded({ extended: true }));
 //   },
 //   credentials: false,  // If you're sending cookies or authorization headers
 // }));
+ // Assuming you have a route file for quotations
 
+app.use('/api', quotationsRouter);
 app.use((req, res, next) => {
   res.header("Access-Control-Allow-Origin", "*");
   res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, PATCH");
