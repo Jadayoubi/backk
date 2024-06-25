@@ -1,6 +1,5 @@
 body{
-    display: flex;
-    flex-direction: column;
+
     align-items: center;
     
 }
@@ -86,7 +85,8 @@ body{
 .submit-btn {
     display: block;
     margin: 20px auto;
-    width:100px
+    width:100px;
+    margin-left: 45%;
 }
 /* Add this CSS */
 .enabled {
