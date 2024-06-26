@@ -1,7 +1,4 @@
 const WebQuotation = require('../models/WebQuotation');
-// const AppQuotation = require('../models/AppQuotation');
-// const FleetQuotation = require('../models/FleetQuotation');
-
 const WebQuotationAdmin = require('../models/WebQuotation'); 
 exports.submitWebQuotation = async (req, res) => {
     try {
@@ -50,14 +47,18 @@ exports.submitWebQuotation = async (req, res) => {
     }
 };
 
+
+
 exports.getAllQuotations = async (req, res) => {
     try {
-        const quotations = await WebQuotationAdmin.find(); // Fetch all quotations from the database
+        const quotations = await WebQuotation.find(); // Fetch all quotations from the database
         res.status(200).json(quotations);
     } catch (error) {
+        console.error('Error fetching quotations:', error);
         res.status(500).json({ error: 'Failed to fetch quotations' });
     }
 };
+
 exports.updateQuotationStatus = async (req, res) => {
     try {
         const { id } = req.params;
@@ -90,46 +91,3 @@ exports.deleteQuotation = async (req, res) => {
         res.status(500).json({ error: 'Internal Server Error' });
     }
 };
-// exports.submitAppQuotation = async (req, res) => {
-//     try {
-//         const { email, phone, company, type, features, platform } = req.body;
-
-//         const newQuotation = new AppQuotation({
-//             email,
-//             phoneNumber: phone,
-//             companyName: company,
-//             type,
-//             features,
-//             platform
-//         });
-
-//         await newQuotation.save();
-
-//         res.status(201).json({ message: 'App quotation received successfully!' });
-//     } catch (error) {
-//         console.error('Error submitting app quotation:', error);
-//         res.status(500).json({ message: 'Failed to submit app quotation. Please try again later.' });
-//     }
-// };
-
-// exports.submitFleetQuotation = async (req, res) => {
-//     try {
-//         const { email, phone, company, type, vehiclesCount, services } = req.body;
-
-//         const newQuotation = new FleetQuotation({
-//             email,
-//             phoneNumber: phone,
-//             companyName: company,
-//             type,
-//             vehiclesCount,
-//             services
-//         });
-
-//         await newQuotation.save();
-
-//         res.status(201).json({ message: 'Fleet management quotation received successfully!' });
-//     } catch (error) {
-//         console.error('Error submitting fleet management quotation:', error);
-//         res.status(500).json({ message: 'Failed to submit fleet management quotation. Please try again later.' });
-//     }
-// };

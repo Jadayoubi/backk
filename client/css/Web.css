@@ -11,7 +11,7 @@
     --weight3: 600;
 }
 .containerBack {
-    background: url('../img/images/works/web/parallax-1.jpg') no-repeat center center/cover;
+    background: url('../images/works/web/parallax-1.jpg') no-repeat center center/cover;
     height: 50vh;
     display: flex;
     justify-content: center;
