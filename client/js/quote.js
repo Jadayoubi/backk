@@ -150,6 +150,7 @@ function submitFormWeb() {
             // Optionally show confirmation message or redirect
             document.getElementById('webdev-question-container').style.display = 'none';
             document.getElementById('Webconfirmation-section').style.display = 'block';
+            document.getElementById('Webbuttons').style.display = 'none';
         })
         .catch(error => {
             console.error('Error submitting quotation:', error);
@@ -346,9 +347,9 @@ function fleetsubmitForm() {
         })
         .then(data => {
             console.log('Quotation submitted successfully:', data);
-            // Optionally show confirmation message or redirect
             document.getElementById('fleet-question-container').style.display = 'none';
             document.getElementById('confirmation-section').style.display = 'block';
+            document.getElementById('fleetbuttons').style.display = 'none';
         })
         .catch(error => {
             console.error('Error submitting quotation:', error);
