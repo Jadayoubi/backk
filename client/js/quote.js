@@ -526,7 +526,7 @@ function submitFormApp() {
         };
         console.log(platforms);
         console.log(payload)
-        fetch('http://localhost:3000/api/quotations', {
+        fetch('http://localhost:3000/api/quotations/app', {
             method: 'POST',
             // mode: 'no-cors',
             headers: {

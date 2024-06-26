@@ -11,7 +11,7 @@ function fetchAppDevQuotations() {
         return;
     }
 
-    fetch('http://localhost:3000/api/quotations', {
+    fetch('http://localhost:3000/api/quotations/app/', {
         method: 'GET',
         headers: {
             'Authorization': `Bearer ${token}`
@@ -63,7 +63,7 @@ function getActionButton(quotation) {
 function updateAppDevStatus(id, status) {
     const token = localStorage.getItem('jwtToken'); // Assuming you have stored the JWT token correctly
 
-    fetch(`http://localhost:3000/api/quotations/${id}`, {
+    fetch(`http://localhost:3000/api/quotations/app/${id}`, {
         method: 'PUT',
         headers: {
             'Content-Type': 'application/json',
@@ -87,7 +87,7 @@ function updateAppDevStatus(id, status) {
 function deleteAppDevQuotation(id) {
     const token = localStorage.getItem('jwtToken'); // Assuming you have stored the JWT token correctly
 
-    fetch(`http://localhost:3000/api/quotations/${id}`, {
+    fetch(`http://localhost:3000/api/quotations/app/${id}`, {
         method: 'DELETE',
         headers: {
             'Authorization': `Bearer ${token}`

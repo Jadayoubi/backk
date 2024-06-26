@@ -50,7 +50,6 @@ exports.submitWebQuotation = async (req, res) => {
 
 
 exports.getAllQuotations = async (req, res) => {
-    console.log('Entered getAllQuotations function');
     try {
         const quotations = await WebQuotation.find(); // Fetch all quotations from the database
         res.status(200).json(quotations);
