@@ -141,7 +141,7 @@ function changeContent(section) {
 
     switch (section) {
         case 'security':
-            image.src = './images/aboutSlider/AI.jpg';
+            image.src = './images/aboutSlider/camera.jpg';
             text.innerHTML = `
                 Use AI-powered video technology to protect your most important assets, your employees. Capture and manage security risks in real time across your operations.
                 <br>
@@ -209,35 +209,23 @@ function changeContent(section) {
     const rect = activeLink.getBoundingClientRect();
     const containerRect = document.querySelector('.navbar').getBoundingClientRect();
     const width = rect.width;
-    const left = rect.left - containerRect.left;
+    const left = rect.left ;
 
     progressBar.style.transition = 'none';
     progressBar.style.width = '0';
     progressBar.style.left = `${left}px`;
-    
+    console.log(left);
     setTimeout(() => {
         progressBar.style.transition = 'width 5s linear';
         progressBar.style.width = `${width}px`;
-    }, 10);
+    }, 5);
 }
 
 function autoChangeContent() {
     currentIndex = (currentIndex + 1) % sections.length;
     changeContent(sections[currentIndex]);
 }
-// Show WhatsApp bubble for 10 seconds after page load
-document.addEventListener('DOMContentLoaded', () => {
-    const messageBubble = document.getElementById('message-bubble');
-    
-    // Show message bubble for 5 seconds after page load
-    messageBubble.style.display = 'block';
 
-    setTimeout(() => {
-        messageBubble.style.display = 'none';
-    }, 5000); // 5000 milliseconds = 5 seconds
-});
+setInterval(autoChangeContent, 5000); 
 
-
-setInterval(autoChangeContent, 7000); 
-
-changeContent('ecosystem');
+changeContent('security');
