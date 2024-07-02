@@ -230,3 +230,73 @@ function autoChangeContent() {
 interval = setInterval(autoChangeContent, 5000);
 
 changeContent('security');
+////////////////////////////////////////////////////
+/////////////////// ON Fleet////////////
+//////////////////////////////////////////////////
+
+function changeContentFleet(section) {
+    const contentData = {
+        'courier': {
+            image: './images/onfleet/industry-courier.png',
+            subtitle: 'Courier',
+            features: [
+                'Gain up to 40% efficiency with route optimization',
+                'Simplify driver onboarding',
+                'Provide clients real-time updates on all deliveries'
+            ]
+        },
+        'grocery': {
+            image: './images/onfleet/industry-grocery.png',
+            subtitle: 'Grocery',
+            features: [
+                'Manage grocery deliveries effectively',
+                'Ensure freshness with real-time tracking',
+                'Optimize delivery routes for efficiency'
+            ]
+        },
+        'restaurant': {
+            image: './images/onfleet/industry-courier.png',
+            subtitle: 'Restaurant',
+            features: [
+                'Deliver food hot and fresh',
+                'Real-time order tracking for customers',
+                'Optimize delivery routes to reduce time'
+            ]
+        },
+        // Add more categories as needed
+    };
+
+    const content = contentData[section];
+    const contentImage = document.getElementById('content-image');
+    const contentSubtitle = document.getElementById('content-subtitle');
+    const contentList = document.getElementById('content-list');
+    
+    // Remove animation class first (if exists)
+    contentImage.classList.remove('slide-in');
+    contentSubtitle.classList.remove('slide-in');
+    contentList.classList.remove('slide-in');
+    
+    // Update content
+    contentImage.src = content.image;
+    contentSubtitle.innerText = content.subtitle;
+    
+    contentList.innerHTML = '';
+    content.features.forEach(feature => {
+        const li = document.createElement('li');
+        li.innerText = feature;
+        contentList.appendChild(li);
+    });
+    
+    // Trigger reflow before adding animation class
+    contentImage.offsetHeight; // This line forces a reflow, ensuring the animation will be applied
+    
+    // Add animation class after a slight delay to trigger animation
+    setTimeout(() => {
+        contentImage.classList.add('slide-in');
+        contentSubtitle.classList.add('slide-in');
+        contentList.classList.add('slide-in');
+    }, 50); // Adjust the delay as needed
+}
+
+// Initial load
+changeContentFleet('courier');
