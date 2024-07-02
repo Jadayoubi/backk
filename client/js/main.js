@@ -127,6 +127,7 @@
 //aboutSlider Script
 let sections = ['security', 'ecosystem', 'workflow', 'visibility'];
 let currentIndex = 0;
+let interval;
 
 function changeContent(section) {
     const image = document.getElementById('image');
@@ -137,8 +138,6 @@ function changeContent(section) {
     });
 
     let activeLink;
-    let iconAndTextHTML = '';
-
     switch (section) {
         case 'security':
             image.src = './images/aboutSlider/camera.jpg';
@@ -193,7 +192,6 @@ function changeContent(section) {
             text.innerHTML = `
                 Use AI-powered video technology to protect your most important assets, your employees. Capture and manage security risks in real time across your operations.
                 <br>
-               
                 <span class="icon-text"><i class="bi bi-shield-lock"></i> Security feature</span>
                 <span class="icon-text"><i class="bi bi-camera-video"></i> Video surveillance</span>
                 <span class="icon-text"><i class="bi bi-alarm"></i> Real-time alerts</span>
@@ -209,16 +207,19 @@ function changeContent(section) {
     const rect = activeLink.getBoundingClientRect();
     const containerRect = document.querySelector('.navbar').getBoundingClientRect();
     const width = rect.width;
-    const left = rect.left ;
+    const left = rect.left - containerRect.left;
 
     progressBar.style.transition = 'none';
     progressBar.style.width = '0';
     progressBar.style.left = `${left}px`;
-    console.log(left);
+    
     setTimeout(() => {
         progressBar.style.transition = 'width 5s linear';
         progressBar.style.width = `${width}px`;
-    }, 5);
+    }, 50);
+
+    clearInterval(interval);
+    interval = setInterval(autoChangeContent, 5000);
 }
 
 function autoChangeContent() {
@@ -226,6 +227,6 @@ function autoChangeContent() {
     changeContent(sections[currentIndex]);
 }
 
-setInterval(autoChangeContent, 5000); 
+interval = setInterval(autoChangeContent, 5000);
 
 changeContent('security');
