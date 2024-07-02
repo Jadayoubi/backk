@@ -3,9 +3,52 @@
 .aboutSlider .navbar a{
     margin: 20px;
     text-decoration: none;
-        color: #000;
+    color: #000;
+    /*  */
+
 }
-  
+.aboutSliderh1{
+    text-align: center;
+}
+.aboutSlider .navbar{
+    display: flex;
+    flex-direction: column;
+    position: static;
+}
+.aboutSlider img{
+    width: 90%;
+}
+.aboutSlider .navbar a.active {
+    color: rgb(6, 163, 218);
+}
+/* .aboutSlider .navbar a i{
+    margin: 20px;
+    text-decoration: none;
+   
+    display: flex;
+    flex-direction: row;
+
+} */
+  .aboutSlider i{
+    color: rgb(6, 163, 218);
+    margin-right: 10px;
+  }
+  .aboutSlider #content{
+    margin: 30px;
+  }
+  .aboutSlider  .icon-text{
+   margin-left: 10px;
+   display: flex;
+   flex-direction: row;
+   
+    /* margin-left: 50px; */
+  }
+  .aboutSlider  span{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    
+  }
 .progress-aboutSlider {
         
     width: 100%;
