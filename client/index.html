@@ -33,11 +33,13 @@
     <!-- Customized Bootstrap Stylesheet -->
     <link href="./css/bootstrap.min.css" rel="stylesheet">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
-
+   
     <!-- Template Stylesheet -->
     <link href="./css/style.css" rel="stylesheet">
     <link href="./css/index.css" rel="stylesheet"/>
     <link href="./css/aboutSlider.css" rel="stylesheet"/>
+    <link href="./css/onfleet.css " rel="stylesheet"/>
+
     <style id="theme-style">
         /* Default light theme */
         body {
@@ -302,6 +304,65 @@
         </div>
     </div>
     <!-- Facts End -->
+<!--onfleet Start-->
+<div class="onfleetBody">
+<div class="onfleetContainer">
+    <div class="left-panel">
+        <div class="item" onclick="changeContentFleet('courier')">
+            <img src="./images/onfleet/industry-courier.png" alt="Courier">
+            <p>Courier</p>
+        </div>
+        <div class="item" onclick="changeContentFleet('grocery')">
+            <img src="./images/onfleet/industry-grocery.png" alt="Grocery">
+            <p>Grocery</p>
+        </div>
+        <div class="item" onclick="changeContentFleet('restaurant')">
+            <img src="./images/onfleet/industry-courier.png" alt="Restaurant">
+            <p>Restaurant</p>
+        </div>
+        <div class="item" onclick="changeContentFleet('restaurant')">
+            <img src="./images/onfleet/industry-courier.png" alt="Restaurant">
+            <p>Restaurant</p>
+        </div>
+        <div class="item" onclick="changeContentFleet('restaurant')">
+            <img src="./images/onfleet/industry-courier.png" alt="Restaurant">
+            <p>Restaurant</p>
+        </div>
+        <div class="item" onclick="changeContentFleet('restaurant')">
+            <img src="./images/onfleet/industry-courier.png" alt="Restaurant">
+            <p>Restaurant</p>
+        </div>
+        <div class="item" onclick="changeContentFleet('restaurant')">
+            <img src="./images/onfleet/industry-courier.png" alt="Restaurant">
+            <p>Restaurant</p>
+        </div>
+        <div class="item" onclick="changeContentFleet('restaurant')">
+            <img src="./images/onfleet/industry-courier.png" alt="Restaurant">
+            <p>Restaurant</p>
+        </div>
+        <div class="item" onclick="changeContentFleet('restaurant')">
+            <img src="./images/onfleet/industry-courier.png" alt="Restaurant">
+            <p>Restaurant</p>
+        </div>
+        
+        <!-- Add more items as needed -->
+    </div>
+    <div class="right-panel">
+        <div id="fleetContent">
+            <img id="content-image" src="./images/onfleet/industry-courier.png" alt="Content Image">
+            <!-- <h2 id="content-title">The Onfleet Advantage</h2> -->
+            <h3 id="content-subtitle">Default</h3>
+            <ul id="content-list">
+                <li>Deliver food hot and fresh</li>
+                <li>Real-time order tracking for customers</li>
+                <li>Optimize delivery routes to reduce time</li>
+            </ul>
+            <button id="learn-more">Learn more</button>
+        </div>
+    </div>
+</div>
+</div>
+<!--onfleet End-->
     <video width="100%" height="60%" controls autoplay loop muted >
         <source src="./images/vd.mp4" type="video/mp4">
 
@@ -872,6 +933,7 @@
     <script src="./lib/owlcarousel/owl.carousel.min.js"></script>
 
     <!-- Template Javascript -->
+
     <script src="./js/main.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
