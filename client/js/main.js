@@ -127,6 +127,7 @@
 //aboutSlider Script
 let sections = ['security', 'ecosystem', 'workflow', 'visibility'];
 let currentIndex = 0;
+let interval;
 
 function changeContent(section) {
     const image = document.getElementById('image');
@@ -137,11 +138,9 @@ function changeContent(section) {
     });
 
     let activeLink;
-    let iconAndTextHTML = '';
-
     switch (section) {
         case 'security':
-            image.src = './images/aboutSlider/AI.jpg';
+            image.src = './images/aboutSlider/camera.jpg';
             text.innerHTML = `
                 Use AI-powered video technology to protect your most important assets, your employees. Capture and manage security risks in real time across your operations.
                 <br>
@@ -193,7 +192,6 @@ function changeContent(section) {
             text.innerHTML = `
                 Use AI-powered video technology to protect your most important assets, your employees. Capture and manage security risks in real time across your operations.
                 <br>
-               
                 <span class="icon-text"><i class="bi bi-shield-lock"></i> Security feature</span>
                 <span class="icon-text"><i class="bi bi-camera-video"></i> Video surveillance</span>
                 <span class="icon-text"><i class="bi bi-alarm"></i> Real-time alerts</span>
@@ -218,26 +216,17 @@ function changeContent(section) {
     setTimeout(() => {
         progressBar.style.transition = 'width 5s linear';
         progressBar.style.width = `${width}px`;
-    }, 10);
+    }, 50);
+
+    clearInterval(interval);
+    interval = setInterval(autoChangeContent, 5000);
 }
 
 function autoChangeContent() {
     currentIndex = (currentIndex + 1) % sections.length;
     changeContent(sections[currentIndex]);
 }
-// Show WhatsApp bubble for 10 seconds after page load
-document.addEventListener('DOMContentLoaded', () => {
-    const messageBubble = document.getElementById('message-bubble');
-    
-    // Show message bubble for 5 seconds after page load
-    messageBubble.style.display = 'block';
 
-    setTimeout(() => {
-        messageBubble.style.display = 'none';
-    }, 5000); // 5000 milliseconds = 5 seconds
-});
+interval = setInterval(autoChangeContent, 5000);
 
-
-setInterval(autoChangeContent, 7000); 
-
-changeContent('ecosystem');
+changeContent('security');
