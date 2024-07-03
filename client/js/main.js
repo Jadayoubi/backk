@@ -233,7 +233,6 @@ changeContent('security');
 ////////////////////////////////////////////////////
 /////////////////// ON Fleet////////////
 //////////////////////////////////////////////////
-
 function changeContentFleet(section) {
     const contentData = {
         'courier': {
@@ -263,6 +262,17 @@ function changeContentFleet(section) {
                 'Optimize delivery routes to reduce time'
             ]
         },
+        'coffee': {
+            image: './images/onfleet/industry-courier.png',
+            subtitle: 'coffee',
+            features: [
+                'Deliver coffee hot and fresh',
+                'Real-time order tracking for customers',
+                'Optimize delivery routes to reduce time'
+            ]
+        },
+
+        
         // Add more categories as needed
     };
 
@@ -296,6 +306,11 @@ function changeContentFleet(section) {
         contentSubtitle.classList.add('slide-in');
         contentList.classList.add('slide-in');
     }, 50); // Adjust the delay as needed
+
+    // Add purple border to the clicked item
+    const items = document.querySelectorAll('.item');
+    items.forEach(item => item.classList.remove('selected-item')); // Remove 'selected-item' class from all items
+    document.querySelector(`[onclick="changeContentFleet('${section}')"]`).classList.add('selected-item'); // Add 'selected-item' class to the clicked item
 }
 
 // Initial load
