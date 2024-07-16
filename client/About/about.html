@@ -40,6 +40,94 @@
     <link href="../css/style.css" rel="stylesheet">
     <link href="../css/index.css" rel="stylesheet"/>
     <script defer src="../js/navbar.js"></script>
+    <style>
+   
+          #features.section {
+            background-color: #f5f9fc;
+            padding: 80px 0;
+            
+          }
+      
+          .section-title h2 {
+            font-size: 32px;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 20px;
+            color: #0077b6;
+          }
+      
+          .section-title p {
+            font-size: 16px;
+            color: #666;
+            text-align: center;
+            margin-bottom: 40px;
+          }
+      
+          .features-item {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+          }
+      
+          .features-item h3 {
+            font-size: 24px;
+            font-weight: 700;
+            color: #0077b6;
+            margin-bottom: 20px;
+          }
+      
+          .features-item p {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 20px;
+          }
+      
+          .features-item ul li {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 10px;
+          }
+      
+          .features-item ul li:before {
+            content: "•";
+            color: #0077b6;
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+          }
+      
+          .btn-get-started {
+            background-color: #0077b6;
+            color: #fff;
+            border-radius: 50px;
+            padding: 12px 30px;
+            font-size: 16px;
+            font-weight: 600;
+            transition: all 0.3s ease-in-out;
+          }
+      
+          .btn-get-started:hover {
+            background-color: #089ce6;
+            color: #fff;
+          }
+      
+          .image-stack {
+            position: relative;
+          }
+      
+          .image-stack img.stack-front {
+            position: relative;
+            z-index: 2;
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+          }
+  
+  
+    </style>
 </head>
 
 <body>
@@ -55,7 +143,7 @@
         <div class="row gx-0">
             <div class="col-lg-8 text-center text-lg-start mb-2 mb-lg-0">
                 <div class="d-inline-flex align-items-center" style="height: 45px;">
-                    <small class="me-3 text-light"><i class="fa fa-map-marker-alt me-2"></i>Beirut,Lebanon</small>
+                    <small class="me-3 text-light"><i class="fa fa-map-marker-alt me-2"></i>Beirut, Lebanon</small>
                     <small class="me-3 text-light"><i class="fa fa-phone-alt me-2"></i>+961 70 677 712</small>
                     <small class="text-light"><i class="fa fa-envelope-open me-2"></i>info@example.com</small>
                 </div>
@@ -90,41 +178,7 @@
             </div>
         </div>
     </div> 
- 
-            <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel"
-            data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#header-carousel"
-            data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
-    </div>
-</div> 
     <!-- Navbar End -->
-
-
-    <!-- Full Screen Search Start -->
-    <div class="modal fade" id="searchModal" tabindex="-1">
-        <div class="modal-dialog modal-fullscreen">
-            <div class="modal-content" style="background: rgba(9, 30, 62, .7);">
-                <div class="modal-header border-0">
-                    <button type="button" class="btn bg-white btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body d-flex align-items-center justify-content-center">
-                    <div class="input-group" style="max-width: 600px;">
-                        <input type="text" class="form-control bg-transparent border-primary p-3" placeholder="Type search keyword">
-                        <button class="btn btn-primary px-4"><i class="bi bi-search"></i></button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Full Screen Search End -->
-
-
     <!-- About Start -->
     <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s" id="about">
         <div class="container py-5">
@@ -134,10 +188,8 @@
                         <h5 class="fw-bold text-primary text-uppercase">About Us</h5>
                         <h1 class="mb-0">Driving Innovation in the IoT Landscape: SecuFleet's 10-Year Legacy</h1>
                     </div>
-                    <p class="mb-4">We are SecuFleet IoT Group, our objective is to create an ecosystem that connects everything to adapt your business to 
-                        emerging realities in a rapidly growing network of connected objects that are able to collect and exchange data in real 
-                        time using embedded systems and sensors. In order to be successful, our service offer what’s really important to the 
-                        end user by listening to clients needs and digitalize the scope of work to create a proactive environment. </p>
+                    <p class="mb-4">At SecuFleet IoT Group, our mission is to forge an interconnected ecosystem that seamlessly adapts your business to the dynamic realities of a rapidly expanding network of intelligent devices. By leveraging cutting-edge embedded systems and sensors, we facilitate real-time data collection and exchange. Our commitment to understanding client needs ensures the delivery of tailored solutions that foster a proactive and efficient environment.<br/> <br/>
+                        Core Services: </p>
                     <div class="row g-0 mb-3">
                         <div class="col-sm-6 wow zoomIn" data-wow-delay="0.2s">
                             <h5 class="mb-3"><i class="fa fa-check text-primary me-3"></i>Device Connection</h5>
@@ -155,11 +207,12 @@
                             <i class="fa fa-phone-alt text-white"></i>
                         </div>
                         <div class="ps-4">
-                            <h5 class="mb-2">Call to ask any question</h5>
+                            <h5 class="mb-2">For inquiries, please call </h5>
                             <h4 class="text-primary mb-0">+961 70 677 712</h4>
                         </div>
                     </div>
-                    <a href="quote.html" class="btn btn-primary py-3 px-5 mt-3 wow zoomIn" data-wow-delay="0.9s">Request A Quote</a>
+                    <h5 class="mb-2">OR </h5>
+                    <a href="quote.html" class="btn btn-primary py-3 px-5 mt-3 wow zoomIn" data-wow-delay="0.9s"> Request a quote today</a>
                 </div>
                 <div class="col-lg-5" style="min-height: 500px;">
                     <div class="position-relative h-100">
@@ -171,245 +224,122 @@
     </div>
     <!-- About End -->
 
-    <!--OUR MISSION-->
-    <div class="container-fluid py-5 wow fadeInUp ourMission" data-wow-delay="0.1s">
-        <div class="container py-5">
-            <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
-                <h5 class="fw-bold text-primary text-uppercase">Our Mission</h5>
-                <h1 class="mb-0"> Our exceptional skills enable us to produce millions of IoT devices to support our mission.</h1>
-            </div>
-            <div class="row g-5">
-                <div class="col-lg-4">
-                    <div class="row g-5">
-                        <div class="col-12 wow zoomIn" data-wow-delay="0.2s">
-                            <div class="bg-primary rounded d-flex align-items-center justify-content-center mb-3" style=" color: white;  width: 60px; height: 60px;">
-                                <!-- <span class="material-symbols-outlined">
-                                    assignment
-                                    </span> -->
-                               <span class="material-symbols-outlined">
-                                    assignment
-                                    </span>
-                            </div>
-                            <h4>Advocating IoT Security Assurance Frameworks</h4>
-                                
-                               
-                            <p class="mb-0" "><span class="material-symbols-outlined" > handshake </span>We advocate for the adoption of the Assurance Framework among IoT stakeholders</p>      
-                            <p class="mb-0"> <span class="material-symbols-outlined" > power  </span> This supports the secure and reliable implementation of connected technologies</p>
-                        </div>
-                        <div class="col-12 wow zoomIn" data-wow-delay="0.6s">
-                            <div class="bg-primary rounded d-flex align-items-center justify-content-center mb-3" style=" color: white;  width: 60px; height: 60px;">
-                                <span class="material-symbols-outlined">
-                                    construction
-                                    </span>
-                            </div>
-                            <h4></i> Developing Security Guidance</h4>
-                            <p> <span class="material-symbols-outlined" >import_contacts</span>Composing and promoting security best practice guidance</p>
-                            <p> <span class="material-symbols-outlined">contract</span>Collaborating with industry experts to establish robust IoT security standards</p>
-                              
-                          
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4  wow zoomIn" data-wow-delay="0.9s" style="min-height: 350px;">
-                    <div class="position-relative h-100">
-                        <img class="position-absolute w-100 h-100 rounded wow zoomIn" data-wow-delay="0.1s" src="../images/about/about1.jpg" style="object-fit: cover;">
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="row g-5">
-                        <div class="col-12 wow zoomIn" data-wow-delay="0.4s">
-                            <div class="bg-primary rounded d-flex align-items-center justify-content-center mb-3" style=" color: white;  width: 60px; height: 60px;">
-                                <span class="material-symbols-outlined">
-                                    build
-                                    </span>
-                                </div>
-                                <h4>Shaping IoT Regulation</h4>
-                                <p class="mb-0"> <span class="material-symbols-outlined">search</span>Influence the direction and scope of any future necessary regulation</p>
-                                <p class="mb-0"><span class="material-symbols-outlined">lock </span>Engage policymakers to ensure IoT regulations foster innovation while prioritizing security and privacy</p>
-                            </div>
-                            <div class="col-12 wow zoomIn" data-wow-delay="0.8s">
-                                <div class="bg-primary rounded d-flex align-items-center justify-content-center mb-3" style=" color: white;  width: 60px; height: 60px;">
-                                    <span class="material-symbols-outlined">
-                                        group
-                                        </span>
-                                </div>
-                                <h4>Empowering Our IoT Security Community</h4>
-                                <p class="mb-0"> <span class="material-symbols-outlined"> language</span>Deliver business value to members by building an eminent, diverse, and international IoT security network</p>
-                                    
-                                   
-                                <p class="mb-0"> <span class="material-symbols-outlined">    neurology </span>Forge strategic partnerships to broaden the expertise and impact of our security community</p>
-                                   
-                                
-     
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <section id="features" class="features section">
+    <!--css for features section (mission-vision-value)-->
+       
+  <!-- Features Section -->
+<section id="features" class="features section">
 
-<!--OUR VALUE-->
-<div class="container-fluid py-5 wow fadeInUp ourValue" data-wow-delay="0.1s">
-    <div class="container py-5">
-        <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
-            <h5 class="fw-bold text-primary text-uppercase">Our VALUE</h5>
-            <h1 class="mb-0"> Synergizing SecuFleet IoT and Partners for Shared Value</h1>
-        </div>
-        <div class="row g-5">
-            <div class="col-lg-4">
-                <div class="row g-5">
-                    <div class="col-12 wow zoomIn" data-wow-delay="0.2s">
-                        <div class="bg-primary rounded d-flex align-items-center justify-content-center mb-3" style=" color: white;  width: 60px; height: 60px;">
-                            <!-- <span class="material-symbols-outlined">
-                                assignment
-                                </span> -->
-                                <span class="material-symbols-outlined">
-                                    package_2
-                                    </span>
-                        </div>
-                        <h4>Reliable IoT Devices for Organized Work</h4>
-                            
-                           
-                        <p class="mb-0"><span class="material-symbols-outlined">settings</span>Robust, high-performance IoT hardware for streamlined operations</p> 
-                        <p class="mb-0"> <span class="material-symbols-outlined"> attach_file</span>Flexible platform integrates seamlessly with existing workflows</p>
-                            
-                           
-                    </div>
-                    <div class="col-12 wow zoomIn" data-wow-delay="0.6s">
-                        <div class="bg-primary rounded d-flex align-items-center justify-content-center mb-3" style=" color: white;  width: 60px; height: 60px;">
-                            <span class="material-symbols-outlined">
-                                key
-                                </span>
-                        </div>
-                        <h4></i> Privacy-Focused IoT Solutions</h4>
-                        <p> <span class="material-symbols-outlined">laptop_mac </span>Comprehensive training program educates users on privacy best practices</p>
-                        <p> <span class="material-symbols-outlined">arrow_split</span>Customizable platform provides granular control over data access and sharing</p>
-                            
-                      
-                          
-                      
-                    </div>
-                </div>
+    <!-- Section Title -->
+  
+    <div class="container ">
+  
+        <div class="row gy-4 align-items-center features-item ">
+            <div class="col-lg-5 order-2 order-lg-1 " data-aos="fade-up" data-aos-delay="200">
+            
+              <div class="section-title position-relative pb-3 mb-5" >
+              <h3 class="fw-bold text-primary text-uppercase ">Our Mission</h3>
             </div>
-            <div class="col-lg-4  wow zoomIn" data-wow-delay="0.9s" style="min-height: 350px;">
-                <div class="position-relative h-100">
-                    <img class="position-absolute w-100 h-100 rounded wow zoomIn" data-wow-delay="0.1s" src="../images/about/about2.jpg" style="object-fit: cover;">
-                </div>
+              <p>
+                Our exceptional skills enable us to produce millions of IoT devices to support our mission. We champion the secure and reliable deployment of connected technologies, advocating for the adoption of IoT Security Assurance Frameworks among stakeholders. Our dedication to shaping the future of IoT regulation ensures that security and privacy remain at the forefront of innovation.
+              </p>
+              <ul>
+                <li>Advocating IoT Security Assurance Frameworks</li>
+                <!--  : Promoting the adoption of secure and reliable connected technologies. -->
+                 <li>Developing Security Guidance</li>
+                <!-- : Establishing industry best practices and robust security standards. -->
+                 <li>Shaping IoT Regulation</li>
+                <!-- : Influencing future regulations to foster innovation while ensuring security. -->
+                <li>Empowering Our IoT Security Community</li>
+                <!-- : Building a diverse, international network of IoT security professionals and strategic partners. -->
+              </ul>
+              <!-- <a href="#" class="btn btn-get-started">Get Started</a> -->
             </div>
-            <div class="col-lg-4">
-                <div class="row g-5">
-                    <div class="col-12 wow zoomIn" data-wow-delay="0.4s">
-                        <div class="bg-primary rounded d-flex align-items-center justify-content-center mb-3" style=" color: white;  width: 60px; height: 60px;">
-                            <span class="material-symbols-outlined">
-                                build
-                                </span>
-                            </div>
-                            <h4>Secured and Customizable IOT solution</h4>
-                            <p class="mb-0"> <span class="material-symbols-outlined"> explore</span>Tailored services address unique customer challenges</p>
-                            <p class="mb-0"><span class="material-symbols-outlined"> square_foot </span> Flexible platform adapts to evolving business needs</p>
-                               
-                               
-                        </div>
-                        <div class="col-12 wow zoomIn" data-wow-delay="0.8s">
-                            <div class="bg-primary rounded d-flex align-items-center justify-content-center mb-3" style=" color: white;  width: 60px; height: 60px;">
-                                <span class="material-symbols-outlined">
-                                    handshake
-                                    </span>
-                            </div>
-                            <h4>Collaborative Ecosystems</h4>
-                            <p class="mb-0"> <span class="material-symbols-outlined"> partner_exchange </span>language</span> A diverse network of partners expands the available service capabilities</p>         
-                            <p class="mb-0"> <span class="material-symbols-outlined">    language</span> Carefully curated collaborations drive ongoing innovation and growth</p>
-                                
-                            
-                               
-                            
- 
-                        </div>
-                    </div>
-                </div>
+            <div class="col-lg-7 order-1 order-lg-2 d-flex align-items-center justify-content-end" data-aos="zoom-out" data-aos-delay="100">
+              <div class="image-stack">
+                <!-- <img src="../images/about/mission1.jpg" alt="" class="stack-front" width="500" height="auto"> -->
+                <img src="../images/about/mission2.jpg" alt="" class="stack-front" width="500" height="auto">
+              </div>
             </div>
-        </div>
+            <!-- <div id="ourMission" class="container-fluid py-5 wow fadeInUp ourMission" data-wow-delay="0.1s"></div> -->
+          </div>
+  
+  </section>
+<br/>
+<br/>
+<div class="row gy-4 align-items-stretch justify-content-between features-item" style="max-width: 70%; margin-left: 15%;">
+    <div class="col-lg-6 d-flex align-items-center features-img-bg" data-aos="zoom-out">
+      <div class="image-stack mx-auto">
+        <img src="../images/about/vision1.jpg" alt="" class="stack-front" width="500" height="auto">
+      </div>
     </div>
+    <div class="col-lg-6 d-flex justify-content-center flex-column" data-aos="fade-up">
+      <div class="section-title position-relative pb-3 mb-5">
+      <h3 class="fw-bold text-primary text-uppercase">Our Vision</h3>
+    </div>
+      <p>Driving Transformative IoT Solutions<br>
+      We envision a future where IoT solutions revolutionize everyday life through transformative technologies and innovative fleet management systems. Our goal is to empower clients with groundbreaking IoT solutions that optimize operations and drive continuous improvement.</p>
+      <ul>
+        <li>IoT Solutions for Transformative Changes</li>
+        <!-- :Simplifying lives<Br/> through digital assets and innovative systems. -->
+        <li>Empowering Clients with Groundbreaking IoT </li>
+        <!-- :Digitalizing and<Br/> optimizing operations with unique solutions. -->
+        <li>IoT Innovation Driving Everyday Ease</li>
+        <!-- :Transforming  daily<Br/> life through pioneering technologies. -->
+        <li>IoT Expertise Elevating the Client Experience</li>
+        <!-- :Delivering <Br/>tailored  and impactful solutions with a commitment to innovation. -->
+      </ul>
+      <!-- <a href="#" class="btn btn-get-started align-self-start">Get Started</a> -->
+    </div>
+  </div><!-- Features Item -->
+      <br/>
+      <br/>
+      <br/>
+      <br/>
 
+      <div class="container">
+        <div class="row gy-4 align-items-center features-item">
+          <div class="col-lg-5 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
+            <div class="section-title position-relative pb-3 mb-5">
+            <h3 class="fw-bold text-primary text-uppercase">Our Value</h3>
+          </div>
+            <p>
+              Synergizing SecuFleet IoT and Partners for Shared Value
+              Our innovative IoT solutions are designed to seamlessly integrate into your operations, providing robust and high-performance hardware, privacy-focused services, and customizable platforms that meet unique business needs. Our collaborative ecosystems expand service capabilities and drive continuous growth and innovation.
+            </p>
+            <ul>
+              <li>Reliable IoT Devices</li>
+              <!-- : High-performance hardware for streamlined operations. -->
+              <li>Privacy-Focused IoT Solutions</li>
+              <!-- : Comprehensive privacy training and customizable data control. -->
+              <li>Secured and Customizable IoT Solutions</li>
+              <!-- : Tailored services for unique challenges. -->
+              <li>Collaborative Ecosystems</li>
+              <!-- : Strategic partnerships that enhance service capabilities. -->
+            </ul>
+            <!-- <a href="#" class="btn btn-get-started">Get Started</a> -->
+          </div>
+          <div class="col-lg-7 order-1 order-lg-2 d-flex align-items-center justify-content-end" data-aos="zoom-out" data-aos-delay="100">
+            <div class="image-stack">
+              <img src="../images/about/value1.jpg" alt="" class="stack-front" width="500" height="auto">
+              <img src="assets/img/features-light-1.jpg" alt="" class="stack-back">
+              <!-- <img src="assets/img/features-light-2.jpg" alt="" class="stack-back"> -->
+            </div>
+          </div>
+        </div>
+      </div><!-- /Features Section -->
+    <!--OUR MISSION-->
+    
 
 <!--OUR VISION-->
 
-<div class="container-fluid py-5 wow fadeInUp ourVision" data-wow-delay="0.1s">
-    <div class="container py-5">
-        <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
-            <h5 class="fw-bold text-primary text-uppercase">Our VISION</h5>
-            <h1 class="mb-0"> Driving Transformative IoT Solutions</h1>
-        </div>
-        <div class="row g-5">
-            <div class="col-lg-4">
-                <div class="row g-5">
-                    <div class="col-12 wow zoomIn" data-wow-delay="0.2s">
-                        <div class="bg-primary rounded d-flex align-items-center justify-content-center mb-3" style=" color: white;  width: 60px; height: 60px;">
-                          
-                                <span class="material-symbols-outlined">
-                                    rocket_launch
-                                    </span>
-                        </div>
-                        <h4>IoT Solutions for Transformative Changes</h4>
-                            
-                           
-                        <p class="mb-0"><span class="material-symbols-outlined">lightbulb </span>Digitalize assets to simplify people's lives</p>  
-                        <p class="mb-0"> <span class="material-symbols-outlined"> construction</span>Innovative fleet management systems serve client needs</p> 
-                    </div>
-                    <div class="col-12 wow zoomIn" data-wow-delay="0.6s">
-                        <div class="bg-primary rounded d-flex align-items-center justify-content-center mb-3" style=" color: white;  width: 60px; height: 60px;">
-                            <span class="material-symbols-outlined">
-                                build
-                                </span>
-                        </div>
-                        <h4></i> Empowering Clients with Groundbreaking IoT</h4>
-                        <p><span class="material-symbols-outlined">language </span>Unique solutions to digitalize and optimize operations</p>
-                        <p> <span class="material-symbols-outlined"> neurology</span> Creative, ambitious work to advance our mission</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4  wow zoomIn" data-wow-delay="0.9s" style="min-height: 350px;">
-                <div class="position-relative h-100">
-                    <img class="position-absolute w-100 h-100 rounded wow zoomIn" data-wow-delay="0.1s" src="../images/about/eye.jpg" style="object-fit: cover;">
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="row g-5">
-                    <div class="col-12 wow zoomIn" data-wow-delay="0.4s">
-                        <div class="bg-primary rounded d-flex align-items-center justify-content-center mb-3" style=" color: white;  width: 60px; height: 60px;">
-                            <span class="material-symbols-outlined">
-                                emoji_objects
-                                </span>
-                                </div>
-                            <h4>IoT Innovation Driving Everyday Ease</h4>
-                            <p class="mb-0"> <span class="material-symbols-outlined">electrical_services</span>Pioneering technologies that transform daily life</p>
-                                
-                                
-                            <p class="mb-0"><span class="material-symbols-outlined">handshake</span> Collaborative ecosystem to strategically achieve transformative goals</p>
-                                
-                                
-                               
-                               
-                        </div>
-                        <div class="col-12 wow zoomIn" data-wow-delay="0.8s">
-                            <div class="bg-primary rounded d-flex align-items-center justify-content-center mb-3" style=" color: white;  width: 60px; height: 60px;">
-                                <span class="material-symbols-outlined">
-                                    star
-                                    </span>
-                            </div>
-                            <h4>IoT Expertise Elevating the Client Experience</h4>
-                            <p class="mb-0"> <span class="material-symbols-outlined"> trophy </span>Established as a global leader in delivering tailored, impactful IoT solutions</p>  
-                               
-                              
-                            <p class="mb-0"> <span class="material-symbols-outlined"> rocket </span> Open-minded approach fuels continuous innovation</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
 
+
+<!--OUR VALUE-->
+
+
+<!--OUR VISION-->
 
 
 

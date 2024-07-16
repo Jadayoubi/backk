@@ -12,7 +12,8 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.3/font/bootstrap-icons.min.css" rel="stylesheet">
-  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+
     <!-- Favicon -->
     <link href="../img/favicon.ico" rel="icon">
 
@@ -38,9 +39,17 @@
     <link href="../css/style.css" rel="stylesheet">
     <link href="../css/index.css" rel="stylesheet"/>
     <link href="../css/App.css" rel="stylesheet">
-    
+    <link rel="stylesheet" href="styles.css"> 
+    <link rel="stylesheet" href="../css/lightgallery-bundle.min.css">
     <!-- font-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <link href="../images/logo/logo.jpg" rel="icon">
+
+    <!-- Isotope -->
+<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+
+<!-- LightGallery -->
+<link href="https://cdn.jsdelivr.net/npm/lightgallery@2.0.0/dist/css/lightgallery.min.css" rel="stylesheet">
 <style>
 
 
@@ -97,7 +106,49 @@
 
           <!---->
    
+          <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
+            <h5 class="fw-bold text-primary text-uppercase">Our App Portfolio</h5> 
+            <h1 class="mb-0">Innovative Mobile Apps That Drive Success</h1>
+        </div>
 
+  <!-- Latest Projects-->
+
+ <section class="section section-sm section-fluid bg-default text-center" id="projects">
+                <div class="container-fluid">
+                  <h2 class="wow fadeInLeft">Latest Projects</h2>
+                  <p class="quote-jean wow fadeInRight" data-wow-delay=".1s">
+                    In our portfolio, you can browse the latest products developed for our clients for different corporate purposes. Our qualified team of interface designers and software developers is always ready to create something unique for you.
+                  </p>
+                  <div class="isotope-filters isotope-filters-horizontal">
+
+                    <ul class="isotope-filters-list" id="isotope-3 article" >
+                        <li><a class="active" href="#article" data-isotope-filter="*" data-isotope-group="gallery">All</a></li>
+                        <li><a href="#article" data-isotope-filter=".T1" data-isotope-group="gallery">Productivity </a></li>
+                        <li><a href="#article" data-isotope-filter=".T2" data-isotope-group="gallery"> Food Delivery </a></li>
+                        <li><a href="#article" data-isotope-filter=".T3" data-isotope-group="gallery">Fitness </a></li>
+                        <li><a href="#article" data-isotope-filter=".T4" data-isotope-group="gallery">Traveling bookings</a></li>
+                        <!-- <li><a href="#article" data-isotope-filter=".Type5" data-isotope-group="gallery">Construction</a></li>
+                        <li> <a href="#article" data-isotope-filter=".Type6" data-isotope-group="gallery">App Pages</a></li>
+                        <li> <a href="#article" data-isotope-filter=".Type7" data-isotope-group="gallery">E commerce</a></li> -->
+
+                      </ul>
+                  </div>
+
+                  <div class="row row-30 isotope" data-isotope-layout="fitRows" data-isotope-group="gallery"
+                  data-lightgallery="group">
+                  <!-- <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item Type1 wow fadeInRight" data-filter="T1"> -->
+                    <!-- Thumbnail Classic-->
+                    <!--Productivity apps start-->
+                    <!--Gallery 1-->
+                    <article class="thumbnail thumbnail-classic thumbnail-md" >
+                        <div class="thumbnail-classic-figure" id="gallery-1">
+                            <div id="lightgallery1" class="lightgallery">
+                                <div id="lightgallery1" class="lightgallery">
+                                    <a href="../images/works/web/rest/gusto/main.png" class="project-link" data-lightgallery="group-item">     
+                                        <img src="../images/works/web/rest/gusto/main.png" alt="Home Page" />
+                                    </a>
+            <!---->
+   
     
         <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
             <div class="container py-5">
@@ -178,7 +229,11 @@
 
 <!-- Template Javascript -->
 <script src="../js/main.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+<script src="../js/lightgallery.min.js"></script>
 <script>
+    
     document.addEventListener('DOMContentLoaded', function() {
 var carouselElement = document.getElementById('header-carousel');
 var carousel = new bootstrap.Carousel(carouselElement);
