@@ -5,9 +5,9 @@ exports.getJobById = async (req, res) => {
         const jobId = req.params.id;
 
         // Check if jobId is a valid ObjectId
-        if (!mongoose.Types.ObjectId.isValid(jobId)) {
-            return res.status(400).json({ error: 'Invalid job ID format' });
-        }
+        // if (!mongoose.Types.ObjectId.isValid(jobId)) {
+        //     return res.status(400).json({ error: 'Invalid job ID format' });
+        // }
 
         const job = await JobListing.findById(jobId);
         if (!job) {
