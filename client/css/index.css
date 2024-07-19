@@ -91,7 +91,7 @@ body{
 .Products .description {
     color: #757575; 
     font-size: 0.8rem; 
-    max-width: 50px;
+    max-width: 40px;
 }
 .Products .icon{
     font-size: 30px;
@@ -103,7 +103,7 @@ body{
     top: 100px; 
     left: 50%;
     transform: translateX(-55%);
-    width: 62vw;
+    width: 58vw;
     padding: 0;
     font-size: 1rem;
     color: #212529;
@@ -112,7 +112,7 @@ body{
     background-color: #fff;
     background-clip: padding-box;
     border: 1px solid rgba(0, 0, 0, 0.15);
-    border-radius: 0.25rem;
+    border-radius: 10px;
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.175);
 }
 
