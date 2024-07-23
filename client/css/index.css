@@ -11,11 +11,33 @@
     font-weight: 700;
     font-style: normal;
 }
-
+@media (min-width: 768px) {
+/* Width of the entire scrollbar */
+::-webkit-scrollbar {
+    width: 12px;
+  }
+  
+  /* Track (background of the scrollbar) */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* Handle (scrollbar thumb) */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(6, 163, 218);
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(6, 163, 218);
+  }
+}
 /* Add more @font-face rules for different font weights and styles if needed */
 
 body{
     font-family: 'Roboto', sans-serif; 
+
 }
 /* CSS */
 .whatsapp-icon {
@@ -264,43 +286,7 @@ height: 45%;
     width: 200px;
     
 }
-@media (max-width: 768px) {
-    /* aboutSlider responsivness start */
 
-/* aboutSlider responsivness end */
-  video{
-    border: 1px solid black;
-    border-radius: 10px;
-    /* display: none; */
-  }
-    .bus .dropdown-toggle::after , .Products .dropdown-toggle::after {
-        display: none;
-    }
-    .serv .description{
-        display: none !important;
-    }
-    .serv .dropdown-menu{
-        width: 50vw;
-
-
-    }
-    .bus .dropdown-menu, .Products .dropdown-menu {
-        display: none !important; 
-    }
-    .back-to-top{
-        display: none !important;
-    }
-    .services-menu-content {
-        display: none;
-        position: absolute;
-        left: 35%;
-        top: 0;
-        background-color: white; 
-        padding: 10px;
-        min-width: 200px;
-        z-index: 1;
-    }
-}
 /* Switch css */
 
 .switch {
@@ -362,3 +348,64 @@ body.dark-mode .cards p{
 body.dark-mode .cards p{
   color: black !important;
 }
+/* responsive */
+@media (max-width: 768px) {
+    body{
+        width: 100%;
+     
+      }
+      *{
+        overflow-x: hidden;
+      }
+    /* aboutSlider responsivness start */
+.aboutSlider{
+    max-width: 95%;
+}
+
+/* aboutSlider responsivness end */
+
+  video{
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 90%;
+    /* display: none; */
+  }
+  .aboutVd{
+   
+    width: 100%;
+  }
+
+  
+  .onfleetBody{
+    width: 100%;
+  }
+    .bus .dropdown-toggle::after , .Products .dropdown-toggle::after {
+        display: none;
+    }
+    .serv .description{
+        display: none !important;
+    }
+    .serv .dropdown-menu{
+        width: 50vw;
+
+
+    }
+    .bus .dropdown-menu, .Products .dropdown-menu {
+        display: none !important; 
+    }
+    .back-to-top{
+        display: none !important;
+    }
+    .services-menu-content {
+        display: none;
+        position: absolute;
+        left: 35%;
+        top: 0;
+        background-color: white; 
+        padding: 10px;
+        min-width: 200px;
+        z-index: 1;
+    }
+
+}
+/* responsive end */
