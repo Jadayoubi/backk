@@ -71,8 +71,9 @@ body{
 .bus .description {
     color: #757575; 
     font-size: 0.8rem; 
-    max-width: 50px;
+    /* Removed max-width: 50px; */
 }
+
 .bus .dropdown-menu {
     display: none;
     position: fixed;
@@ -80,7 +81,6 @@ body{
     left: 50%;
     transform: translateX(-50%);
     width: 60vw;
-    /* padding: 0; */
     font-size: 1rem;
     color: #212529;
     text-align: left;
@@ -90,7 +90,6 @@ body{
     border: 1px solid rgba(0, 0, 0, 0.15);
     border-radius: 10px;
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.175);
-    
 }
 
 .bus .dropdown-menu.show {
@@ -99,21 +98,34 @@ body{
 
 .bus .dropdown-item {
     display: flex;
-    align-items: center;
-    /* padding: 20px ; */
-    
+    align-items: flex-start;
+    padding: 10px;
 }
 
 .bus .dropdown-item span {
     margin-right: 10px;
-    margin-top: -40px;
     font-size: 40px;
     color: rgb(6, 163, 218);
+}
+
+.bus .dropdown-item div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: fit-content;
+}
+@media (min-width: 991px) and (max-width:1650px){
+    .bus .dropdown-menu {
+        width: 70vw; /* Adjust width for smaller screens */
+        top: 70px; /* Adjust top position for better fit */
+        padding: 10px; /* Adjust padding */
+        left: 100%;
+    }
 }
 .Products .description {
     color: #757575; 
     font-size: 0.8rem; 
-    max-width: 40px;
+    max-width: 40px;    
 }
 .Products .icon{
     font-size: 30px;
@@ -150,7 +162,6 @@ body{
     display: flex;
     align-items: center;
     padding: 20px ;
-    
 }
 
 .Products .dropdown-item span {
@@ -172,7 +183,7 @@ body{
     top: 100px;
     left: 50%;
     transform: translateX(-40%);
-    width: 25vw;
+    width: fit-content;
     padding: 0;
     font-size: 1rem;
     color: #212529;
@@ -189,6 +200,8 @@ body{
     display: flex;
     align-items: center;
     padding: 10px 15px;
+    width: fit-content;
+    white-space: nowrap;
 }
 
 .serv .dropdown-item span {
@@ -349,6 +362,39 @@ body.dark-mode .cards p{
   color: black !important;
 }
 /* responsive */
+ @media (min-width: 991px) and (max-width: 1368px) {
+    .bus .dropdown-menu {
+    /* visibility: hidden; */
+   
+    }
+    
+}
+@media (min-width: 1368px) and (max-width: 1652px) {
+    .serv .dropdown-menu{
+        width: 35vw;
+    }
+} 
+/* @media (min-width: 991px) and (max-width: 1770px) {
+    .serv .dropdown-menu {
+        position: fixed;
+        top: 100px;
+        left: 50%;
+        transform: translateX(-40%);
+        width: 30vw;
+        padding: 0;
+        font-size: 1rem;
+        color: #212529;
+        text-align: left;
+        list-style: none;
+        background-color: #fff;
+        background-clip: padding-box;
+        border: 1px solid rgba(0, 0, 0, 0.15);
+        border-radius: 0.25rem;
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.175);
+    }
+    
+  } */
+  
 @media (max-width: 768px) {
     body{
         width: 100%;
