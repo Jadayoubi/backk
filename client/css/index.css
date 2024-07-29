@@ -366,10 +366,7 @@ body.dark-mode .cards p{
 }
 /* responsive */
  @media (min-width: 991px) and (max-width: 1368px) {
-    .bus .dropdown-menu {
-    /* visibility: hidden; */
-   
-    }
+  
     
 }
 @media (min-width: 1368px) and (max-width: 1652px) {
