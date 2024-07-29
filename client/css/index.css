@@ -11,6 +11,9 @@
     font-weight: 700;
     font-style: normal;
 }
+.dropdown-item a{
+    text-decoration: none;
+}
 @media (min-width: 768px) {
 /* Width of the entire scrollbar */
 ::-webkit-scrollbar {
