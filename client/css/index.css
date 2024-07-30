@@ -11,6 +11,9 @@
     font-weight: 700;
     font-style: normal;
 }
+.dropdown-item a{
+    text-decoration: none;
+}
 @media (min-width: 768px) {
 /* Width of the entire scrollbar */
 ::-webkit-scrollbar {
@@ -363,10 +366,7 @@ body.dark-mode .cards p{
 }
 /* responsive */
  @media (min-width: 991px) and (max-width: 1368px) {
-    .bus .dropdown-menu {
-    /* visibility: hidden; */
-   
-    }
+  
     
 }
 @media (min-width: 1368px) and (max-width: 1652px) {
