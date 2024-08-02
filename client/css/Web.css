@@ -150,7 +150,17 @@ h1:last-of-type {
         flex-direction: column;
     }
 }
-
+@media (max-width: 768px){
+    .containerBack p{
+        visibility: hidden;
+    }
+    .buttons{
+        margin-top: -120px;
+    }
+    .containerBack h1{
+        font-size: 30px;
+    }
+}
 @media (max-width: 950px) and (min-width: 450px) {
     .box {
         text-align: center;
@@ -160,6 +170,7 @@ h1:last-of-type {
         height: 50%;
         width: 10%;
     }
+   
 }
 
 .cyan {
