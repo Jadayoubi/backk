@@ -15,7 +15,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.3/font/bootstrap-icons.min.css" rel="stylesheet">
   
     <!-- Favicon -->
-    <link href="./images/logo/logo.jpg" rel="icon">
+    <link href="/client/images/logo/logo.jpg" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -28,19 +28,26 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
     <!-- Libraries Stylesheet -->
-    <link href="./lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="./lib/animate/animate.min.css" rel="stylesheet">
+    <link href="/client/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="/client/lib/animate/animate.min.css" rel="stylesheet">
 
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <link href="/client/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
    
     <!-- Template Stylesheet -->
-    <link href="./css/style.css" rel="stylesheet">
-    <link href="./css/index.css" rel="stylesheet"/>
-    <link href="./css/aboutSlider.css" rel="stylesheet"/>
-    <link href="./css/onfleet.css " rel="stylesheet"/>
-   
+    <link href="/client/css/style.css" rel="stylesheet">
+    <link href="/client/css/index.css" rel="stylesheet"/>
+    <link href="/client/css/aboutSlider.css" rel="stylesheet"/>
+    <link href="/client/css/onfleet.css " rel="stylesheet"/>
+    <link href="/client/css/industrySlider.css" rel="stylesheet"/>
+    <style>
+    
+    body{
+        overflow-x: hidden;
+    }
+        
+    </style>
 </head>
 
 <body>
@@ -240,8 +247,54 @@
         </div>
     </div>
     <!-- Facts End -->
+    <div class="container">
+        <h1 class="Ih1">Compatibility</h1>
+        <div class="Ifeatures">
+            <div class="Ifeature">
+                <img src="/client/images/industrySlider/number1.jpeg">
+                <p class="Ifeature-text">Gain up to 40% efficiency with route optimization</p>
+            </div>
+            <div class="Ifeature">
+                <img src="/client/images/industrySlider/number2.jpeg">
+                <p>Simplify driver onboarding</p>
+            </div>
+            <div class="Ifeature">
+                <img src="/client/images/industrySlider/number3.jpeg">
+                <p class="Ifeature-text">Provide clients real-time updates on all deliveries</p>
+            </div>
+        </div>
+    </div>
+    <div class="Islider-container">
+
+        <div class="Iarrow left" id="IprevArrow"></div>
+        <div class="Iarrow right" id="InextArrow"></div>
+
+        <div class="Islider">
+            <div class="Islide">
+                <img src="/client/images/industrySlider/grocery.jpeg" alt="Photo 1">
+                <div class="Islide-caption"><b>GROCERY</b></div>
+            </div>
+            <div class="Islide">
+                <img src="/client/images/industrySlider/restaurant.jpeg" alt="Photo 2">
+                <div class="Islide-caption"><b>RESTAURANTS</b></div>
+            </div>
+            <div class="Islide">
+                <img src="/client/images/industrySlider/coffee.jpeg" alt="Photo 3">
+                <div class="Islide-caption"><b>COFFEE SHOP</b></div>
+            </div>
+            <div class="Islide">
+                <img src="/client/images/industrySlider/coffee.jpeg" alt="Photo 4">
+                <div class="Islide-caption"><b>COFFEE SHOP</b></div>
+            </div>
+            <div class="Islide">
+                <img src="/client/images/industrySlider/coffee.jpeg" alt="Photo 5">
+                <div class="Islide-caption"><b>COFFEE SHOP</b></div>
+            </div>
+        </div>
+
+    </div>
 <!--onfleet Start-->
-<div class="onfleetBody">
+<!-- <div class="onfleetBody">
 <div class="onfleetContainer">
     <div class="left-panel">
         <div class="item" onclick="changeContentFleet('courier')">
@@ -279,10 +332,10 @@
         <div class="item" onclick="changeContentFleet('restaurant')">
             <img src="./images/onfleet/industry-courier.png" alt="Restaurant">
             <p>Restaurant</p>
-        </div>
+        </div> -->
         
         <!-- Add more items as needed -->
-    </div>
+    <!-- </div>
     <div class="right-panel">
         <div id="fleetContent">
             <img id="content-image" src="./images/onfleet/industry-courier.png" alt="Content Image">
@@ -296,7 +349,7 @@
         </div>
     </div>
 </div>
-</div>
+</div> -->
 <!--onfleet End-->
     <video width="100%" height="60%" controls autoplay loop muted >
         <source src="./images/vd.mp4" type="video/mp4">
@@ -663,6 +716,36 @@
 
     <script src="./js/main.js"></script>
     <script>
+        const islider = document.querySelector('.Islider');
+        const islides = document.querySelectorAll('.Islide');
+        const iprevArrow = document.getElementById('IprevArrow');
+        const inextArrow = document.getElementById('InextArrow');
+        let icurrentIndex = 0;
+        const islidesToShow = 3;
+        const itotalSlides = islides.length;
+    
+        function iupdateSlider() {
+            islider.style.transform = `translateX(-${icurrentIndex * (100 / islidesToShow)}%)`;
+        }
+    
+        function inextSlide() {
+            icurrentIndex = (icurrentIndex + 1) % (itotalSlides - islidesToShow + 1);
+            iupdateSlider();
+        }
+    
+        function iprevSlide() {
+            icurrentIndex = (icurrentIndex - 1 + (itotalSlides - islidesToShow + 1)) % (itotalSlides - islidesToShow + 1);
+            iupdateSlider();
+        }
+    
+        iprevArrow.addEventListener('click', iprevSlide);
+        inextArrow.addEventListener('click', inextSlide);
+    
+        setInterval(inextSlide, 3000);
+    
+        iupdateSlider();
+        
+        /////////////////////////////////////
         document.addEventListener('DOMContentLoaded', function() {
     var carouselElement = document.getElementById('header-carousel');
     var carousel = new bootstrap.Carousel(carouselElement);
