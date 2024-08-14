@@ -5,7 +5,9 @@
     --light: #EEF9FF;
     --dark: #091E3E;
 }
-
+/* body{
+    background-color: #FAF9F6!important;
+} */
 
 /*** Spinner ***/
 .spinner {
