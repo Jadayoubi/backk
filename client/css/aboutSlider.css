@@ -33,6 +33,9 @@
     color: rgb(6, 163, 218);
     margin-right: 10px;
   }
+  .aboutSlider img{
+    width: 100% !important;
+  }
   .aboutSlider #content{
     margin: 30px;
   }
