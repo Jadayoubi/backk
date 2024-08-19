@@ -140,55 +140,56 @@ function changeContent(section) {
     let activeLink;
     switch (section) {
         case 'security':
-            image.src = './images/aboutSlider/camera.jpg';
+            image.src = '/client/images/aboutSlider/camera.jpg';
             text.innerHTML = `
-                Use AI-powered video technology to protect your most important assets, your employees. Capture and manage security risks in real time across your operations.
-                <br>
-                <span class="icon-text"><i class="bi bi-shield-lock"></i> Security feature</span>
-                <span class="icon-text"><i class="bi bi-camera-video"></i> Video surveillance</span>
-                <span class="icon-text"><i class="bi bi-alarm"></i> Real-time alerts</span>
+            Utilizes AI to enhance fleet security, detecting threats and ensuring safety. Continuously monitors data to prevent breaches and respond to incidents.    
+            <br> 
+                <span class="icon-text"><i class="bi bi-shield-lock"></i>Proactive threat detection</span>
+                <span class="icon-text"><i class="bi bi-camera-video"></i>Automated incident response</span>
+                <span class="icon-text"><i class="bi bi-alarm"></i>Improved data analysis</span>
             `;
             activeLink = document.getElementById('security-link');
             currentIndex = 0;
             break;
         case 'ecosystem':
-            image.src = './images/aboutSlider/eco.jpg';
+            image.src = '/client/images/aboutSlider/eco.jpg';
             text.innerHTML = `
-                Run your business on one integrated platform. Unify data across maintenance, logistics, sales accounting, HR and more.
+                Integrates various components of the fleet management system for seamless communication and data exchange, optimizing operations.
                 <br>
-                <span class="icon-text"><i class="bi bi-globe"></i> Global reach</span>
-                <span class="icon-text"><i class="bi bi-graph-up"></i> Data integration</span>
-                <span class="icon-text"><i class="bi bi-person-lines-fill"></i> HR management</span>
+                <span class="icon-text"><i class="bi bi-globe"></i>Integrated systems</span>
+                <span class="icon-text"><i class="bi bi-graph-up"></i>Scalability</span>
+                <span class="icon-text"><i class="bi bi-person-lines-fill"></i>Streamlined communication</span>
             `;
             activeLink = document.getElementById('ecosystem-link');
             currentIndex = 1;
             break;
         case 'workflow':
-            image.src = './images/aboutSlider/truckFleetC.png';
+            image.src = '/client/images/aboutSlider/truckFleetC.png';
             text.innerHTML = `
-                Streamline workflows and increase productivity. Establish benchmarks and make business decisions using 1.6 billion data points captured by Samsara.
-                <br>
+            Automates tasks and provides comprehensive reporting, optimizing daily operations and tracking performance metrics.    
+            <br>
                 <span class="icon-text"><i class="bi bi-diagram-3"></i> Workflow automation</span>
-                <span class="icon-text"><i class="bi bi-bar-chart"></i> Benchmarking</span>
-                <span class="icon-text"><i class="bi bi-gear"></i> Productivity tools</span>
+                <span class="icon-text"><i class="bi bi-bar-chart"></i>Performance tracking</span>
+                <span class="icon-text"><i class="bi bi-gear"></i>Comprehensive reports</span>
             `;
             activeLink = document.getElementById('workflow-link');
             currentIndex = 2;
             break;
         case 'visibility':
-            image.src = './images/aboutSlider/last.jpg';
+            image.src = '/client/images/aboutSlider/Fleet-Management.jpg';
+            image.style.width='35%';
             text.innerHTML = `
-                Gain real-time visibility across production facilities, remote assets, fleets and services all the way to end customers to enable digital transformation at scale.
+                Offers constant monitoring of the fleet, allowing real-time tracking of vehicles and assets for better operational control.
                 <br>
-                <span class="icon-text"><i class="bi bi-eye"></i> Real-time monitoring</span>
-                <span class="icon-text"><i class="bi bi-map"></i> Asset tracking</span>
-                <span class="icon-text"><i class="bi bi-wifi"></i> Connectivity solutions</span>
+                <span class="icon-text"><i class="bi bi-eye"></i>Enhanced control</span>
+                <span class="icon-text"><i class="bi bi-map"></i>Improved decision-making</span>
+                <span class="icon-text"><i class="bi bi-wifi"></i>Live tracking</span>
             `;
             activeLink = document.getElementById('visibility-link');
             currentIndex = 3;
             break;
         default:
-            image.src = './images/aboutSlider/AI.jpg';
+            image.src = '/client/images/aboutSlider/AI.jpg';
             text.innerHTML = `
                 Use AI-powered video technology to protect your most important assets, your employees. Capture and manage security risks in real time across your operations.
                 <br>
@@ -236,7 +237,7 @@ changeContent('security');
 function changeContentFleet(section) {
     const contentData = {
         'courier': {
-            image: './images/onfleet/industry-courier.png',
+            image: '/client/images/onfleet/industry-courier.png',
             subtitle: 'Courier',
             features: [
                 'Gain up to 40% efficiency with route optimization',
@@ -245,7 +246,7 @@ function changeContentFleet(section) {
             ]
         },
         'grocery': {
-            image: './images/onfleet/industry-grocery.png',
+            image: '/client/images/onfleet/industry-grocery.png',
             subtitle: 'Grocery',
             features: [
                 'Manage grocery deliveries effectively',
@@ -254,7 +255,7 @@ function changeContentFleet(section) {
             ]
         },
         'restaurant': {
-            image: './images/onfleet/industry-courier.png',
+            image: '/client/images/onfleet/industry-courier.png',
             subtitle: 'Restaurant',
             features: [
                 'Deliver food hot and fresh',
@@ -263,7 +264,7 @@ function changeContentFleet(section) {
             ]
         },
         'coffee': {
-            image: './images/onfleet/industry-courier.png',
+            image: '/client/images/onfleet/industry-courier.png',
             subtitle: 'coffee',
             features: [
                 'Deliver coffee hot and fresh',
@@ -271,22 +272,17 @@ function changeContentFleet(section) {
                 'Optimize delivery routes to reduce time'
             ]
         },
-
-        
-        // Add more categories as needed
     };
 
     const content = contentData[section];
     const contentImage = document.getElementById('content-image');
     const contentSubtitle = document.getElementById('content-subtitle');
     const contentList = document.getElementById('content-list');
-    
-    // Remove animation class first (if exists)
+
     contentImage.classList.remove('slide-in');
     contentSubtitle.classList.remove('slide-in');
     contentList.classList.remove('slide-in');
-    
-    // Update content
+
     contentImage.src = content.image;
     contentSubtitle.innerText = content.subtitle;
     
@@ -297,21 +293,51 @@ function changeContentFleet(section) {
         contentList.appendChild(li);
     });
     
-    // Trigger reflow before adding animation class
-    contentImage.offsetHeight; // This line forces a reflow, ensuring the animation will be applied
-    
-    // Add animation class after a slight delay to trigger animation
+
+    contentImage.offsetHeight; 
+
     setTimeout(() => {
         contentImage.classList.add('slide-in');
         contentSubtitle.classList.add('slide-in');
         contentList.classList.add('slide-in');
-    }, 50); // Adjust the delay as needed
+    }, 50);
 
-    // Add purple border to the clicked item
+
     const items = document.querySelectorAll('.item');
     items.forEach(item => item.classList.remove('selected-item')); // Remove 'selected-item' class from all items
     document.querySelector(`[onclick="changeContentFleet('${section}')"]`).classList.add('selected-item'); // Add 'selected-item' class to the clicked item
 }
 
-// Initial load
 changeContentFleet('courier');
+
+////////////////////////////////////////
+/////////
+//////////////////////////////////////////
+const Islider = document.querySelector('.Islider');
+const Islides = document.querySelectorAll('.Islide');
+const IprevArrow = document.getElementById('IprevArrow');
+const InextArrow = document.getElementById('InextArrow');
+let IcurrentIndex = 0;
+const IslidesToShow = 3; // Number of slides visible at a time
+const ItotalSlides = Islides.length;
+
+function IupdateSlider() {
+    Islider.style.transform = `translateX(-${IcurrentIndex * (100 / IslidesToShow)}%)`;
+}
+
+function InextSlide() {
+    IcurrentIndex = (IcurrentIndex + 1) % (ItotalSlides - IslidesToShow + 1);
+    IupdateSlider();
+}
+
+function IprevSlide() {
+    IcurrentIndex = (IcurrentIndex - 1 + (ItotalSlides - IslidesToShow + 1)) % (ItotalSlides - IslidesToShow + 1);
+    IupdateSlider();
+}
+
+IprevArrow.addEventListener('click', IprevSlide);
+InextArrow.addEventListener('click', InextSlide);
+
+setInterval(InextSlide, 3000);
+
+IupdateSlider();
