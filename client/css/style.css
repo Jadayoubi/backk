@@ -5,7 +5,9 @@
     --light: #EEF9FF;
     --dark: #091E3E;
 }
-
+/* body{
+    background-color: #FAF9F6!important;
+} */
 
 /*** Spinner ***/
 .spinner {
@@ -467,7 +469,7 @@ h6,
 .back-to-top {
     position: fixed;
     display: none;
-    right: 45px;
+    left: 45px;
     bottom: 45px;
     z-index: 99;
 }

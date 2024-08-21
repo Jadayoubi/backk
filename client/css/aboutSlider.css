@@ -33,6 +33,9 @@
     color: rgb(6, 163, 218);
     margin-right: 10px;
   }
+  .aboutSlider img{
+    width: 100% !important;
+  }
   .aboutSlider #content{
     margin: 30px;
   }
@@ -101,7 +104,7 @@
     
     .aboutSlider .navbar a {
         text-decoration: none;
-        color: #000;
+        color: hwb(0 0% 100%);
         padding: 10px 20px;
         transition: color 0.3s, border-bottom 0.3s;
         margin: 0 10px;
