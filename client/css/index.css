@@ -345,6 +345,83 @@ height: 45%;
     transform: translateX(26px);
   }
 
+  /****** who we are*****/
+  .who-we-are-section {
+    background-color: white;
+    padding: 40px 20px;
+    position: relative;
+    z-index: 1;
+    border: 3px solid #e0e0e0;
+    border-radius: 20px;
+    margin-top: -95px;
+    
+  }
+  
+  .who-we-are-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: white;
+    padding: 40px 20px;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 2;
+    margin-bottom: 200px;
+    margin-top: 200px;
+
+  }
+  
+  .who-we-are-title {
+    font-size: 25px;
+    color: #06A3DA;
+    margin-bottom: 20px;
+  }
+  
+  .who-we-are-description-wrapper {
+    position: relative;
+    z-index: 2;
+    padding: 0 20px;
+  }
+  
+  .who-we-are-description {
+    font-size: 20px;
+    line-height: 1.6;
+    margin: 0;
+    margin-top:30px;
+  }
+
+
+@media (max-width: 768px) {
+    .who-we-are-section {
+      margin: 100px 0;
+    }
+  
+    .who-we-are-title {
+      font-size: 20px;
+    }
+  
+    .who-we-are-description {
+      font-size: 16px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .who-we-are-section {
+      padding: 20px;
+    }
+  
+    .who-we-are-content {
+      padding: 20px;
+    }
+  
+    .who-we-are-description-wrapper {
+      padding: 0;
+    }
+  }
+  
+
+  /*********************/
+
   /* Dark mode */
   body {
     background-color: white;
