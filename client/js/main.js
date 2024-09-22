@@ -133,14 +133,15 @@ function changeContent(section) {
     const image = document.getElementById('image');
     const text = document.getElementById('text');
     
-    document.querySelectorAll('.navbar a').forEach(link => {
-        link.classList.remove('active');
+    document.querySelectorAll('.navbarabout a').forEach(link => {
+        link.classList.remove('active1');
     });
 
     let activeLink;
     switch (section) {
         case 'security':
             image.src = '/client/images/aboutSlider/camera.jpg';
+            image.style.borderRadius='15px';
             text.innerHTML = `
             Utilizes AI to enhance fleet security, detecting threats and ensuring safety. Continuously monitors data to prevent breaches and respond to incidents.    
             <br> 
@@ -153,6 +154,7 @@ function changeContent(section) {
             break;
         case 'ecosystem':
             image.src = '/client/images/aboutSlider/eco.jpg';
+            image.style.borderRadius='15px';
             text.innerHTML = `
                 Integrates various components of the fleet management system for seamless communication and data exchange, optimizing operations.
                 <br>
@@ -165,6 +167,7 @@ function changeContent(section) {
             break;
         case 'workflow':
             image.src = '/client/images/aboutSlider/truckFleetC.png';
+            image.style.borderRadius='15px';
             text.innerHTML = `
             Automates tasks and provides comprehensive reporting, optimizing daily operations and tracking performance metrics.    
             <br>
@@ -178,6 +181,7 @@ function changeContent(section) {
         case 'visibility':
             image.src = '/client/images/aboutSlider/Fleet-Management.jpg';
             image.style.width='35%';
+            image.style.borderRadius='15px';
             text.innerHTML = `
                 Offers constant monitoring of the fleet, allowing real-time tracking of vehicles and assets for better operational control.
                 <br>
@@ -190,6 +194,7 @@ function changeContent(section) {
             break;
         default:
             image.src = '/client/images/aboutSlider/AI.jpg';
+            image.style.borderRadius='15px';
             text.innerHTML = `
                 Use AI-powered video technology to protect your most important assets, your employees. Capture and manage security risks in real time across your operations.
                 <br>
@@ -201,7 +206,7 @@ function changeContent(section) {
             currentIndex = 0;
     }
 
-    activeLink.classList.add('active');
+    activeLink.classList.add('active1');
 
     // Adjust progress bar width and position
     const progressBar = document.getElementById('progress-bar');

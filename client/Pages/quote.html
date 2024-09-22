@@ -13,6 +13,7 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
@@ -120,6 +121,12 @@
         <div class="service bounce-top" id="app-service" onclick="showAppQuestions('appDev')">
             <div><i class="fa-solid fa-laptop-code" style="font-size: 50px;"></i></div>
             App Development
+        </div>
+        <div class="service bounce-top" id="consulting-service" onclick="showConsultingQuestions('consulting')">
+            <div>
+                <span class="material-symbols-outlined" style="font-size: 50px;">travel_explore</span>
+            </div>
+            Consulting
         </div>
     </div>
 
@@ -351,7 +358,7 @@
                     <p>Already have a website?</p>
                 </div>
                 <div class="web-question-card question-card" data-answer="idk">
-                    <div><img src="../images/quote/dont-know.png" style="width: 47px;"></div>
+                    <div><img src="/client/images/quote/dont-know.png" style="width: 47px;"></div>
                     <p>I dont Know / Other</p>
                 </div>
 
@@ -532,7 +539,255 @@
         </div>
     
 </section>
-  
+<section id="consulting" class="consulting-questions hidden">
+
+    <div class="progress-container" id="consultingprogress-container">
+        <span id="consultingprogress-text">0%</span>
+        <div class="progress">
+            <div id="consultingprogress-bar" class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+            </div>
+        </div>
+    </div>
+    <div id="consulting-question-container" class="text-center">
+        <!-- Question 1: Type of Consulting service -->
+        <div class="question" id="consulting-question-1">
+            <h2 class="text-center">What kind of consulting service do you need?</h2><br>
+            <div class="consulting-question-card question-card" data-answer="Business-Strategy">
+                <div><span class="material-symbols-outlined" style="width: 35px;">
+                    storefront
+                    </span>
+                </div>
+                <p>Business Strategy</p>
+                <br>
+            </div>
+            <div class="consulting-question-card question-card" data-answer="customer-strategy">
+                <div><i class="fa-solid fa-users-viewfinder" style="font-size: 38px;"></i></div>
+                <p>Customer Strategy</p>
+                <br>
+            </div>
+            <div class="consulting-question-card question-card" data-answer="operation-strategy">
+               
+                    <img src="/client/images/quote/operation.png" style="width: 35%;"/>
+               
+                <p>Operations Strategy</p>
+                <br>
+            </div>
+            <div class="consulting-question-card question-card" data-answer="organizational-strategy">
+                <div>
+                    <img src="/client/images/quote/organ.png" style="width: 40%;" />
+               </div>
+                <p>Organizational Strategy</p>
+                <br>
+            </div>
+            <div class="consulting-question-card question-card" data-answer="product&service-innovation">
+                <div>
+                    <img src="/client/images/quote/product.png" style="width: 55%;"/>
+                </div>
+                <p>Product & Service innovation</p>
+            </div>
+            <div class="consulting-question-card question-card" data-answer="technology-strategy">
+                <div>
+                    <img src="/client/images/quote/tech.png" style="width: 40%;"/>
+                </div>
+                <p>Technology Strategy</p>
+                <br>
+            </div>
+            <div class="consulting-question-card question-card" data-answer="digital-marketing-strategies">
+                <div>
+                    <img src="/client/images/quote/digital.png" style="width:60%;"/>
+                </div>
+                <p>Digital Marketing Strategies</p>
+            </div>
+            <div class="consulting-question-card question-card" data-answer="Case-studies">
+                <div>
+                    <img src="/client/images/quote/case.png" style="width:58%;"/>
+                </div>
+                <p>Case Studies</p>
+                <br>
+                
+            </div>
+        
+        </div>
+        
+        <!-- Question 2: Platform -->
+        <div class="question" id="consulting-question-2" style="display:none;">
+            <h2 class="text-center">What are the main challenges you are facing?</h2>
+            <div class="consulting-question-card question-card" data-answer="market-competition">
+                <div>
+                    <img src="/client/images/quote/comp.png" style="width:60%;"/>
+                </div>
+                <p>Market Competition</p>
+            </div>
+            <div class="consulting-question-card question-card" data-answer="customer-retention">
+                <div>
+                    <img src="/client/images/quote/customer.png" style="width: 48%;"/>
+                </div>
+                <p>Customer Retention</p>
+            </div>
+            <div class="consulting-question-card question-card" data-answer="technological-innovation">
+                <div>
+                    <img src="/client/images/quote/tech.png" style="width: 53%;"/>
+                </div>
+                <p>Technological Innovation</p>
+            </div>
+            <div class="consulting-question-card question-card" data-answer="cost-management">
+                <div>
+                    <img src="/client/images/quote/cost.png" style="width: 53%;"/>
+                </div>
+                <p>Cost Management</p>
+            </div>
+            <div class="consulting-question-card question-card" data-answer="other">
+                <div>
+                    <img src="/client/images/quote/other.png" style="width: 75%;"/>
+                </div>
+                <p>Other</p>
+              
+            </div>
+        </div>
+
+        <!-- Question 3: Features -->
+        <div class="question" id="consulting-question-3" style="display:none;">
+            <h2 class="text-center">Are you looking for ongoing support or a one-time consultation?</h2>
+            <div class="consulting-question-card question-card" data-answer="ongoing-support">
+                <div>
+                    <img src="/client/images/quote/ongoing.png" style="width: 48%;"/>
+                </div>
+                <p>Ongoing Support</p>
+            </div>
+            <div class="consulting-question-card question-card" data-answer="one-time-consultation">
+                <div>
+                    <img src="/client/images/quote/oneTime.png" style="width: 55%;"/>
+                </div>
+                <p>One-Time Consultation</p>
+            </div>
+            <div class="consulting-question-card question-card" data-answer="not-sure">
+                <div>
+                    <img src="/client/images/quote/dont-know.png" style="width: 70%;"/>
+                </div>
+                <p>Not Sure</p>
+            </div>
+            
+        </div>
+
+        <!-- Question 4: Design and Branding -->
+        <div class="question" id="consulting-question-4" style="display:none;">
+            <h2 class="text-center">How many team members will be involved?</h2>
+            <div class="consulting-question-card question-card" data-answer="just-me">
+                <div><span class="material-symbols-outlined">
+                    person
+                    </span></div>
+                <p>Just Me</p>
+                <br>
+            </div>
+            <div class="consulting-question-card question-card" data-answer="2-5">
+                <div><span class="material-symbols-outlined" style="font-size:50px;">
+                    group
+                    </span></i></div>
+                <p>2-5 Team Members</p>
+            </div>
+            <div class="consulting-question-card question-card" data-answer="6-10">
+                <div><span class="material-symbols-outlined" style="font-size:50px;">
+                    groups
+                    </span></div>
+                <p>6-10 Team Members</p>
+            </div>
+            <div class="consulting-question-card question-card" data-answer=">10">
+                <img src="/client/images/quote/10.png" style="width: 50%;"/>
+                <p>More than 10 Team Members</p>
+            </div>
+        </div>
+
+        <!-- Question 5: Budget and Timeline -->
+        <div class="question" id="consulting-question-5" style="display:none;">
+            <h2 class="text-center">What is your expected timeline for completion?</h2>
+            <div class="consulting-question-card question-card" data-answer="<3">
+                <div>
+                    <img src="/client/images/quote/duration.png" style="width: 40%;"/>
+                </div>
+                <p>Less than 3 months</p>
+                
+            </div>
+            <div class="consulting-question-card question-card" data-answer="3-6">
+                <div> <img src="/client/images/quote/duration2.png" style="width: 50%;"/></div>
+                <br>
+                <p>3-6 months</p>
+            </div>
+            <div class="consulting-question-card question-card" data-answer="6-12">
+                <div> <img src="/client/images/quote/duration3.png" style="width: 50%;"/></div>
+                <br>
+                <p>6-12 months</p>
+            </div>
+            <div class="consulting-question-card question-card" data-answer=">1year">
+                <div> <img src="/client/images/quote/duration4.png" style="width: 50%;"/></div>
+                <p>More than 1 year</p>
+            </div>
+        </div>
+
+        <!-- Contact Information -->
+        <div class="question" id="consulting-question-6" style="display:none;">
+            <h2 class="text-center">
+                What is your email address?<br/> This is the address to which we will send you all the information.
+            </h2>
+            <label class="emailLabel">Email:</label><br>
+            <input type="email" id="consulting-email" name="email" class="email" placeholder="Enter your email" required><br>
+            <span class="error" id="consultingEmailError" style="color: red; font-size: large; display: none;">Please enter a valid email address.</span><br><br>
+        
+            <label class="phoneLabel">Phone Number:</label><br>
+            <input type="tel" id="consulting-phone" name="phone" class="phone email" placeholder="Enter your phone number" required><br><br>
+        
+            <label class="companyLabel">Company Name:</label><br>
+            <input type="text" id="consulting-company" name="company" class="company" placeholder="Enter your company name" required><br><br>
+        </div>
+    </div>
+    <section id="consultingbuttons"> 
+        <button id="consulting-back-btn" class="btn btn-secondary submit-btn" disabled>Back</button>
+        <button id="consulting-next-btn" class="btn btn-primary submit-btn" disabled>Next</button>
+        <button id="consulting-submit-btn" class="btn btn-primary submit-btn bounce-top" onclick="submitFormConsulting()" style="display: none;">Submit</button>
+    </section>
+    <div id="consultingconfirmation-section" class="confirmationSection" style="display: none;">
+        <h2 class="text-center">Thank you!</h2>
+        <p>We have received your quotation. We will get back to you shortly.</p>
+        <button class="btn btn-primary submit-btn" onclick="redirect()">Home Page</button>
+    </div>
+
+</section>
+<div class="container-fluid py-5" style="background-color: #081f3e; margin-top: 8%;">
+    <div class="container py-5">
+        <div class="row text-center">
+            <div class="col-lg-12">
+                <!-- Main Heading -->
+                <h1 style="color: white; margin-bottom: 20px;">Prefer Direct Contact? Call Us</h1>
+                <br>
+                <!-- Subheading with Multiple Lines -->
+                <p style="color: white; margin-bottom: 20px;">
+                    Get in touch with our team today to receive a no-obligation quote tailored to your specific needs.<br>
+                    We're here to answer any questions you may have.<br>
+                    We'll provide detailed pricing information to help you make an informed decision.
+                </p>
+                <!-- <br/>
+                <br/> -->
+                <!-- Call to Action Box -->
+                <a href="https://wa.me/96170677712" class="d-inline-block text-decoration-none" style="background-color: rgba(233, 232, 232, 0.129); width: 30%; height: 20%;; ; display: inline-block;">
+                    <h5 style="color: rgb(6, 163, 218);text-align: center; margin-top: 3%;"> Let's Chat on WhatsApp</h5>
+                </a>
+                <!-- <br/> -->
+                <!-- Contact Information -->
+                <div class="row mt-4 justify-content-center">
+                    <div class="col-md-6 d-flex align-items-center justify-content-center" >
+                        <i class="bi bi-telephone" style="font-size: 24px; color: white; margin-right: 7px; margin-top: -5px;" ></i>
+                       <a href="tel:+961 70677712" style="color: white;">Call to ask any question </a>
+                    </div>
+                    <div class="col-md-6 d-flex align-items-center justify-content-center mt-3 mt-md-0">
+                        <i class="bi bi-clock" style="font-size: 24px; color: white; margin-right: 7px; margin-top: -6px;"></i>
+                       
+                           <a href="https://wa.me/96170677712" style="color: white;"> Reply within 24 hours</a>
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
     <!-- Quote End -->
     <!--Footer start-->
     <script defer src="/client/js/footer.js"></script>

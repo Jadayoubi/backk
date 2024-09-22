@@ -5,7 +5,28 @@ body {
     background-color: #fff;
     color: #333;
 }
-
+.line-animation {
+    width: 8%; 
+    height: 100%;   
+    background-color: #081f3e;
+    position: absolute;
+    animation: slide 3s infinite ease-in-out;
+    }
+    .line-container {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        }
+        
+        .line-line {
+        width: 10%; 
+        height: 7px; 
+        background-color: #00a0e9; 
+        position: relative;
+        overflow: hidden;
+        border-radius: 5px; 
+        /* margin-left: 4%; */
+        }
 /* Hero Section */
 .hero {
     background-color: #0a1a38;
@@ -50,7 +71,7 @@ body {
 }
 
 .our-story h2 {
-    margin-right: 345px;
+    margin-right: 27%;
     font-size: 2.5em;
     margin-bottom: 20px;
     color: white;
@@ -183,6 +204,9 @@ body {
         /* position: relative; */
         /* margin-top: 50px; */
         /* margin-bottom: 60px; */
+    }
+    .our-story .line-line{
+        display: none;
     }
     .core-services .service-item img {
         width: 100%;
@@ -342,4 +366,9 @@ body {
 
 .button-image:hover {
     transform: scale(1.1);
+}
+@media screen and (min-width:999px) {
+    .values {
+      margin-left:50%;
+    }
 }
