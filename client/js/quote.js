@@ -7,6 +7,17 @@ let currentWebQuestion = 1;
 /////////////////////
 let totalAppQuestions=6;
 let currentAppQuestions=1;
+///////////////////////
+let totalConsltQuestions=6;
+let currentConsltQuestion=1;
+
+let ConsltselectedAnswers = {
+    type: '',
+    challenges: '',
+    support: '',
+    team: '',
+    timeline: '',
+}
 
 let selectedAnswers = {
     type: '',
@@ -19,6 +30,8 @@ let selectedAnswers = {
 document.getElementById('webdev-email').addEventListener('input', updateNextButtonStateWebdev);
 
  document.getElementById('appdev-email').addEventListener('input', updateNextButtonStateAppdev);
+
+document.getElementById('consulting-email').addEventListener('input', updateNextButtonStateConsulting);
 
 function validateEmail(emailInputId, errorId) {
     const emailInput = document.getElementById(emailInputId);
@@ -619,6 +632,188 @@ document.querySelectorAll('#appdev-question-5 .app-question-card').forEach(card 
         console.log('Selected Budget/Timeline:', selectedAnswers.budgetTimeline);
     });
 });
+//////////////////////////////////////////////////////////////////////
+/////////////////////////////////Consulting//////////////////////////
+/////////////////////////////////////////////////////////////////////
+function showConsultingQuestions(service) {
+    console.log("Consulting Clicked");
+    document.getElementById('service-container').classList.add('hidden'); // Hide the service options
+    document.getElementById(service).classList.remove('hidden'); // Show the selected service section
+   
+    document.getElementById(`consulting-question-${currentConsltQuestion}`).style.display = 'block'; // Show the first question of Consulting
+}
+
+document.querySelectorAll('.consulting-question-card').forEach(card => {
+    // console.log("Card found:", card); 
+    card.addEventListener('click', () => {
+        card.classList.toggle('selected');
+        card.classList.add('bounce-top');
+        updateNextButtonStateConsulting();
+        setTimeout(() => {
+            card.classList.remove('bounce-top');
+        }, 1000);
+    });
+});
+
+document.getElementById('consulting-next-btn').addEventListener('click', () => {
+    if (currentConsltQuestion < totalConsltQuestions) {
+        document.getElementById(`consulting-question-${currentConsltQuestion}`).style.display = 'none';
+        currentConsltQuestion++;
+        document.getElementById(`consulting-question-${currentConsltQuestion}`).style.display = 'block';
+        updateConsultingProgressBar();
+        updateNextButtonStateConsulting();
+        updateConsultingBackButtonState();
+    } 
+
+});
+
+document.getElementById('consulting-back-btn').addEventListener('click', () => {
+    if (currentConsltQuestion > 1) {
+        document.getElementById(`consulting-question-${currentConsltQuestion}`).style.display = 'none';
+        currentConsltQuestion--;
+        document.getElementById(`consulting-question-${currentConsltQuestion}`).style.display = 'block';
+        updateConsultingProgressBar();
+        updateNextButtonStateConsulting();
+        updateConsultingBackButtonState();
+    }
+});
+
+document.getElementById('consulting-question-container').addEventListener('click', event => {
+    const target = event.target;
+    if (target.classList.contains('question-card')) {
+        updateNextButtonStateConsulting(); // Call the function to update the next button state
+    }
+});
+
+
+
+function updateNextButtonStateConsulting() {
+    let currentQuestionElement = document.getElementById(`consulting-question-${currentConsltQuestion}`);
+    let selectedCards = currentQuestionElement.querySelectorAll('.question-card.selected').length;
+
+    // Check if it's the last question in the webdev section
+    if (currentConsltQuestion === totalConsltQuestions) { // Assuming the last question index is 6
+        let emailInput = document.getElementById('consulting-email').value.trim();
+        document.getElementById('consulting-next-btn').style.display = 'none';
+        document.getElementById('consulting-submit-btn').disabled = emailInput === '';
+        document.getElementById('consulting-submit-btn').style.display = emailInput === '' ? 'none' : '';
+    } else {
+        document.getElementById('consulting-next-btn').disabled = selectedCards === 0;
+        document.getElementById('consulting-submit-btn').style.display = 'none';
+    }
+}
+
+function updateConsultingProgressBar() {
+    let progressPercentage = ((currentConsltQuestion-1 ) / totalConsltQuestions) * 100;
+    document.getElementById('consultingprogress-bar').style.width = `${progressPercentage}%`;
+    document.getElementById('consultingprogress-text').innerText = `${Math.round(progressPercentage)}%`;
+}
+
+function updateConsultingBackButtonState() {
+    const consultingBackButton = document.getElementById('consulting-back-btn');
+    
+    consultingBackButton.disabled = currentConsltQuestion === 1;
+    if (currentConsltQuestion > 1) {
+        consultingBackButton.classList.add('enabled');
+    } else {
+        consultingBackButton.classList.remove('enabled');
+    }
+}
+
+function submitFormConsulting() {
+    if (validateEmail('consulting-email', 'consultingEmailError')) {
+        const email = document.getElementById('consulting-email').value.trim();
+        const phone = document.getElementById('consulting-phone').value.trim();
+        const company = document.getElementById('consulting-company').value.trim();
+        const type = ConsltselectedAnswers.type;
+        const challenges = ConsltselectedAnswers.challenges;
+        const support = ConsltselectedAnswers.support;
+        const team = ConsltselectedAnswers.team;
+        const timeline = ConsltselectedAnswers.timeline;
+
+        const payload = {
+            email: email,
+            phone: phone,
+            company: company,
+            type: type,
+            challenges: challenges,
+            support: support,
+            team: team,
+            timeline: timeline
+        };
+        // console.log(platforms);
+        console.log(payload)
+        fetch('http://localhost:3000/api/consulting/create', {
+            method: 'POST',
+            // mode: 'no-cors',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(payload),
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`Network response was not ok: ${response.statusText}`);
+            }
+            return response.json();
+        })
+        .then(data => {
+            console.log('Quotation submitted successfully:', data);
+            // Optionally show confirmation message or redirect
+            document.getElementById('consulting-question-container').style.display = 'none';
+            document.getElementById('consultingconfirmation-section').style.display = 'block';
+            document.getElementById('consultingbuttons').style.display = 'none';
+            //Appbuttons
+        })
+        .catch(error => {
+            console.error('Error submitting quotation:', error);
+            // Handle error: display message to user, retry, etc.
+        });
+    } else {
+        document.getElementById('consultingEmailError').style.display = 'block';
+        console.log("Email error");
+    }
+}
+
+function redirect() {
+    window.location.href = '../index.html';
+}
+
+
+document.querySelectorAll('#consulting-question-1 .consulting-question-card').forEach(card => {
+    card.addEventListener('click', function() {
+        ConsltselectedAnswers.type = card.getAttribute('data-answer');
+        console.log('Selected Type:', ConsltselectedAnswers.type);
+    });
+});
+
+document.querySelectorAll('#consulting-question-2 .consulting-question-card').forEach(card => {
+    card.addEventListener('click', function() {
+        ConsltselectedAnswers.challenges = card.getAttribute('data-answer');
+        console.log('Selected challenges:', ConsltselectedAnswers.challenges);
+    });
+});
+
+document.querySelectorAll('#consulting-question-3 .consulting-question-card').forEach(card => {
+    card.addEventListener('click', function() {
+        ConsltselectedAnswers.support = card.getAttribute('data-answer');
+        console.log('Selected support:', ConsltselectedAnswers.support);
+    });
+});
+
+document.querySelectorAll('#consulting-question-4 .consulting-question-card').forEach(card => {
+    card.addEventListener('click', function() {
+        ConsltselectedAnswers.team = card.getAttribute('data-answer');
+        console.log('Selected team:', ConsltselectedAnswers.team);
+    });
+});
+
+document.querySelectorAll('#consulting-question-5 .consulting-question-card').forEach(card => {
+    card.addEventListener('click', function() {
+        ConsltselectedAnswers.timeline = card.getAttribute('data-answer');
+        console.log('Selected timeline:', ConsltselectedAnswers.timeline);
+    });
+});
 
 // Initial call to set progress and button state
 updateFleetProgressBar();
@@ -632,3 +827,7 @@ updateNextButtonStateWebdev();
 updateAppBackButtonState()
 updateAppProgressBar();
 updateNextButtonStateAppdev();
+////////////////////////////
+updateConsultingBackButtonState()
+updateConsultingProgressBar();
+updateNextButtonStateConsulting();

@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,17 +9,226 @@
     <link href="/client/css/style.css" rel="stylesheet">
     <link href="/client/css/index.css" rel="stylesheet"/>
 
+    <link href="/client/css/navbar.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Symbols+Outlined">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <style>
-        .Products img{
+        /* .Products img{
             width: 70px;
             height: 47px;
-        }
+        } */
+        .dropdown-content .dropdown-item p {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.dropdown-content .dropdown-item:hover p {
+    display: block;
+    opacity: 1;
+}
+
      
     </style>
 </head>
 <body>
 
+    <nav class="navbar">
+        
+        <div class="hamburger" id="hamburger">
+            <div class="slider-container">
+                <div class="slider-line slider-line-1">
+                    <div class="slider-animation"></div>
+                </div>
+                <div class="slider-line slider-line-2">
+                    <div class="slider-animation"></div>
+                </div>
+                <div class="slider-line slider-line-3">
+                    <div class="slider-animation"></div>
+                </div>
+            </div>
+            
+        </div>
+        <div class="navbar-brand">
+            <img src="/client/images/logo/LogoNew-nobg.png" alt="SecuFleet Logo" class="logo">
+        </div>
+        <div class="navbar-right">
+            <a href="http://fleet.activi.link/login/38" class="btn">Login</a>
+            <a href="/client/Pages/quote.html" class="btn">Free Quote</a>
+        </div>
+    </nav>
+    <div class="navbar-menu" id="navbarMenu">
+         <span class="close-btn-sidebar" id="closeSidebar">&times;</span>
+         <ul >
+            <li><a href="/client/index.html">Home</a></li>
+            <li><a href="#" id="aboutLink">About <i class="fa fa-chevron-down arrow"></i></a></li>
+            <li><a href="#" id="productsLink">Products <i class="fa fa-chevron-down arrow"></i></a></li>
+            <li><a href="#" id="servicesLink">Services <i class="fa fa-chevron-down arrow"></i></a></li>
+            <li><a href="#" id="industriesLink">Industries <i class="fa fa-chevron-down arrow"></i></a></li>
+            
+        </ul>
+        <!-- <div class="navbar-buttons">
+            <a href="#" class="btn">Free Quote</a>
+            <a href="#" class="btn">Contact Us</a>
+        </div>
+        <div class="navbar-social">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+        </div> -->
+    </div>
 
+    <div class="overlay" id="overlay">
+        <div class="overlay-content" id="overlayContent">
+            <span class="close-btn" id="closeOverlay" style="display: none;">&times;</span>
+            <div class="dropdown-content" id="aboutDropdownContent">
+                <a href="/client/About/about.html">
+                    <span class="material-symbols-outlined">apartment</span>
+                    About Us
+                </a>
+                <a href="/client/About/Careers.html">
+                    <span class="material-symbols-outlined">work</span>
+                    Careers
+                </a>
+                <a href="/client/About/contact.html">
+                    <span class="material-symbols-outlined">contact_page</span>
+                    Contact Us
+                </a>
+            </div>
+            <div class="dropdown-content" id="productsDropdownContent">
+                <a href="/client/products/fleet-management.html">
+                    <span class="material-icons">build</span>
+                    Fleet Management
+                </a>
+                <a href="/client/products/vehicle-inspection.html">
+                    <span class="material-icons">search</span>
+                    Vehicle Inspection
+                </a>
+                <a href="/client/products/vehicle-inspection.html">
+                    <span class="material-icons">map</span>
+                    Route Planning
+                </a>
+                <a href="/client/products/fleet-management.html">
+                    <span class="material-icons">description</span>
+                    Digital Reports
+                </a>
+                <a href="/client/products/vehicle-inspection.html">
+                    <span class="material-icons">satellite</span>
+                    Asset Tracking
+                </a>
+                <a href="/client/products/vehicle-inspection.html">
+                    <span class="material-icons">location_on</span>
+                    GPS Tracking and Live Data
+                </a>
+                <a href="/client/products/fleet-management.html">
+                    <span class="material-icons">directions_car</span>
+                    Carsharing
+                </a>
+                <a href="/client/products/vehicle-inspection.html">
+                    <span class="material-icons">bar_chart</span>
+                    Fleet Efficiency
+                </a>
+                <a href="/client/products/vehicle-inspection.html">
+                    <span class="material-icons">schedule</span>
+                     Worktime
+                </a>
+                <a href="/client/products/vehicle-inspection.html">
+                    <span class="material-icons">videocam</span>
+                    ADAS and Camera Systems
+                </a>
+                <a href="/client/products/vehicle-inspection.html">
+                    <span class="material-icons">emoji_people</span>
+                    Driver Behaviour
+                </a>
+                <a href="/client/products/vehicle-inspection.html">
+                    <span class="material-icons">ac_unit</span>
+                    Sensor Monitoring
+                </a>
+                <a href="/client/products/vehicle-inspection.html">
+                    <span class="material-icons">chat</span>
+                    Mobile Intergration Tool
+                </a>
+                <a href="/client/products/vehicle-inspection.html">
+                    <span class="material-icons">code</span>
+                    API Integrations
+                </a>
+            </div>
+            <div class="dropdown-content" id="servicesDropdownContent">
+                <a href="/client/Service/consulting.html" class="dropdown-item">
+                    <span class="material-symbols-outlined"  style="font-size: 50px;">travel_explore</span>
+                    <div>
+                        <div>Consulting</div>
+                        <p class="description">Advice to optimize your business strategies.</p>
+                    </div>
+                </a>
+                <a href="#" class="dropdown-item">
+                    <span class="material-symbols-outlined"  style="font-size: 50px;">contract_edit</span>
+                    <div>
+                        <div>Contracting</div>
+                        <p class="description">Professional contracting services tailored to your needs.</p>
+                    </div>
+                </a>
+                <a href="/client/Service/webDev.html" class="dropdown-item">
+                    <span><i class="bi bi-code-slash" style="font-size: 50px;"></i></span>
+                    <div>
+                        <div>Web Development</div>
+                        <p class="description">Custom website design and development solutions.</p>
+                    </div>
+                </a>
+                <a href="#" class="dropdown-item">
+                    <span><i class="bi bi-phone" style="font-size: 50px;"></i></span>
+                    <div>
+                        <div>App Development</div>
+                        <p class="description">Innovative mobile app development for various platforms.</p>
+                    </div>
+                </a>
+            </div>
+            <div class="dropdown-content" id="industriesDropdownContent">
+                <a href="industry1.html">
+                    <img src="/client/images/icons/construction.png" style="width: 40%;">
+                    <p>Construction & Mining</p>
+                </a>
+                <a href="industry2.html">
+                    <img src="/client/images/icons/JadMoto.png" style="width: 30%;"/>
+                    Moto, ATV & Quads
+                </a>
+                <a href="industry2.html">
+                    <i class="fa-solid fa-ship"  "></i>
+                    Maritime & boats
+                </a>
+              
+                <a href="industry2.html">
+                    <img src="/client/images/icons/police.png" style="width: 30%;"/>
+                    Utility & Emergency
+                </a>
+                <a href="industry2.html">
+                    <i class="bi bi-truck"></i>
+                    Logistics & Delivery services
+                </a>
+                <a href="industry2.html">
+                    <img src="/client/images/icons/rent1.png" style="width: 40%;"/>
+                    Rental, Insurance & Leasing
+                </a>
+                <a href="industry2.html">
+                    <img src="/client/images/icons/farming.png" style="width: 60%;">
+                    Agriculture &  Farming IOT
+                </a>
+                <a href="industry2.html">
+                   <img src="/client/images/icons/workforce.png" style="width: 40%;"/>
+                    Assets & Workforce
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+<!-- 
 <nav class="navbar navbar-expand-lg navbar-dark px-5 py-3 py-lg-0">
     <a href="/client/index.html" class="navbar-brand p-0">
         <h1 class="m-0"><img src="/client/images/logo/logo.jpg" alt="logo" class="logo" /></h1>
@@ -62,12 +270,10 @@
                                     <div class="dropdown-item">
                                         <span class="material-icons">build</span>
                                         <div>
-
                                             <a href="/client/products/fleet-management.html"><p>Fleet Management</p>
                                             <p class="description">Efficiently manage your fleet of vehicles,<br> including maintenance and scheduling.</p>
                                        
                                        </a> </div>
-
                                     </div>
                                     <div class="dropdown-item">
                                         <span class="material-icons">search</span>
@@ -133,10 +339,8 @@
                                     <div class="dropdown-item">
                                         <span class="material-icons">schedule</span>
                                         <div>
-
                                             <a href="/client/products/worktime.html">
                                             <p>Worktime</p>
-
                                             <p class="description">Track and manage work hours for drivers<br> and employees to ensure compliance and efficiency.</p>
                                         </a>
                                         </div>
@@ -144,13 +348,11 @@
                                     <div class="dropdown-item">
                                         <span class="material-icons">videocam</span>
                                         <div>
-
                                             <a href="/client/products/camera_tracking.html">
                                             <p>ADAS and Camera Systems</p>
                                             <p class="description">Install camera systems for enhanced security<br> and monitoring of vehicles and drivers.</p>
                                         
                                         </a></div>
-
                                     </div>
                                 </div>
                                 <div class="col-md-4">
@@ -205,15 +407,15 @@
                             <span class="material-symbols-outlined">travel_explore</span>
                             <div>
 
+
+                                 
+                                 
                                  
                                 <div>Consulting</div>
                                 <p class="description" ">Advice to optimize your business strategies.</p>
                              
-
                             </div>
-                        
-            
-                        
+                        </a>
                         <a href="#" class="dropdown-item">
                             <span class="material-symbols-outlined">contract_edit</span>
                             <div>
@@ -341,9 +543,13 @@
         <a href="/client/Pages/quote.html" class="btn btn-primary py-2 px-4 ms-3">Free Quote</a>
         <a href="http://fleet.activi.link/login/38" class="btn btn-primary py-2 px-4 ms-3" target="_blank">login</a>
     </div>
-</nav>
+</nav> -->
 
-    
+    <script>
+ 
+
+
+    </script>
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -354,7 +560,7 @@
 <script src="/client/lib/counterup/counterup.min.js"></script>
 <script src="/client/lib/owlcarousel/owl.carousel.min.js"></script>
 
-
+<script src="/client/js/navbar.js"></script>
 <script src="/client/js/main.js"></script>
 </body>
 </html>

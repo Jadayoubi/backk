@@ -46,14 +46,35 @@
     body{
         overflow-x: hidden;
     }
+    .who-we-are-section{
+        position: relative;
+        height: 100vh; /* Set the height of the section */
+        overflow: hidden;
+    }
+    .who-we-are-section video{
+        position: absolute;
+        top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1;
+  transform: translate(-50%, -50%);
+    }
+    .who-we-are-content{
+        position: relative;
+        z-index: 1;
+        border-radius: 20px;
+    }
         
     </style>
 </head>
 
 <body>
     <!-- Spinner Start -->
-    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-        <div class="spinner"></div>
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-40 d-flex align-items-center justify-content-center">
+        <div class="spinner"> <img src="/client/images/logo/round.png"></div>
     </div>
     <!-- Spinner End -->
 
@@ -109,8 +130,9 @@
             <div class="carousel-inner">
                 <div class="carousel-item active">
 
-                    <video class="d-block w-100 sliderVd" muted width="900px">
-                        <source src="./images/slider.mp4" type="video/mp4"/>
+                    <video class="d-block w-100 sliderVd" muted width="900px" autoplay>
+                        <source src="/client/images/slider.mp4" type="video/mp4"/>
+                     
                     </video> 
                     <!-- <img class="w-100" src="./images/sliders/Digitalize your asset.jpg"
                      alt="slider"> -->
@@ -250,7 +272,12 @@
 
 
     <section class="who-we-are-section">
+        <video autoplay loop muted playsinline>
+            <source src="/client/images/homeBackground-vmake.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
         <div class="who-we-are-content">
+            
             <h2 class="who-we-are-title">WHO WE ARE</h2>
             <h1 class="mb-0">The best fleet management and maintenance software</h1>
           <div class="who-we-are-description-wrapper">
@@ -308,6 +335,7 @@
         </div>
 
     </div>
+    <br><br>
 
 <!--onfleet Start-->
 <!-- <div class="onfleetBody">
@@ -376,8 +404,8 @@
     <!-- About Start -->
     <div class="aboutSlider" id="aboutSlider">
         <h1 class="aboutSliderh1">Transformation through intelligent operations</h1>
-        <nav class="navbar">
-            <a href="#aboutSlider" id="security-link" onclick="changeContent('security')" class="active">
+        <nav class="navbarabout">
+            <a href="#aboutSlider" id="security-link" onclick="changeContent('security')" class="active1">
                 <i class="bi bi-shield-lock"></i> AI-enabled scenarios
             </a>
             <a href="#aboutSlider" id="ecosystem-link" onclick="changeContent('ecosystem')">
@@ -664,7 +692,7 @@
                     <br/>
                     <br/>
                     <!-- Call to Action Box -->
-                    <a href="quote.html" class="d-inline-block text-decoration-none" style="background-color: rgba(233, 232, 232, 0.129); width: 30%; height: 20%;; padding: 15px 30px; display: inline-block;">
+                    <a href="/client/Pages/quote.html" class="d-inline-block text-decoration-none" style="background-color: rgba(233, 232, 232, 0.129); width: 30%; height: 20%;; padding: 15px 30px; display: inline-block;">
                         <h5 style="color: rgb(6, 163, 218);text-align: center; margin-top: 1%;">REQUEST A FREE QUOTE</h5>
                     </a>
                     <br/>

@@ -1,6 +1,6 @@
 @media (max-width: 768px) {
     /* aboutSlider responsivness start */
-.aboutSlider .navbar a{
+.aboutSlider .navbarabout a{
     margin: 20px;
     text-decoration: none;
     color: #000;
@@ -10,7 +10,7 @@
 .aboutSliderh1{
     text-align: center;
 }
-.aboutSlider .navbar{
+.aboutSlider .navbarabout{
     display: flex;
     flex-direction: column;
     position: static;
@@ -18,7 +18,7 @@
 .aboutSlider img{
     width: 90%;
 }
-.aboutSlider .navbar a.active {
+.aboutSlider .navbarabout a.active1 {
     color: rgb(6, 163, 218);
 }
 /* .aboutSlider .navbar a i{
@@ -86,7 +86,7 @@
         width: 80%;
         margin: 0 auto;
     }
-    .navbar a i {
+    .navbarabout a i {
         margin-right: 8px;
     font-size: 20px;
     }
@@ -95,14 +95,18 @@
         text-align: center;
     }
     
-    .aboutSlider .navbar {
+    .aboutSlider .navbarabout {
         display: flex;
         justify-content: center;
-        margin-bottom: 5px;
+        margin-bottom: 15px;
         position: static;
+        background-color: #ffffff; /* White background */
+        padding: 10px 20px;
+        border-radius: 8px; /* Rounded corners */
+        box-shadow: 0 6px 6px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
     }
     
-    .aboutSlider .navbar a {
+    .aboutSlider .navbarabout a {
         text-decoration: none;
         color: hwb(0 0% 100%);
         padding: 10px 20px;
@@ -112,7 +116,7 @@
         
     }
     
-    .aboutSlider .navbar a.active, .navbar a:hover {
+    .aboutSlider .navbarabout a.active1, .navbarabout a:hover {
         color: rgb(6, 163, 218);
     }
     

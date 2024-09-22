@@ -9,6 +9,7 @@ const adminRoutes = require('./routes/api/adminRoutes');
 const quotationsRouter = require('./routes/api/appDevQuotationRoutes');
 const fleetQuotationRoutes = require('./routes/api/fleetQuotation');
 const WebQuotationRoute=require('./routes/api/quotation')
+const ConsultingQuotationRoute=require('./routes/api/consultingQuotationRoutes')
 const app = express();
 
 // MongoDB connection
@@ -39,7 +40,7 @@ app.use('/api', adminRoutes);
 app.use('/api', quotationsRouter);
 app.use('/api', WebQuotationRoute);
 app.use('/api/fleetQuotations', fleetQuotationRoutes);
-
+app.use('/api/consulting', ConsultingQuotationRoute);
 // Error handling middleware (global)
 app.use((err, req, res, next) => {
   console.error(err.stack);

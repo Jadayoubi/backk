@@ -35,7 +35,7 @@ body{
 .hidden {
     display: none;
 }
- .question-card span,  .service i {
+ .question-card span,  .service i, .service span {
     font-size: 35px;
     color:rgb(6, 163, 218)
 }
