@@ -13,10 +13,10 @@
     />
 
     <!-- Title -->
-    <title>Fleet Management Page</title>
+    <title>Fleet Management</title>
 
     <!-- Favicon -->
-    <link rel="icon" href="img/favicon.png" />
+    <link href="/client/images/logo/logo.jpg" rel="icon">
 
     <link
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -110,14 +110,14 @@
     <link rel="stylesheet" href="../css/products/animate.min.css" />
     <!-- Magnific Popup CSS -->
     <link rel="stylesheet" href="../css/products/magnific-popup.css" />
-    <link rel="stylesheet" href="../css/products/normalize.css" />
+   
 
     <link rel="stylesheet" href="../css/products/responsive.css" />
     <link href="../css/products.css" rel="stylesheet" />
     <!-- <link href="../css/products/style.css" rel="stylesheet"/> -->
     <link href="../css/index.css" rel="stylesheet" />
     <!-- <link href="../css/style.css" rel="stylesheet"/> -->
-
+    <link href="/client/css/animation.css" rel="stylesheet"/>
     <link
       href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css"
       rel="stylesheet"
@@ -126,12 +126,50 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
       rel="stylesheet"
     />
+    <style>
+     
+      .fleetBack{
+        background: url('/client/images/products/FleetManagement/Fleet\ Management\ 103.png');
+        background-position:center 75%;
+        background-size: cover;
+        background-repeat:no-repeat;
+        height: 80vh;
+        animation: bounce-in-right  0.8s ease-in-out both;
+       
+      }
+      #section1{
+        background: url('/client/images/products/FleetManagement/55.png');
+        background-size: cover;
+        background-attachment: fixed;
+        background-repeat:no-repeat;
+        background-position: center;
+        object-fit: cover;
+        padding: 0;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+      }
+   
+      
+      #section3{
+        background: url('/client/images/products/FleetManagement/Fleet\ Management\ 65.webp');
+        background-size: cover;
+        background-position: center 55%;
+        background-repeat: no repeat;
+        object-fit: contain;
+        height:80vh;
+        background-attachment: fixed;
+      }
+
+    </style>
   </head>
 
   <body>
-    <script defer src="../js/navbar.js"></script>
+    <script defer src="/client/js/navbar.js"></script>
     <div id="navbar-container"></div>
-    <img src="../images/products/fleet management1.jpg" />
+    <a href="https://fleet.activi.link/login/38" target="_blank">
+    <div class="fleetBack"></div>
+  </a>
     <!-- Start Schedule Area -->
 
     <section class="schedule" >
@@ -145,11 +183,9 @@
                   <div class="icon"></div>
                   <div class="single-content">
                     <span></span>
-                    <h4>Efficiency and Cost Savings</h4>
+                    <h4>Operational Control and Safety</h4>
                     <p>
-                      Optimize fuel use, schedule predictive maintenance, and
-                      plan efficient routes to reduce costs and boost
-                      productivity.
+                      Leverage Advanced Driver Assistance Systems (ADAS) to enhance driver behavior, optimize asset utilization, minimize risks and boost overall fleet efficiency.
                     </p>
                     <a href="#section1"
                       >LEARN MORE<i class="fa fa-long-arrow-right"></i
@@ -160,7 +196,7 @@
             </div>
             <div class="col-lg-3 col-md-6 col-12">
               <!-- single-schedule -->
-              <div class="single-schedule middle">
+              <div class="single-schedule middle" >
                 <div class="inner">
                   <div class="icon"></div>
                   <div class="single-content">
@@ -224,12 +260,12 @@
     <!--/End Start schedule Area -->
 
     <!-- Service Start -->
-    <section id="section1" style="margin-top: 10%;">
+    <section id="section1">
       <div class="container-xxl service py-5">
         <div class="container">
           <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
             <h6 class="text-primary text-uppercase"></h6>
-            <h1 class="mb-5">Efficiency and Cost Savings</h1>
+            <h1 class="mb-5">Operational Control and Safety</h1>
           </div>
           <div class="row g-4 wow fadeInUp" data-wow-delay="0.3s">
             <div class="col-lg-4">
@@ -240,8 +276,8 @@
                   data-bs-target="#tab-pane-1"
                   type="button"
                 >
-                  <i class="fa fa-car-side fa-2x me-3"></i>
-                  <h4 class="m-0">Fuel Management</h4>
+                  <img class="greenIcon" src="/client/images/products/icons/driver.png"/>
+                  <h4 class="m-0">Driver Performance Monitoring</h4>
                 </button>
                 <button
                   class="nav-link w-100 d-flex align-items-center text-start p-4 mb-4"
@@ -249,8 +285,8 @@
                   data-bs-target="#tab-pane-2"
                   type="button"
                 >
-                  <i class="fa fa-car-side fa-2x me-3"></i>
-                  <h4 class="m-0">Maintenance Scheduling</h4>
+                  <img class="greenIcon" src="/client/images/products/icons/assetTracking.png"/>
+                  <h4 class="m-0">Fleet Asset Utilization</h4>
                 </button>
                 <button
                   class="nav-link w-100 d-flex align-items-center text-start p-4 mb-4"
@@ -258,8 +294,8 @@
                   data-bs-target="#tab-pane-3"
                   type="button"
                 >
-                  <i class="fa fa-car-side fa-2x me-3"></i>
-                  <h4 class="m-0">Route Optimization</h4>
+                  <img class="greenIcon" src="/client/images/products/icons/cruise.png"/>
+                  <h4 class="m-0">Advanced Driver Assistance Systems (ADAS)</h4>
                 </button>
               </div>
             </div>
@@ -271,35 +307,29 @@
                       <div class="position-relative h-100">
                         <img
                           class="position-absolute img-fluid w-100 h-100"
-                          src="/client/images/products/fuel_manage.jpg"
+                          src="/client/images/products/FleetManagement/Fleet Management 22.png"
                           style="object-fit: cover"
                           alt=""
                         />
                       </div>
                     </div>
                     <div class="col-md-6">
-                      <h3 class="mb-3">Maximizing Fuel Efficiency</h3>
+                      <h3 class="mb-3">Driver Performance Monitoring</h3>
                       <p class="mb-4">
-                        We excel in optimizing fuel usage through advanced
-                        monitoring and management strategies, ensuring
-                        significant cost reductions while maintaining
-                        performance standards.
+                        Monitor driver behavior and ensure compliance with safety protocols to minimize risks and boost fleet safety.
                       </p>
                       <p>
-                        <i class="fa fa-check text-success me-3"></i>Precise
-                        Maintenance Scheduling
+                        <i class="fa fa-check text-success me-3"></i>Behavioral Insights
                       </p>
                       <p>
-                        <i class="fa fa-check text-success me-3"></i>Skilled
-                        Technicians
+                        <i class="fa fa-check text-success me-3"></i>Real-Time Alerts
                       </p>
                       <p>
-                        <i class="fa fa-check text-success me-3"></i
-                        >State-of-the-Art Equipment
+                        <i class="fa fa-check text-success me-3"></i>Driver Training Programs
                       </p>
-                      <a href="" class="btn btn-primary py-3 px-5 mt-3"
-                        >Read More<i class="fa fa-arrow-right ms-3"></i
-                      ></a>
+                      <a href="/client/products/driver-behavior.html" class="btn btn-primary py-3 px-5 mt-3" style="color: white;">
+                        Read More<i class="fa fa-arrow-right ms-3"></i>
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -309,34 +339,29 @@
                       <div class="position-relative h-100">
                         <img
                           class="position-absolute img-fluid w-100 h-100"
-                          src="../images/aboutSlider/carFleet.png"
+                          src="/client/images/products/FleetManagement/Fleet Management 54.png"
                           style="object-fit: cover"
                           alt=""
                         />
                       </div>
                     </div>
                     <div class="col-md-6">
-                      <h3 class="mb-3">Proactive Maintenance Planning</h3>
+                      <h3 class="mb-3">Fleet Asset Utilization</h3>
                       <p class="mb-4">
-                        Our approach integrates predictive maintenance
-                        techniques, minimizing downtime and unexpected repair
-                        costs, thereby enhancing operational reliability.
+                        Track fleet utilization rates, reduce idle time, and maximize resource allocation for peak efficiency.
                       </p>
                       <p>
-                        <i class="fa fa-check text-success me-3"></i>Quality
-                        Assurance
+                        <i class="fa fa-check text-success me-3"></i>Utilization Analytics
                       </p>
                       <p>
-                        <i class="fa fa-check text-success me-3"></i>Expert
-                        Maintenance Crew
+                        <i class="fa fa-check text-success me-3"></i>Idle Time Monitoring
                       </p>
                       <p>
-                        <i class="fa fa-check text-success me-3"></i
-                        >Cutting-Edge Tools and Technology
+                        <i class="fa fa-check text-success me-3"></i>Resource Allocation Strategies
                       </p>
-                      <a href="" class="btn btn-primary py-3 px-5 mt-3"
-                        >Read More<i class="fa fa-arrow-right ms-3"></i
-                      ></a>
+                      <a href="/client/products/Asset-Tracking.html" class="btn btn-primary py-3 px-5 mt-3" style="color: white;">
+                        Read More<i class="fa fa-arrow-right ms-3"></i>
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -346,35 +371,29 @@
                       <div class="position-relative h-100">
                         <img
                           class="position-absolute img-fluid w-100 h-100"
-                          src="/client/images/products/route_opt.jpg"
+                          src="/client/images/products/FleetManagement/sensor.png"
                           style="object-fit: cover"
                           alt=""
                         />
                       </div>
                     </div>
                     <div class="col-md-6">
-                      <h3 class="mb-3">Optimized Routing Solutions</h3>
+                      <h3 class="mb-3">Advanced Driver Assistance Systems (ADAS)</h3>
                       <p class="mb-4">
-                        Leveraging data-driven insights and innovative
-                        algorithms, we tailor routes to streamline operations,
-                        reduce travel time, and lower fuel consumption,
-                        promoting eco-friendly practices
+                        Enhance fleet safety and efficiency with cutting-edge ADAS technology. These systems utilize cameras and sensors to monitor driver behavior, prevent collisions, and provide real-time feedback.
                       </p>
                       <p>
-                        <i class="fa fa-check text-success me-3"></i>Reliable
-                        Service
+                        <i class="fa fa-check text-success me-3"></i>Collision Avoidance
                       </p>
                       <p>
-                        <i class="fa fa-check text-success me-3"></i>Experienced
-                        Route Planners
+                        <i class="fa fa-check text-success me-3"></i>Lane Departure Alerts
                       </p>
                       <p>
-                        <i class="fa fa-check text-success me-3"></i>Advanced
-                        Navigation Systems
+                        <i class="fa fa-check text-success me-3"></i>Real-Time Monitoring
                       </p>
-                      <a href="" class="btn btn-primary py-3 px-5 mt-3"
-                        >Read More<i class="fa fa-arrow-right ms-3"></i
-                      ></a>
+                      <a href="/client/products/ADAS-and-Camera-Systems.html" class="btn btn-primary py-3 px-5 mt-3" style="color: white;">
+                        Read More<i class="fa fa-arrow-right ms-3"></i>
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -384,9 +403,10 @@
         </div>
       </div>
     </section>
-    <!-- Service End -->
+    
+    <!-- Service End --> 
     <!-- About Start -->
-    <section id="section2" style="margin-top: 10%;">
+    <section id="section2">
       <div class="container-xxl py-5">
         <div class="container">
           <div class="row g-5">
@@ -396,10 +416,10 @@
                 data-wow-delay="0.1s"
               >
                 <img
-                  class="position-absolute img-fluid w-100 h-120"
-                  src="/client/images/products/system.jpeg"
+                  class="position-absolute img-fluid"
+                  src="/client/images/products/FleetManagement/systemE.png"
                 
-                  alt=""
+                  alt="Safety and Compliance"
                 />
               </div>
             </div>
@@ -462,7 +482,7 @@
                   </div>
                 </div>
               </div>
-              <a href="" class="btn btn-primary py-3 px-5"
+              <a href="/client/products/digital-reports.html" class="btn btn-primary py-3 px-5"
                 >Read More<i class="fa fa-arrow-right ms-3"></i
               ></a>
             </div>
@@ -472,7 +492,7 @@
     </section>
     <!-- About End -->
     <!-- Service Start -->
-    <section id="section3" style="margin-top: 10%;">
+    <section id="section3">
       <div class="container-xxl service py-5">
         <div class="container">
           <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
@@ -488,7 +508,7 @@
                   data-bs-target="#tab-pane-4"
                   type="button"
                 >
-                  <i class="fa fa-car-side fa-2x me-3"></i>
+                  <img class="greenIcon" src="/client/images/products/icons/recycle.png">
                   <h4 class="m-0">Green Fleet Initiatives</h4>
                 </button>
                 <button
@@ -497,7 +517,7 @@
                   data-bs-target="#tab-pane-5"
                   type="button"
                 >
-                  <i class="fa fa-car-side fa-2x me-3"></i>
+                <img class="greenIcon" src="/client/images/products/icons/ev.png">
                   <h4 class="m-0">Electric and Hybrid Vehicles</h4>
                 </button>
                 <button
@@ -506,7 +526,7 @@
                   data-bs-target="#tab-pane-6"
                   type="button"
                 >
-                  <i class="fa fa-car-side fa-2x me-3"></i>
+                <img class="greenIcon" src="/client/images/products/icons/greenWorld.png">
                   <h4 class="m-0">Environmental Reporting</h4>
                 </button>
               </div>
@@ -519,7 +539,7 @@
                       <div class="position-relative h-100">
                         <img
                           class="position-absolute img-fluid w-100 h-100"
-                          src="/client/images/products/eco.jpg"
+                          src="/client/images/products/FleetManagement/eco.jpg"
                           style="object-fit: cover"
                           alt=""
                         />
@@ -546,7 +566,7 @@
                         <i class="fa fa-check text-success me-3"></i>Sustainable
                         Operations
                       </p>
-                      <a href="" class="btn btn-primary py-3 px-5 mt-3"
+                      <a href="/client/products/fleet.efficiency.html" class="btn btn-primary py-3 px-5 mt-3"
                         >Read More<i class="fa fa-arrow-right ms-3"></i
                       ></a>
                     </div>
@@ -558,7 +578,7 @@
                       <div class="position-relative h-100">
                         <img
                           class="position-absolute img-fluid w-100 h-100"
-                          src="/client/images/products/electrical_v.jpg"
+                          src="/client/images/products/FleetManagement/i8.png"
                           style="object-fit: cover"
                           alt=""
                         />
@@ -586,7 +606,7 @@
                         <i class="fa fa-check text-success me-3"></i>Modern
                         Fleet
                       </p>
-                      <a href="" class="btn btn-primary py-3 px-5 mt-3"
+                      <a href="/client/products/fleet.efficiency.html" class="btn btn-primary py-3 px-5 mt-3"
                         >Read More<i class="fa fa-arrow-right ms-3"></i
                       ></a>
                     </div>
@@ -598,7 +618,7 @@
                       <div class="position-relative h-100">
                         <img
                           class="position-absolute img-fluid w-100 h-100"
-                          src="/client/images/products/green.jpg"
+                          src="/client/images/products/FleetManagement/34.png"
                           style="object-fit: cover"
                           alt=""
                         />
@@ -626,7 +646,7 @@
                         <i class="fa fa-check text-success me-3"></i>Corporate
                         Responsibility
                       </p>
-                      <a href="" class="btn btn-primary py-3 px-5 mt-3"
+                      <a href="/client/products/fleet.efficiency.html" class="btn btn-primary py-3 px-5 mt-3"
                         >Read More<i class="fa fa-arrow-right ms-3"></i
                       ></a>
                     </div>
@@ -641,7 +661,7 @@
     <!-- Service End -->
 
     <!-- About Start -->
-    <section id="section4" style="margin-top: 10%;">
+    <section id="section4">
       <div class="container-xxl py-5">
         <div class="container">
           <div class="row g-5">
@@ -705,7 +725,7 @@
                   </div>
                 </div>
               </div>
-              <a href="" class="btn btn-primary py-3 px-5"
+              <a href="/client/products/gps-tracking.html" class="btn btn-primary py-3 px-5"
                 >Read More<i class="fa fa-arrow-right ms-3"></i
               ></a>
             </div>
@@ -716,7 +736,7 @@
               >
                 <img
                   class="position-absolute img-fluid w-100 h-100"
-                  src="../images/aboutSlider/truckFleet.png"
+                  src="/client/images/products/FleetManagement/real-time-tracking.png"
                   style="object-fit: cover"
                   alt=""
                 />

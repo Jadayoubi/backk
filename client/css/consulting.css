@@ -1,3 +1,51 @@
+.consultBack{
+    background-image: url('/client/images/consulting/test/best.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center 45%;
+    height: 80vh;
+}
+.box-text{
+    color: white;
+    width: 100%;
+}
+.consultBack .row{
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+
+}
+.consultBack .container {
+display: flex;
+align-items: center;
+justify-content: center;
+height: 100%; 
+background-color: rgba(0, 0, 0, 0.12);
+border-radius: 10px;
+}
+.contain .box{
+background-image: url('/client/images/consulting/test/Designer\ \(17\).jpeg');
+    background-size: cover;
+    background-position: center 45%;
+    color: white;
+}
+.contain .box span{
+background-color: #091e3e5a ;
+
+}
+
+@media (max-width: 762px) {
+.consultBack .row {
+width: 100%;
+}
+.mobile{
+background-color: #091e3e5a  ;
+}
+.mobileImg img{
+margin-top: 40px;
+
+}
+}
 .section-title h5{
     font-size:1.1em;
 }
@@ -13,6 +61,9 @@
     text-align: center;
     color: white;
     position: relative;
+}
+#section2 h1, #section2 p{
+color: white;
 }
 
 .containerBack::before {

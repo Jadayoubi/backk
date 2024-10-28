@@ -1,13 +1,70 @@
 /* Fleet management */
 
 /*** Service ***/
+body{
+    width: 100%;
+    background-color: #091E3E !important;
+}
+.btn{
+    color: white;
+  }
+.tab-pane{
+    background-color: rgba(39, 39, 39, 0.211);
+    border-radius: 10px;
+  }
+  .text-center{
+    padding-bottom: 10px;
+  }
+  .mb-3{
+    padding-top: 10px;
+  }
+  .mb-4,#section1 .d-flex,#section2 .d-flex,#section3 .d-flex, #section4 .d-flex{
+    padding-top: 30px;
+  }
+ @media (max-width:768px) {
+    #section1{
+        height: fit-content;
+
+    }
+  .schedule{
+    visibility: hidden;
+  }
+
+ }
+ @media(min-width:768px){
+    #section1{
+        height: 100vh;
+    }
+ }
+
+
+  #section2{
+    background-color:#091E3E;
+    height: fit-content;
+  }
+    #section1 h1, #section1 h3,  #section1 p, #section3 h1,#section2 span, #section2 p, #section3 h3, #section4 span, #section4 p{
+    color: white;
+  }
+  #section1 h6, #section2 h1, #section2 h6, #section4 h1 , #section4 h6{
+    color: rgb(6, 163, 218);
+  }    
+  #section4{
+    background-color: #091E3E;
+  }
+ 
+  .greenIcon{
+   
+    width: 80px;
+    object-fit: contain;
+    padding-right: 10px;
+  }
 .service .nav .nav-link {
     background: var(--light);
     transition: .5s;
 }
 
 .service .nav .nav-link.active {
-    background: var(--primary);
+    background: #091E3E;
 }
 
 .service .nav .nav-link.active h4 {
@@ -21,20 +78,22 @@
     padding-bottom: 5rem;
 }
 
-
+.btn:before{
+background-color: #091E3E;
+}
 
 .position-relative img {
     border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    
 }
 
 
 
-.d-flex {
+.choice  {
     align-items: center;
 }
 
-.d-flex .bg-light {
+.choice .bg-light {
     background-color: #f8f9fa !important;
     border-radius: 50%;
 }
@@ -47,7 +106,7 @@
     padding-left: 1rem !important;
 }
 
-.col-12 .d-flex {
+.col-12 .choice  {
     margin-bottom: 1.5rem;
 }
 
@@ -56,7 +115,7 @@
 }
 
 /* Bullet Points */
-.d-flex .bg-light {
+.choice  .bg-light {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -76,7 +135,7 @@
     padding-left: 15px;
 }
 
-.d-flex h6 {
+.choice  h6 {
     margin-bottom: 0;
 }
 
@@ -104,8 +163,9 @@
 
 /* Ensure images cover the container */
 .img-fluid {
-    object-fit: cover;
-    height: 100%;
+    object-fit: contain; 
+    height: 100% !important; 
+    border-radius: 10px;
 }
 
 .schedule {
@@ -113,7 +173,11 @@
     margin: 0;
     padding: 0;
     position: relative;
-    height: 230px; / /* Remove fixed height */
+
+  animation: slide-in-fwd-center 0.8s ease-in-out both 0.2s;
+}
+.schedule .container{
+    height: 0px;
 }
 
 .schedule .schedule-inner {
@@ -130,9 +194,9 @@
     text-align: left;
     z-index: 3;
     border-radius: 5px;
-    background: #1A76D1;
+    background:rgb(6, 163, 218);
     transition: all .3s ease-out 0s;
-    height: 100%; /* Ensure full height within column */
+    height: 100%;
     display: flex; /* Use flexbox for internal layout */
     flex-direction: column;
 }
@@ -182,18 +246,16 @@
     padding-top: 15px;
 }
 
-/* Ensure all columns have the same height */
 .schedule .row {
     display: flex;
     flex-wrap: wrap;
-    margin: 0 -15px;
+    justify-content: space-between;
 }
 
 .schedule .col-lg-3 {
     display: flex;
     margin-bottom: 30px;
 	padding: 0 15px;
-    /* Add some space between rows on smaller screens */
 }
 
 .schedule .schedule-inner {
@@ -213,7 +275,7 @@
     margin: 0 auto;
     width: 80%;
     height: 90%;
-    background:#1A76D1;
+    background:rgb(6, 163, 218);
     opacity: 0;
     filter: blur(10px);
     -webkit-transition: all .3s ease-out 0s;
@@ -222,11 +284,9 @@
     -o-transition: all .3s ease-out 0s;
     transition: all .3s ease-out 0s;
 }
-.schedule .single-schedule:hover:before{
-	opacity: 0.8;
-}
 .schedule .single-schedule:hover{
 	transform: translateY(-5px);
+    background-color:#091E3E ;
 }
 .schedule .single-schedule .icon i{
 	position: absolute;

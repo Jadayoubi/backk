@@ -56,14 +56,14 @@ Version:	1.1
 		});
 		
 		$('.pro-features .get-pro').on( "click", function(){
-			$('.pro-features').toggleClass('active');
+			$('.pro-features').toggleClass('activeproducts');
 		});
 		
 		/*====================================
 			Search JS
 		======================================*/ 
 		$('.search a').on( "click", function(){
-			$('.search-top').toggleClass('active');
+			$('.search-top').toggleClass('activeproducts');
 		});
 		
 		/*====================================
@@ -207,15 +207,15 @@ Version:	1.1
 		/*===================
 			Accordion JS
 		=====================*/ 
-		$('.accordion > li:eq(0) a').addClass('active').next().slideDown();
+		$('.accordion > li:eq(0) a').addClass('activeproducts').next().slideDown();
 		$('.accordion a').on('click', function(j) {
 			var dropDown = $(this).closest('li').find('p');
 			$(this).closest('.accordion').find('p').not(dropDown).slideUp(300);
-			if ($(this).hasClass('active')) {
-				$(this).removeClass('active');
+			if ($(this).hasClass('activeproducts')) {
+				$(this).removeClass('activeproducts');
 			} else {
-				$(this).closest('.accordion').find('a.active').removeClass('active');
-				$(this).addClass('active');
+				$(this).closest('.accordion').find('a.activeproducts').removeClass('activeproducts');
+				$(this).addClass('activeproducts');
 			}
 			dropDown.stop(false, true).slideToggle(300);
 			j.preventDefault();
@@ -250,10 +250,10 @@ Version:	1.1
 			Right Bar JS
 		=================================*/ 
 		$('.right-bar .bar').on( "click", function(){
-			$('.sidebar-menu').addClass('active');
+			$('.sidebar-menu').addClass('activeproducts');
 		});
 		$('.sidebar-menu .cross').on( "click", function(){
-			$('.sidebar-menu').removeClass('active');
+			$('.sidebar-menu').removeClass('activeproducts');
 		});
 		
 		/*=====================

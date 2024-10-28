@@ -13,10 +13,10 @@
     />
 
     <!-- Title -->
-    <title>Fleet Management Page</title>
+    <title>Sensor Monitoring</title>
 
     <!-- Favicon -->
-    <link rel="icon" href="img/favicon.png" />
+    <link href="/client/images/logo/logo.jpg" rel="icon">
 
     <link
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -110,7 +110,7 @@
     <link rel="stylesheet" href="../css/products/animate.min.css" />
     <!-- Magnific Popup CSS -->
     <link rel="stylesheet" href="../css/products/magnific-popup.css" />
-    <link rel="stylesheet" href="../css/products/normalize.css" />
+    <link rel="stylesheet" href="/client/css/animation.css" />
 
     <link rel="stylesheet" href="../css/products/responsive.css" />
     <link href="../css/products.css" rel="stylesheet" />
@@ -126,12 +126,39 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
       rel="stylesheet"
     />
+    <style>
+     
+      .sensorBack{
+        background: url('/client/images/products/sesnor/Fleet\ Management\ 69.jpg');
+        background-position:center 60%;
+        background-size: cover;
+        background-repeat:no-repeat;
+        height: 80vh;
+        animation: bounce-in-right  0.8s ease-in-out both;
+       
+      }
+      #section1{
+        background: url('/client/images/products/sesnor/Fleet\ Management\ 61.jpeg');
+        background-size: cover;
+        background-attachment: fixed;
+        background-repeat:no-repeat;
+        background-position: center;
+        object-fit: cover;
+        padding: 0;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+      }
+   
+  
+
+    </style>
   </head>
 
   <body>
     <script defer src="../js/navbar.js"></script>
     <div id="navbar-container"></div>
-    <img src="../images/products/fleet management1.jpg" />
+   <div class="sensorBack"></div>
     <!-- Start Schedule Area -->
 
     <section class="schedule" >
@@ -176,26 +203,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-lg-3 col-md-12 col-12">
-              <!-- single-schedule -->
-              <div class="single-schedule last">
-                <div class="inner">
-                  <div class="icon"></div>
-                  <div class="single-content">
-                    <span></span>
-                    <h4>Reporting and Analytics</h4>
-                    <p>
-                        Generate comprehensive reports and leverage data analytics to
-                        gain insights, optimize operations, and drive business
-                        decisions.
-                    </p>
-                    <a href="#section3"
-                      >LEARN MORE<i class="fa fa-long-arrow-right"></i
-                    ></a>
-                  </div>
-                </div>
-              </div>
-            </div>
+   
             <div class="col-lg-3 col-md-12 col-12">
               <!-- single-schedule -->
               <div class="single-schedule last">
@@ -223,7 +231,7 @@
     <!--/End Start schedule Area -->
 
     <!-- Service Start -->
-    <section id="section1" style="margin-top: 10%;">
+    <section id="section1">
       <div class="container-xxl service py-5">
         <div class="container">
           <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
@@ -239,7 +247,7 @@
                   data-bs-target="#tab-pane-1"
                   type="button"
                 >
-                  <i class="fa fa-car-side fa-2x me-3"></i>
+                  <img src="/client/images/products/sesnor/vehicleInspectionIcon.png" class="greenIcon"/>
                   <h4 class="m-0">Vehicle Diagnostics</h4>
                 </button>
                 <button
@@ -248,7 +256,7 @@
                   data-bs-target="#tab-pane-2"
                   type="button"
                 >
-                  <i class="fa fa-car-side fa-2x me-3"></i>
+                <img src="/client/images/products/sesnor/gpsIcon.png" class="greenIcon"/>
                   <h4 class="m-0">GPS Tracking</h4>
                 </button>
                 <button
@@ -257,7 +265,7 @@
                   data-bs-target="#tab-pane-3"
                   type="button"
                 >
-                  <i class="fa fa-car-side fa-2x me-3"></i>
+                <img src="/client/images/products/sesnor/dataIcon.png" class="greenIcon"/>
                   <h4 class="m-0">Data Analytics</h4>
                 </button>
               </div>
@@ -270,7 +278,7 @@
                       <div class="position-relative h-100">
                         <img
                           class="position-absolute img-fluid w-100 h-100"
-                          src="../images/aboutSlider/AI.jpg"
+                          src="/client/images/products/sesnor/Fleet Management 115.jpg"
                           style="object-fit: cover"
                           alt=""
                         />
@@ -297,9 +305,6 @@
                         >Predictive
                         Maintenance
                       </p>
-                      <a href="" class="btn btn-primary py-3 px-5 mt-3"
-                        >Read More<i class="fa fa-arrow-right ms-3"></i
-                      ></a>
                     </div>
                   </div>
                 </div>
@@ -309,7 +314,7 @@
                       <div class="position-relative h-100">
                         <img
                           class="position-absolute img-fluid w-100 h-100"
-                          src="../images/aboutSlider/carFleet.png"
+                          src="/client/images/products/sesnor/gps.png"
                           style="object-fit: cover"
                           alt=""
                         />
@@ -336,9 +341,6 @@
                         >Seamless
                         Integration
                       </p>
-                      <a href="" class="btn btn-primary py-3 px-5 mt-3"
-                        >Read More<i class="fa fa-arrow-right ms-3"></i
-                      ></a>
                     </div>
                   </div>
                 </div>
@@ -348,7 +350,7 @@
                       <div class="position-relative h-100">
                         <img
                           class="position-absolute img-fluid w-100 h-100"
-                          src="../images/aboutSlider/camera.jpg"
+                          src="/client/images/products/sesnor/sensor.png"
                           style="object-fit: cover"
                           alt=""
                         />
@@ -374,9 +376,6 @@
                         <i class="fa fa-check text-success me-3"></i>Customizable
                         Dashboards
                       </p>
-                      <a href="" class="btn btn-primary py-3 px-5 mt-3"
-                        >Read More<i class="fa fa-arrow-right ms-3"></i
-                      ></a>
                     </div>
                   </div>
                 </div>
@@ -388,7 +387,7 @@
     </section>
     <!-- Service End -->
     <!-- About Start -->
-    <section id="section2" style="margin-top: 10%;">
+    <section id="section2">
       <div class="container-xxl py-5">
         <div class="container">
           <div class="row g-5">
@@ -399,8 +398,8 @@
               >
                 <img
                   class="position-absolute img-fluid w-100 h-100"
-                  src="../images/aboutSlider/eco.jpg"
-                  style="object-fit: cover"
+                  src="/client/images/products/sesnor/Fleet Management 10.png"
+                  style="object-fit: contain"
                   alt=""
                 />
               </div>
@@ -460,9 +459,6 @@
                   </div>
                 </div>
               </div>
-              <a href="" class="btn btn-primary py-3 px-5"
-                >Read More<i class="fa fa-arrow-right ms-3"></i
-              ></a>
             </div>
           </div>
         </div>
@@ -470,176 +466,11 @@
     </section>
     <!-- About End -->
     <!-- Service Start -->
-    <section id="section3" style="margin-top: 10%;">
-      <div class="container-xxl service py-5">
-        <div class="container">
-          <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-            <h6 class="text-primary text-uppercase"></h6>
-            <h1 class="mb-5">Reporting and Analytics</h1>
-          </div>
-          <div class="row g-4 wow fadeInUp" data-wow-delay="0.3s">
-            <div class="col-lg-4">
-              <div class="nav w-100 nav-pills me-4">
-                <button
-                  class="nav-link w-100 d-flex align-items-center text-start p-4 mb-4 active"
-                  data-bs-toggle="pill"
-                  data-bs-target="#tab-pane-4"
-                  type="button"
-                >
-                  <i class="fa fa-car-side fa-2x me-3"></i>
-                  <h4 class="m-0">Advanced Reporting</h4>
-                </button>
-                <button
-                  class="nav-link w-100 d-flex align-items-center text-start p-4 mb-4"
-                  data-bs-toggle="pill"
-                  data-bs-target="#tab-pane-5"
-                  type="button"
-                >
-                  <i class="fa fa-car-side fa-2x me-3"></i>
-                  <h4 class="m-0">Data Analytics</h4>
-                </button>
-                <button
-                  class="nav-link w-100 d-flex align-items-center text-start p-4 mb-4"
-                  data-bs-toggle="pill"
-                  data-bs-target="#tab-pane-6"
-                  type="button"
-                >
-                  <i class="fa fa-car-side fa-2x me-3"></i>
-                  <h4 class="m-0">Customizable Dashboards</h4>
-                </button>
-              </div>
-            </div>
-            <div class="col-lg-8">
-              <div class="tab-content w-100">
-                <div class="tab-pane fade show active" id="tab-pane-4">
-                  <div class="row g-4">
-                    <div class="col-md-6" style="min-height: 350px">
-                      <div class="position-relative h-100">
-                        <img
-                          class="position-absolute img-fluid w-100 h-100"
-                          src="../images/aboutSlider/truckFleet.png"
-                          style="object-fit: cover"
-                          alt=""
-                        />
-                      </div>
-                    </div>
-                    <div class="col-md-6">
-                      <h3 class="mb-3">
-                        Comprehensive reporting for data-driven decision making.
-                      </h3>
-                      <p class="mb-4">
-                        Generate detailed reports on key performance indicators,
-                    fleet operations, and environmental impact to gain valuable
-                    insights.
-                      </p>
-                      <p>
-                        <i class="fa fa-check text-success me-3"></i
-                        >Customizable
-                        Reporting
-                      </p>
-                      <p>
-                        <i class="fa fa-check text-success me-3"></i>Streamlined
-                        Workflows
-                      </p>
-                      <p>
-                        <i class="fa fa-check text-success me-3"></i>Data-Driven
-                        Insights
-                      </p>
-                      <a href="" class="btn btn-primary py-3 px-5 mt-3"
-                        >Read More<i class="fa fa-arrow-right ms-3"></i
-                      ></a>
-                    </div>
-                  </div>
-                </div>
-                <div class="tab-pane fade" id="tab-pane-5">
-                  <div class="row g-4">
-                    <div class="col-md-6" style="min-height: 350px">
-                      <div class="position-relative h-100">
-                        <img
-                          class="position-absolute img-fluid w-100 h-100"
-                          src="img/service-2.jpg"
-                          style="object-fit: cover"
-                          alt=""
-                        />
-                      </div>
-                    </div>
-                    <div class="col-md-6">
-                      <h3 class="mb-3">
-                        Leveraging data analytics to optimize fleet performance.
-                      </h3>
-                      <p class="mb-4">
-                        Utilize advanced analytics to identify trends, patterns, and
-                    opportunities for improving operational efficiency and
-                    sustainability.
-                      </p>
-                      <p>
-                        <i class="fa fa-check text-success me-3"></i>Predictive
-                        Insights
-                      </p>
-                      <p>
-                        <i class="fa fa-check text-success me-3"></i
-                        >Improved
-                        Decision Making
-                      </p>
-                      <p>
-                        <i class="fa fa-check text-success me-3"></i>Enhanced
-                        Performance
-                      </p>
-                      <a href="" class="btn btn-primary py-3 px-5 mt-3"
-                        >Read More<i class="fa fa-arrow-right ms-3"></i
-                      ></a>
-                    </div>
-                  </div>
-                </div>
-                <div class="tab-pane fade" id="tab-pane-6">
-                  <div class="row g-4">
-                    <div class="col-md-6" style="min-height: 350px">
-                      <div class="position-relative h-100">
-                        <img
-                          class="position-absolute img-fluid w-100 h-100"
-                          src="img/service-3.jpg"
-                          style="object-fit: cover"
-                          alt=""
-                        />
-                      </div>
-                    </div>
-                    <div class="col-md-6">
-                      <h3 class="mb-3">
-                        Customizable dashboards for real-time visibility.
-                      </h3>
-                      <p class="mb-4">
-                        Tailor your reporting dashboards to your specific needs,
-                    providing a comprehensive view of your fleet's performance
-                    and environmental impact.
-                      </p>
-                      <p>
-                        <i class="fa fa-check text-success me-3"></i>Personalized
-                        Insights
-                      </p>
-                      <p>
-                        <i class="fa fa-check text-success me-3"></i>Real-Time
-                        Monitoring
-                      </p>
-                      <p>
-                        <i class="fa fa-check text-success me-3"></i>Informed
-                        Decision Making
-                      </p>
-                      <a href="" class="btn btn-primary py-3 px-5 mt-3"
-                        >Read More<i class="fa fa-arrow-right ms-3"></i
-                      ></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+  
     <!-- Service End -->
 
     <!-- About Start -->
-    <section id="section4" style="margin-top: 10%;">
+    <section id="section4">
       <div class="container-xxl py-5">
         <div class="container">
           <div class="row g-5">
@@ -703,9 +534,6 @@
                   </div>
                 </div>
               </div>
-              <a href="" class="btn btn-primary py-3 px-5"
-                >Read More<i class="fa fa-arrow-right ms-3"></i
-              ></a>
             </div>
             <div class="col-lg-6 pt-4" style="min-height: 400px">
               <div
@@ -714,8 +542,8 @@
               >
                 <img
                   class="position-absolute img-fluid w-100 h-100"
-                  src="../images/aboutSlider/truckFleet.png"
-                  style="object-fit: cover"
+                  src="/client/images/products/sesnor/Fleet Management 11.png"
+                  style="object-fit: contain; border-radius: 10px;"
                   alt=""
                 />
               </div>

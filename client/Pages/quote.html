@@ -14,7 +14,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet">
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+    <!-- <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet"> -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.3/font/bootstrap-icons.min.css" rel="stylesheet">
@@ -40,13 +40,13 @@
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="../css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet"> -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet">
 
     <!-- Template Stylesheet -->
-    <!-- <link href="../css/style.css" rel="stylesheet">
-    <link href="../css/index.css" rel="stylesheet"> -->
-    <link href="../css/quote.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/index.css" rel="stylesheet">
+    <link href="/client/css/quote.css" rel="stylesheet">
     <style>
              
     </style>
@@ -54,9 +54,7 @@
 
 <body>
     <!-- Spinner Start -->
-    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-        <div class="spinner"></div>
-    </div>
+  
     <!-- Spinner End -->
 
 
@@ -141,27 +139,49 @@
             <div class="question" id="question-1">
                 <h2 class="text-center title">What types of vehicles do you have?</h2>
                 <div class="fleet-question-card question-card" data-answer="cars">
-                    <i class="fa-solid fa-car-side" style="font-size: 35px;"></i>
+                    <img src="/client/images/icons/quote/car.png"  alt="car tracking"  style="width:  75px;"/>
                     <p>Cars</p>
+                    
+                </div>
+                <div class="fleet-question-card question-card" data-answer="electirc-car">
+                    <img src="/client/images/icons/quote/electric.png"  alt="electric vehicles tracking"  style="width: 60px;"/>
+                    <p>Electric Cars</p>
                 </div>
                 <div class="fleet-question-card question-card" data-answer="trucks">
-                    <i class="fa-solid fa-truck-moving" style="font-size: 35px;"></i>
+                    <img src="/client/images/icons/quote/truck.png"  alt="Trucks tracking"  style="width:  55px;"/>
                     <p>Trucks</p>
                 </div>
                 <div class="fleet-question-card question-card" data-answer="bus">
-                    <i class="fa-solid fa-bus" style="font-size: 35px;"></i>
+                    <img src="/client/images/icons/quote/bus.png"  alt="bus tracking"  style="width:  95px;"/>
                     <p>Bus</p>
                 </div>
+                <div class="fleet-question-card question-card" data-answer="construction-vehicles">
+                    <img src="/client/images/icons/quote/constructionVehicle.png" alt="construction vehicles tracking" style="width:  58px;"/>
+                    <p>Construction</p>
+                </div>
                 <div class="fleet-question-card question-card" data-answer="semi-trailers">
-                    <span class="material-symbols-outlined" style="font-size: 35px;">
-                        rv_hookup
-                    </span>
+                    <img src="/client/images/icons/quote/semi-trailer.png"  alt="construction vehicles tracking"  style="width:  100px;"/>
                     <p>Semi-trailers</p>
                 </div>
+                <div class="fleet-question-card question-card" data-answer="logistics">
+                   <img src="/client/images/icons/quote/logistic.png" alt="Logistic vehicles tracking" style="width: 60px;"/>
+                    <p>Logistics</p>
+                </div>
+                <div class="fleet-question-card question-card" data-answer="boats">
+                    <img src="/client/images/icons/quote/boat.png" alt="Boats tracking" style="width:  60px;"/>
+                  
+                    <p>Boats</p>
+                </div>
+                <div class="fleet-question-card question-card" data-answer="workforce">
+                    <img src="/client/images/icons/quote/workforce.png " alt="Workforce tracking" style="width: 87px;"/>
+                    <p>Workforce</p>
+                </div>
+                <div class="fleet-question-card question-card" data-answer="moto">
+                    <img src="/client/images/icons/quote/JadMoto.png" alt="Moto and ATV tracking" style="width: 70px;"/>
+                    <p>Moto & ATV</p>
+                </div>
                 <div class="fleet-question-card question-card" data-answer="others">
-                    <span class="material-symbols-outlined" style="font-size: 35px;">
-                        front_loader
-                    </span>
+                    <img src="/client/images/quote/other.png" alt="Fleet tracking" style="width:  60px;"/>
                     <p>Others</p>
                 </div>
             </div>
@@ -198,7 +218,7 @@
                 <h2 class="text-center">What features are you interested in?</h2>
                 <div class="fleet-question-card question-card" data-answer="gps">
                     <i class="fa-solid fa-map-location"aria-hidden="true" style="font-size: 40px;"></i>
-                    <p>GPS</p>
+                    <p>GPS Tracking</p>
                 </div>
                 <div class="fleet-question-card question-card" data-answer="eld">
                     <span class="material-symbols-outlined" style="font-size: 35px;">
@@ -210,13 +230,49 @@
                     <i class="bi bi-webcam-fill" style="font-size: 28px;"></i>
                     <p>Dash Cams</p>
                 </div>
+                <div class="fleet-question-card question-card cam" data-answer="cam">
+                    <i class="bi bi-webcam-fill" style="font-size: 28px;"></i>
+                    <p>ADAS & Cams</p>
+                </div>
+                <div class="fleet-question-card question-card" data-answer="maintenance">
+                    <i class="fa-solid fa-oil-can" style="font-size:40px;"></i>
+                    <p>Work Time</p>
+                </div>
+                <div class="fleet-question-card question-card" data-answer="maintenance">
+                    <i class="fa-solid fa-oil-can" style="font-size:40px;"></i>
+                    <p>Fleet Efficiency</p>
+                </div>
+                <div class="fleet-question-card question-card" data-answer="maintenance">
+                    <i class="fa-solid fa-oil-can" style="font-size:40px;"></i>
+                    <p>Digital Reports</p>
+                </div>
+                <div class="fleet-question-card question-card" data-answer="maintenance">
+                    <i class="fa-solid fa-oil-can" style="font-size:40px;"></i>
+                    <p>Sensor Monitoring</p>
+                </div>
+                <div class="fleet-question-card question-card" data-answer="maintenance">
+                    <i class="fa-solid fa-oil-can" style="font-size:40px;"></i>
+                    <p>Driver Behaviour Tracking</p>
+                </div>
+                <div class="fleet-question-card question-card" data-answer="maintenance">
+                    <i class="fa-solid fa-oil-can" style="font-size:40px;"></i>
+                    <p>Vehicle Inspection</p>
+                </div>
+                <div class="fleet-question-card question-card" data-answer="maintenance">
+                    <i class="fa-solid fa-oil-can" style="font-size:40px;"></i>
+                    <p>API Integration</p>
+                </div>
+                <div class="fleet-question-card question-card" data-answer="maintenance">
+                    <i class="fa-solid fa-oil-can" style="font-size:40px;"></i>
+                    <p>Asset Tracking</p>
+                </div>
                 <div class="fleet-question-card question-card" data-answer="maintenance">
                     <i class="fa-solid fa-oil-can" style="font-size:40px;"></i>
                     <p>Maintenance</p>
                 </div>
                 <div class="fleet-question-card question-card" data-answer="maintenance">
                     <i class="fa-solid fa-route" style="font-size: 40px;"></i>
-                    <p>Routing</p>
+                    <p>Route Planning</p>
                 </div>
                 <div class="fleet-question-card question-card" data-answer="others">
                     <span class="material-symbols-outlined" style="font-size: 36px;">

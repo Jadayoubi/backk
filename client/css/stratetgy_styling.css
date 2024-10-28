@@ -4,7 +4,7 @@
 .line-animation {
     width: 8%; 
     height: 100%;   
-    background-color: #081f3e;
+    background-color: #091E3E;
     position: absolute;
     animation: slide 3s infinite ease-in-out;
     }
@@ -62,7 +62,7 @@ td {
 }
 
 .partA {
-    background-color: #081f3e;
+    background-color: #091E3E;
     color: white;
     margin: 0;
     padding: 0;
@@ -133,7 +133,7 @@ td {
 
 .child:hover {
     background: white;
-    color: #081f3e;
+    color: #091E3E;
 }
 .container_four {
     display: flex;
@@ -280,7 +280,7 @@ td {
     display: flex;
     flex-wrap: wrap;
     margin: 0 50px;
-    background-color: #081f3e;
+    background-color: #091E3E;
     border-radius: 15px;
     justify-content: space-between;
 }
@@ -300,7 +300,7 @@ td {
 
 .boxes .planBox:hover  {
     background: white;
-    color: #081f3e;
+    color: #091E3E;
 }
 
 .planBox h3 {
@@ -308,7 +308,7 @@ td {
 }
 
 .boxes .planBox:hover h3 {
-    color: #081f3e;
+    color: #091E3E;
 }
 
 /* Media query for mobile screens */

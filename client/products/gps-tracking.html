@@ -13,10 +13,10 @@
     />
 
     <!-- Title -->
-    <title>Fleet Management Page</title>
+    <title>GPS Tracking</title>
 
     <!-- Favicon -->
-    <link rel="icon" href="img/favicon.png" />
+    <link href="/client/images/logo/logo.jpg" rel="icon">
 
     <link
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -110,8 +110,6 @@
     <link rel="stylesheet" href="../css/products/animate.min.css" />
     <!-- Magnific Popup CSS -->
     <link rel="stylesheet" href="../css/products/magnific-popup.css" />
-    <link rel="stylesheet" href="../css/products/normalize.css" />
-
     <link rel="stylesheet" href="../css/products/responsive.css" />
     <link href="../css/products.css" rel="stylesheet" />
     <!-- <link href="../css/products/style.css" rel="stylesheet"/> -->
@@ -126,12 +124,47 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
       rel="stylesheet"
     />
+    <link href="/client/css/animation.css" rel="stylesheet"/>
+    <style>
+
+
+      #section1{
+        background: url('/client/images/products/GPS\ Tracking\ &\ Telematics/19.png');
+        background-size: cover;
+        background-attachment: fixed;
+        background-repeat: no repeat;
+        background-position: center;
+        object-fit: cover;
+        padding: 0;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+      }
+      .gpsBackVd{
+  object-fit: cover;
+  background-position: center;
+  width: 100%;
+ 
+}
+.section1Back{
+  z-index: -1;
+}
+@media (min-width:768px) {
+  .gpsBackVd{
+
+  height: 80vh;
+}
+}
+   
+    </style>
   </head>
 
   <body>
     <script defer src="../js/navbar.js"></script>
     <div id="navbar-container"></div>
-    <img src="../images/products/fleet management1.jpg" style="width: 2500px; height: 900px;" />
+  <video class="gpsBackVd" autoplay muted loop>
+    <source src="/client/images/products/GPS Tracking & Telematics/1.mp4"/>
+  </video>
     <!-- Start Schedule Area -->
 
     <section class="schedule" >
@@ -173,35 +206,14 @@
                         maintenance alerts. Proactively address issues and schedule
                         maintenance to keep your fleet running smoothly.
                       </p>
-                      <a href="#section1"
+                      <a href="#section2"
                         >LEARN MORE<i class="fa fa-long-arrow-right"></i
                       ></a>
                     </div>
                   </div>
                 </div>
               </div>
-          
-              <div class="col-lg-3 col-md-6 col-12">
-                <!-- single-schedule -->
-                <div class="single-schedule first">
-                  <div class="inner">
-                    <div class="icon"></div>
-                    <div class="single-content">
-                      <span></span>
-                      <h4>Comprehensive Reporting</h4>
-                      <p>
-                        Generate detailed reports on your fleet's performance,
-                        including mileage, fuel usage, idle time, and more. Gain
-                        valuable insights to make informed decisions and optimize
-                        your operations.
-                      </p>
-                      <a href="#section1"
-                        >LEARN MORE<i class="fa fa-long-arrow-right"></i
-                      ></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
+
           
               <div class="col-lg-3 col-md-6 col-12">
                 <!-- single-schedule -->
@@ -217,7 +229,7 @@
                         Stay on top of your fleet's performance and respond quickly
                         to any problems.
                       </p>
-                      <a href="#section1"
+                      <a href="#section4"
                         >LEARN MORE<i class="fa fa-long-arrow-right"></i
                       ></a>
                     </div>
@@ -231,7 +243,11 @@
     <!--/End Start schedule Area -->
 
     <!-- Service Start -->
-    <section id="section1" style="margin-top: 10%;">
+    <section id="section1">
+      <!-- <video class="section1Back" loop autoplay muted>
+        <source src="/client/images/products/GPS Tracking & Telematics/animate4Cropped.mp4"  type="video/mp4">
+         Your browser does not support the video tag.
+      </video> -->
         <div class="container-xxl service py-5">
           <div class="container">
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
@@ -247,8 +263,8 @@
                     data-bs-target="#tab-pane-1"
                     type="button"
                   >
-                    <i class="fa fa-map-marker fa-2x me-3"></i>
-                    <h4 class="m-0">Real-Time Fleet Monitoring</h4>
+                   <img src="/client/images/products/icons/gpsIcon.png" class="greenIcon"/>
+                   <h4 class="m-0">Real-Time Fleet Monitoring</h4>
                   </button>
                   <button
                     class="nav-link w-100 d-flex align-items-center text-start p-4 mb-4"
@@ -256,7 +272,8 @@
                     data-bs-target="#tab-pane-2"
                     type="button"
                   >
-                    <i class="fa fa-wrench fa-2x me-3"></i>
+                   <img src="/client/images/products/icons/maint.png" class="greenIcon"/>
+                   
                     <h4 class="m-0">Predictive Maintenance</h4>
                   </button>
                   <button
@@ -265,8 +282,8 @@
                     data-bs-target="#tab-pane-3"
                     type="button"
                   >
-                    <i class="fa fa-chart-line fa-2x me-3"></i>
-                    <h4 class="m-0">Data-Driven Decision Making</h4>
+                  <img src="/client/images/products/icons/43.png" class="greenIcon"/>
+                  <h4 class="m-0">Data-Driven Decision Making</h4>
                   </button>
                 </div>
               </div>
@@ -278,7 +295,7 @@
                         <div class="position-relative h-100">
                           <img
                             class="position-absolute img-fluid w-100 h-100"
-                            src="../images/aboutSlider/GPS.jpg"
+                            src="/client/images/products/GPS Tracking & Telematics/Fleet Management 48.png"
                             style="object-fit: cover"
                             alt=""
                           />
@@ -304,9 +321,6 @@
                           <i class="fa fa-check text-success me-3"></i>Predictive Maintenance
                           Alerts
                         </p>
-                        <a href="" class="btn btn-primary py-3 px-5 mt-3"
-                          >Read More<i class="fa fa-arrow-right ms-3"></i
-                        ></a>
                       </div>
                     </div>
                   </div>
@@ -316,7 +330,7 @@
                         <div class="position-relative h-100">
                           <img
                             class="position-absolute img-fluid w-100 h-100"
-                            src="../images/aboutSlider/maintenance.jpg"
+                            src="/client/images/products/GPS Tracking & Telematics/Fleet Management 49.png"
                             style="object-fit: cover"
                             alt=""
                           />
@@ -342,9 +356,6 @@
                           <i class="fa fa-check text-success me-3"></i>Automated Maintenance
                           Scheduling
                         </p>
-                        <a href="" class="btn btn-primary py-3 px-5 mt-3"
-                          >Read More<i class="fa fa-arrow-right ms-3"></i
-                        ></a>
                       </div>
                     </div>
                   </div>
@@ -354,7 +365,7 @@
                         <div class="position-relative h-100">
                           <img
                             class="position-absolute img-fluid w-100 h-100"
-                            src="../images/aboutSlider/data-analysis.jpg"
+                            src="/client/images/products/GPS Tracking & Telematics/routeMaint.png"
                             style="object-fit: cover"
                             alt=""
                           />
@@ -379,9 +390,6 @@
                           <i class="fa fa-check text-success me-3"></i>Benchmarking and
                           Performance Monitoring
                         </p>
-                        <a href="" class="btn btn-primary py-3 px-5 mt-3"
-                          >Read More<i class="fa fa-arrow-right ms-3"></i
-                        ></a>
                       </div>
                     </div>
                   </div>
@@ -393,7 +401,7 @@
                   </section>
     <!-- Service End -->
     <!-- About Start -->
-    <section id="section2" style="margin-top: 10%;">
+    <section id="section2">
       <div class="container-xxl py-5">
         <div class="container">
           <div class="row g-5">
@@ -404,7 +412,7 @@
               >
                 <img
                   class="position-absolute img-fluid w-100 h-100"
-                  src="../images/aboutSlider/eco.jpg"
+                  src="/client/images/products/GPS Tracking & Telematics/Fleet Management 48.png"
                   style="object-fit: cover"
                   alt=""
                 />
@@ -469,9 +477,6 @@
                     </div>
                   </div>
                 </div>
-                <a href="" class="btn btn-primary py-3 px-5"
-                  >Read More<i class="fa fa-arrow-right ms-3"></i
-                ></a>
               </div>
               </div>
               </div>
@@ -480,176 +485,11 @@
               
     <!-- About End -->
     <!-- Service Start -->
-    <section id="section3" style="margin-top: 10%;">
-        <div class="container-xxl service py-5">
-          <div class="container">
-            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-              <h6 class="text-primary text-uppercase"></h6>
-              <h1 class="mb-5">GPS Tracking and Live Data</h1>
-            </div>
-            <div class="row g-4 wow fadeInUp" data-wow-delay="0.3s">
-              <div class="col-lg-4">
-                <div class="nav w-100 nav-pills me-4">
-                  <button
-                    class="nav-link w-100 d-flex align-items-center text-start p-4 mb-4 active"
-                    data-bs-toggle="pill"
-                    data-bs-target="#tab-pane-4"
-                    type="button"
-                  >
-                    <i class="fa fa-map-marked-alt fa-2x me-3"></i>
-                    <h4 class="m-0">Real-time Vehicle Tracking</h4>
-                  </button>
-                  <button
-                    class="nav-link w-100 d-flex align-items-center text-start p-4 mb-4"
-                    data-bs-toggle="pill"
-                    data-bs-target="#tab-pane-5"
-                    type="button"
-                  >
-                    <i class="fa fa-chart-line fa-2x me-3"></i>
-                    <h4 class="m-0">Live Vehicle Data</h4>
-                  </button>
-                  <button
-                    class="nav-link w-100 d-flex align-items-center text-start p-4 mb-4"
-                    data-bs-toggle="pill"
-                    data-bs-target="#tab-pane-6"
-                    type="button"
-                  >
-                    <i class="fa fa-file-alt fa-2x me-3"></i>
-                    <h4 class="m-0">Reporting and Analytics</h4>
-                  </button>
-                </div>
-              </div>
-           
-         
-    
-            <div class="col-lg-8">
-              <div class="tab-content w-100">
-                <div class="tab-pane fade show active" id="tab-pane-4">
-                  <div class="row g-4">
-                    <div class="col-md-6" style="min-height: 350px">
-                      <div class="position-relative h-100">
-                        <img
-                          class="position-absolute img-fluid w-100 h-100"
-                          src="../images/aboutSlider/truckFleet.png"
-                          style="object-fit: cover"
-                          alt=""
-                        />
-                      </div>
-                    </div>
-                    <div class="col-md-6">
-                      <h3 class="mb-3">
-                        Adopting green practices to minimize environmental
-                        impact.
-                      </h3>
-                      <p class="mb-4">
-                        Implementing recycling programs, using eco-friendly
-                        materials, and optimizing routes to reduce emissions.
-                      </p>
-                      <p>
-                        <i class="fa fa-check text-success me-3"></i
-                        >Eco-Friendly Practices
-                      </p>
-                      <p>
-                        <i class="fa fa-check text-success me-3"></i>Advanced
-                        Technologies
-                      </p>
-                      <p>
-                        <i class="fa fa-check text-success me-3"></i>Sustainable
-                        Operations
-                      </p>
-                      <a href="" class="btn btn-primary py-3 px-5 mt-3"
-                        >Read More<i class="fa fa-arrow-right ms-3"></i
-                      ></a>
-                    </div>
-                  </div>
-                </div>
-                <div class="tab-pane fade" id="tab-pane-5">
-                  <div class="row g-4">
-                    <div class="col-md-6" style="min-height: 350px">
-                      <div class="position-relative h-100">
-                        <img
-                          class="position-absolute img-fluid w-100 h-100"
-                          src="img/service-2.jpg"
-                          style="object-fit: cover"
-                          alt=""
-                        />
-                      </div>
-                    </div>
-                    <div class="col-md-6">
-                      <h3 class="mb-3">
-                        Incorporating electric and hybrid vehicles for a greener
-                        fleet.
-                      </h3>
-                      <p class="mb-4">
-                        Adding electric and hybrid vehicles to the fleet to
-                        lower emissions, reduce fuel costs, and promote
-                        sustainability.
-                      </p>
-                      <p>
-                        <i class="fa fa-check text-success me-3"></i>Reduced
-                        Emissions
-                      </p>
-                      <p>
-                        <i class="fa fa-check text-success me-3"></i
-                        >Cost-Efficiency
-                      </p>
-                      <p>
-                        <i class="fa fa-check text-success me-3"></i>Modern
-                        Fleet
-                      </p>
-                      <a href="" class="btn btn-primary py-3 px-5 mt-3"
-                        >Read More<i class="fa fa-arrow-right ms-3"></i
-                      ></a>
-                    </div>
-                  </div>
-                </div>
-                <div class="tab-pane fade" id="tab-pane-6">
-                  <div class="row g-4">
-                    <div class="col-md-6" style="min-height: 350px">
-                      <div class="position-relative h-100">
-                        <img
-                          class="position-absolute img-fluid w-100 h-100"
-                          src="img/service-3.jpg"
-                          style="object-fit: cover"
-                          alt=""
-                        />
-                      </div>
-                    </div>
-                    <div class="col-md-6">
-                      <h3 class="mb-3">
-                        Live Vehicle Performance Data
-                      </h3>
-                      <p class="mb-4">
-                        Our advanced telematics system provides real-time data on fuel
-    efficiency, emissions, and comprehensive vehicle diagnostics for
-    every vehicle in your fleet. Stay informed and make data-driven
-    decisions to improve performance and reduce environmental impact.
-                      </p>
-                      <p>
-                        <i class="fa fa-check text-success me-3"></i>ive Vehicle Monitoring
-                      </p>
-                      <p>
-                        <i class="fa fa-check text-success me-3"></i>Emissions Tracking and Reporting
-                      </p>
-                      <p>
-                        <i class="fa fa-check text-success me-3"></i>Predictive Maintenance Alerts
-                      </p>
-                      <a href="" class="btn btn-primary py-3 px-5 mt-3"
-                        >Read More<i class="fa fa-arrow-right ms-3"></i
-                      ></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+ 
     <!-- Service End -->
 
     <!-- About Start -->
-    <section id="section4" style="margin-top: 10%;">
+    <section id="section4">
       <div class="container-xxl py-5">
         <div class="container">
           <div class="row g-5">
@@ -715,9 +555,6 @@
                 </div>
               </div>
               </div>
-              <a href="" class="btn btn-primary py-3 px-5"
-                >Read More<i class="fa fa-arrow-right ms-3"></i
-              ></a>
             </div>
             <div class="col-lg-6 pt-4" style="min-height: 400px">
               <div
@@ -726,7 +563,7 @@
               >
                 <img
                   class="position-absolute img-fluid w-100 h-100"
-                  src="../images/aboutSlider/truckFleet.png"
+                  src="/client/images/products/GPS Tracking & Telematics/Fleet Management 15.png"
                   style="object-fit: cover"
                   alt=""
                 />

@@ -8,7 +8,7 @@ body {
 .line-animation {
     width: 8%; 
     height: 100%;   
-    background-color: #081f3e;
+    background-color: #091E3E;
     position: absolute;
     animation: slide 3s infinite ease-in-out;
     }
@@ -29,11 +29,12 @@ body {
         }
 /* Hero Section */
 .hero {
-    background-color: #0a1a38;
+    background-color: #091E3E;
     background-image: url("/client/images/aboutUs/background.png");
     background-size: cover;
     background-position: center;
-    height: 500px;
+    background-repeat: no-repeat;
+    height: 80vh;
     display: flex;
     align-items: center;
     /* justify-content: center; */
@@ -52,10 +53,14 @@ body {
 .about-section {
     background-image: url("/client/images/aboutUs/Untitled-16-01.png");
     background-size: cover;
-    background-position: center;
-    height: 1300px;
+    background-position: center
+    /* height: 1300px; */
 }
-
+.part2{
+    background-image: url("/client/images/testing/bulding5.png");
+    background-size: cover;
+    /* background-position: center; */
+}
 /* Our Story Section */
 .our-story {
     padding: 50px 0;
@@ -82,6 +87,7 @@ body {
     display: inline-block;
     /* width: auto; */
     max-width: 510px;
+    
 }
 
 /* Core Services Section */
@@ -144,7 +150,7 @@ body {
 /* Mission and Vision Section */
 .mission-vision {
     padding: 50px 0;
-    margin-top: 60px;
+
     margin-left: 80px;
 }
 
@@ -167,25 +173,25 @@ body {
 
 .text-container {
     /* flex: 1 1 45%; */
-    max-width: 500px;
+    max-width: 40%;
     display: flex;
     flex-direction: column;
     gap: 20px;
+
 }
 
-.image-container {
-    /* flex: 1 1 45%; */
-    display: flex;
-    justify-content: flex-end;
-}
+
 
 .image-wrapper {
     position: relative;
 }
 
+.part2 p, .part2 li{
+color: white;
+}
 .main-image {
-    width: 70%;
-    object-fit: cover;
+    width: 40%;
+    object-fit: contain;
     position: relative;
     z-index: 2;
 }
@@ -196,25 +202,80 @@ body {
     gap: 10px;
     margin-top: 50px;
 }
+@media ((min-width:770px) and (max-width:1000px)) {
+    .main::before{
+        width:40% !important ;
+        margin-top: 50px;
+    }
+    .main-image{
+        margin-top: 50px;
+    }
+    .secondary-image {
+        width: 80% !important;
+        height:80% !important;
+        object-fit: contain;
+        z-index: 2;
+        position: relative;
+    }
+    
+    .image-wrapper::before {
+        content: "";
+        position: absolute;
+        top: -20px;
+        left: 50px;
+        width: 80% ;
+        height:80% ;
+        background-color: #091E3E;
+        z-index: 1;
+        transform: translate(-15px, -15px);
+        border-radius: 10px;
+        
+    }
 
+}
 @media screen and (max-width:770px) {
     .core-services .service-item p {
         margin: 0;
         font-size: 18px;
-        /* position: relative; */
-        /* margin-top: 50px; */
-        /* margin-bottom: 60px; */
+   
     }
     .our-story .line-line{
-        display: none;
+        /* display: none; */
     }
     .core-services .service-item img {
         width: 100%;
         /* margin-bottom: -10px; */
     }
-    
-    .main-image, .secondary-image{
-     display: none;
+    .main::before{
+        margin-top: 50px;
+
+    }
+    .image-wrapper::before {
+        content: "";
+        position: absolute;
+        top: -20px;
+        left: 50px;
+        width: 70%;
+        height: 50%;
+        background-color: #091E3E;
+        z-index: 1;
+        transform: translate(-15px, -15px);
+        border-radius: 10px;
+        
+    }
+    .main-image{
+     width: 200px;
+     height: 200px;
+     object-fit: contain;
+     z-index: 2;
+     margin-top: 50px;
+    }
+    .secondary-image {
+        width: 150px !important;
+        height: 150px !important;
+        object-fit: cover;
+        z-index: 2;
+        position: relative;
     }
 
     .values{
@@ -223,17 +284,43 @@ body {
     }
 }
 
-@media screen and (max-width:990px) {
-    .main-image{
-        display: none;
-       }
+
+@media(min-width:1000px){
+.missonWP{
+    display: flex;
+    flex-direction: row;
+   
+}
+.main{
+    margin-left: 100px;
+}
+.main::before{
+    width: 65%;
+    height: 90%;
+  
+}
+.main-image{
+    width: 65%;
+    height: 90%;
+}
+.s2{
+    width: 50% !important;
+}
+.i2::before{
+width: 50% !important;
+margin-top: 50px;
+}
+.i1::before{
+    margin-top: 50px;
 }
 .secondary-image {
     width: 65%;
-    height: 110%;
+    height: 100%;
     object-fit: cover;
     position: relative;
     z-index: 2;
+    border-radius: 10px;
+    margin-top: 50px;
 }
 
 .image-wrapper::before {
@@ -241,13 +328,15 @@ body {
     position: absolute;
     top: -20px;
     left: 50px;
-    width: 70%;
+    width: 65%;
     height: 100%;
-    background-color: #002e5b;
+    background-color: #091E3E;
     z-index: 1;
     transform: translate(-15px, -15px);
+    border-radius: 10px;
+    /* margin-top: 50px; */
 }
-
+}
 
 
 
@@ -279,7 +368,7 @@ body {
 /* Meet the Team Section */
 .team {
     padding: 50px 0;
-    text-align: left;
+    text-align: center;
     font-size: 1.4rem;
     margin-top: -20px;
 }
@@ -321,7 +410,7 @@ body {
     text-align: center;
     width: auto;
     background-color: #e2f1f7;
-    margin-bottom: 100px;
+    /* margin-bottom: 100px; */
 }
 
 .p1 {
