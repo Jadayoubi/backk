@@ -13,10 +13,10 @@
     />
 
     <!-- Title -->
-    <title>Fleet Management Page</title>
+    <title>ADAS and Camera Systems</title>
 
     <!-- Favicon -->
-    <link rel="icon" href="img/favicon.png" />
+    <link href="/client/images/logo/logo.jpg" rel="icon">
 
     <link
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -110,7 +110,7 @@
     <link rel="stylesheet" href="../css/products/animate.min.css" />
     <!-- Magnific Popup CSS -->
     <link rel="stylesheet" href="../css/products/magnific-popup.css" />
-    <link rel="stylesheet" href="../css/products/normalize.css" />
+    <link rel="stylesheet" href="/client/css/animation.css" />
 
     <link rel="stylesheet" href="../css/products/responsive.css" />
     <link href="../css/products.css" rel="stylesheet" />
@@ -126,12 +126,42 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
       rel="stylesheet"
     />
+    <style>
+     
+  
+      #section1{
+        background: url('/client/images/products/ADAS\ &\ Camera\ systems/sensor.png');
+        background-size: cover;
+        background-attachment: fixed;
+        background-repeat:no-repeat;
+        background-position: center;
+        object-fit: cover;
+        padding: 0;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+      }
+      .adasVD{
+  object-fit: cover;
+  background-position: center;
+  width: 100%;
+ 
+}
+@media (min-width:768px) {
+  .adasVD{
+
+  height: 80vh;
+}
+}
+    </style>
   </head>
 
   <body>
     <script defer src="../js/navbar.js"></script>
     <div id="navbar-container"></div>
-    <img src="../images/products/fleet management1.jpg" />
+    <video class="adasVD" autoplay loop muted>
+      <source src="/client/images/products/ADAS & Camera systems/animationCropped.mp4" type="video/mp4">
+    </video>
     <!-- Start Schedule Area -->
 
     <section class="schedule" >
@@ -145,9 +175,10 @@
                   <div class="icon"></div>
                   <div class="single-content">
                     <span></span>
-                    <h4>Surveillance Effectiveness and Monitoring Capabilities</h4>
+                    <h4>Enhanced Safety and Collision Avoidance</h4>
                     <p>
-                      Comprehensive camera coverage and advanced analytics enable thorough surveillance and rapid response, integrated with existing security systems.
+                      ADAS technologies provide critical assistance in collision avoidance, lane-keeping, and adaptive cruise control, 
+                      improving overall road safety and reducing accident rates.
                     </p>
                     <a href="#section1"
                       >LEARN MORE<i class="fa fa-long-arrow-right"></i
@@ -175,23 +206,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-lg-3 col-md-12 col-12">
-              <!-- single-schedule -->
-              <div class="single-schedule last">
-                <div class="inner">
-                  <div class="icon"></div>
-                  <div class="single-content">
-                    <span></span>
-                    <h4>Enhanced Safety and Collision Avoidance</h4>
-                    <p>
-                      ADAS technologies provide critical assistance in collision avoidance, lane-keeping, and adaptive cruise control, 
-                      improving overall road safety and reducing accident rates.
-                    </p>
-                    <a href="#section3">LEARN MORE<i class="fa fa-long-arrow-right"></i></a>
-                  </div>
-                </div>
-              </div>
-            </div>
+   
             <div class="col-lg-3 col-md-12 col-12">
               <!-- single-schedule -->
               <div class="single-schedule last">
@@ -217,37 +232,66 @@
     <!--/End Start schedule Area -->
 
     <!-- Service Start -->
-    <section id="section1" style="margin-top: 10%;">
+    <section id="section1">
       <div class="container-xxl service py-5">
-        <div class="container">
+        <div class="container" style="margin-top: 100px;">
           <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
             <h6 class="text-primary text-uppercase"></h6>
-            <h1 class="mb-5">Surveillance Effectiveness and Monitoring Capabilities</h1>
+            <h1 class="mb-5">Enhanced Safety and Collision Avoidance</h1>
           </div>
           <div class="row g-4 wow fadeInUp" data-wow-delay="0.3s">
             <div class="col-lg-4">
               <div class="nav w-100 nav-pills me-4">
-                <button class="nav-link w-100 d-flex align-items-center text-start p-4 mb-4 active" data-bs-toggle="pill" data-bs-target="#tab-pane-1" type="button">
-                  <i class="fa fa-camera fa-2x me-3"></i>
-                  <h4 class="m-0">Comprehensive Camera Coverage</h4>
+                <button
+                class="nav-link w-100 d-flex align-items-center text-start p-4 mb-4 active"
+                data-bs-toggle="pill"
+                data-bs-target="#tab-pane-10"
+                type="button"
+              >
+              <img src="/client/images/products/ADAS & Camera systems/dashcam.png" class="greenIcon"/>
+                <h4 class="m-0">Comprehensive Camera Coverage</h4>
+              </button>
+                <button
+                  class="nav-link w-100 d-flex align-items-center text-start p-4 mb-4"
+                  data-bs-toggle="pill"
+                  data-bs-target="#tab-pane-7"
+                  type="button"
+                >
+                <img src="/client/images/products/ADAS & Camera systems/cruiseIcon.png" class="greenIcon"/>
+                  <h4 class="m-0">Adaptive Cruise Control (ACC)</h4>
                 </button>
-                <button class="nav-link w-100 d-flex align-items-center text-start p-4 mb-4" data-bs-toggle="pill" data-bs-target="#tab-pane-2" type="button">
-                  <i class="fa fa-chart-line fa-2x me-3"></i>
-                  <h4 class="m-0">Advanced Analytics</h4>
+                <button
+                  class="nav-link w-100 d-flex align-items-center text-start p-4 mb-4"
+                  data-bs-toggle="pill"
+                  data-bs-target="#tab-pane-8"
+                  type="button"
+                >
+                <img src="/client/images/products/ADAS & Camera systems/brakeIcon.png" class="greenIcon"/>
+                  <h4 class="m-0">Automatic Emergency Braking (AEB)</h4>
                 </button>
-                <button class="nav-link w-100 d-flex align-items-center text-start p-4 mb-4" data-bs-toggle="pill" data-bs-target="#tab-pane-3" type="button">
-                  <i class="fa fa-link fa-2x me-3"></i>
-                  <h4 class="m-0">Integrated Security Systems</h4>
+                <button
+                  class="nav-link w-100 d-flex align-items-center text-start p-4 mb-4"
+                  data-bs-toggle="pill"
+                  data-bs-target="#tab-pane-9"
+                  type="button"
+                >
+                <img src="/client/images/products/ADAS & Camera systems/laneIcon.png" class="greenIcon"/>
+                  <h4 class="m-0">Lane Departure Warning (LDW)</h4>
                 </button>
               </div>
             </div>
             <div class="col-lg-8">
               <div class="tab-content w-100">
-                <div class="tab-pane fade show active" id="tab-pane-1">
+                <div class="tab-pane fade show active" id="tab-pane-10">
                   <div class="row g-4">
                     <div class="col-md-6" style="min-height: 350px">
                       <div class="position-relative h-100">
-                        <img class="position-absolute img-fluid w-100 h-100" src="../images/aboutSlider/camera.jpg" style="object-fit: cover" alt="" />
+                        <img
+                          class="position-absolute img-fluid w-100 h-100"
+                          src="/client/images/products/ADAS & Camera systems/52.png"
+                          style="object-fit: cover;"
+                          alt=""
+                        />
                       </div>
                     </div>
                     <div class="col-md-6">
@@ -258,45 +302,106 @@
                       <p><i class="fa fa-check text-success me-3"></i>Strategically Placed Cameras</p>
                       <p><i class="fa fa-check text-success me-3"></i>Real-Time Video Monitoring</p>
                       <p><i class="fa fa-check text-success me-3"></i>Seamless Integration with Existing Systems</p>
-                      <a href="" class="btn btn-primary py-3 px-5 mt-3">Read More<i class="fa fa-arrow-right ms-3"></i></a>
+                   
                     </div>
                   </div>
                 </div>
-                <div class="tab-pane fade" id="tab-pane-2">
+                <div class="tab-pane fade show " id="tab-pane-7">
                   <div class="row g-4">
                     <div class="col-md-6" style="min-height: 350px">
                       <div class="position-relative h-100">
-                        <img class="position-absolute img-fluid w-100 h-100" src="../images/aboutSlider/AI.jpg" style="object-fit: cover" alt="" />
+                        <img
+                          class="position-absolute img-fluid w-100 h-100"
+                          src="/client/images/products/ADAS & Camera systems/cruise.png"
+                          style="object-fit: cover"
+                          alt=""
+                        />
                       </div>
                     </div>
                     <div class="col-md-6">
-                      <h3 class="mb-3">Advanced Analytics</h3>
+                      <h3 class="mb-3">Intelligent Speed Management</h3>
                       <p class="mb-4">
-                        Our state-of-the-art analytics capabilities provide valuable insights, enabling rapid response and proactive measures to address any identified issues or threats.
+                        ACC maintains a set speed while automatically adjusting to the speed of the vehicle ahead, enhancing safety and convenience.
                       </p>
-                      <p><i class="fa fa-check text-success me-3"></i>Real-Time Data Processing</p>
-                      <p><i class="fa fa-check text-success me-3"></i>Predictive Modeling</p>
-                      <p><i class="fa fa-check text-success me-3"></i>Customizable Reporting</p>
-                      <a href="" class="btn btn-primary py-3 px-5 mt-3">Read More<i class="fa fa-arrow-right ms-3"></i></a>
+                      <p>
+                        <i class="fa fa-check text-success me-3"></i>
+                        Adjusts speed with traffic
+                      </p>
+                      <p>
+                        <i class="fa fa-check text-success me-3"></i>Minimizes manual adjustments
+                       
+                      </p>
+                      <p>
+                        <i class="fa fa-check text-success me-3"></i>
+                        Prevents rear-end crashes
+                      </p>
+                
                     </div>
                   </div>
                 </div>
-                <div class="tab-pane fade" id="tab-pane-3">
+                <div class="tab-pane fade" id="tab-pane-8">
                   <div class="row g-4">
                     <div class="col-md-6" style="min-height: 350px">
                       <div class="position-relative h-100">
-                        <img class="position-absolute img-fluid w-100 h-100" src="../images/aboutSlider/security.jpg" style="object-fit: cover" alt="" />
+                        <img
+                          class="position-absolute img-fluid w-100 h-100"
+                          src="/client/images/products/ADAS & Camera systems/brake.png"
+                          style="object-fit: cover"
+                          alt=""
+                        />
                       </div>
                     </div>
                     <div class="col-md-6">
-                      <h3 class="mb-3">Integrated Security Systems</h3>
+                      <h3 class="mb-3"> Immediate Response to Impending Collisions</h3>
                       <p class="mb-4">
-                        Our comprehensive solutions integrate seamlessly with existing security systems, ensuring a cohesive and efficient approach to monitoring and response.
+                        AEB systems detect potential collisions and apply the brakes automatically to reduce the severity of impacts or avoid accidents.
+    
                       </p>
-                      <p><i class="fa fa-check text-success me-3"></i>Turnkey Installation</p>
-                      <p><i class="fa fa-check text-success me-3"></i>Scalable and Flexible</p>
-                      <p><i class="fa fa-check text-success me-3"></i>Dedicated Support Team</p>
-                      <a href="" class="btn btn-primary py-3 px-5 mt-3">Read More<i class="fa fa-arrow-right ms-3"></i></a>
+                      <p>
+                        <i class="fa fa-check text-success me-3"></i>
+                        Activates on imminent collision
+                      </p>
+                      <p>
+                        <i class="fa fa-check text-success me-3"></i>
+                        Reduces impact and injury risk
+                      </p>
+                      <p>
+                        <i class="fa fa-check text-success me-3"></i>
+                        Effective in various conditions
+                      </p>
+           
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="tab-pane-9">
+                  <div class="row g-4">
+                    <div class="col-md-6" style="min-height: 350px">
+                      <div class="position-relative h-100">
+                        <img
+                          class="position-absolute img-fluid w-100 h-100"
+                          src="/client/images/products/ADAS & Camera systems/lane2.jpg"
+                          style="object-fit: cover"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <h3 class="mb-3">Preventing Unintended Lane Drift</h3>
+                      <p class="mb-4">
+                        LDW alerts the driver when the vehicle unintentionally drifts out of its lane, helping to prevent accidental lane departures.
+                      </p>
+                      <p>
+                        <i class="fa fa-check text-success me-3"></i>
+                        Provides visual and audible alerts
+                      </p>
+                      <p>
+                        <i class="fa fa-check text-success me-3"></i>Enhances driver awareness
+                      </p>
+                      <p>
+                        <i class="fa fa-check text-success me-3"></i>
+                        Reduces side collision risk
+                      </p>
+               
                     </div>
                   </div>
                 </div>
@@ -309,13 +414,13 @@
     <!-- Service End -->
     <!-- About Start -->
 
-    <section id="section3" style="margin-top: 10%;">
+    <section id="section2">
       <div class="container-xxl py-5">
         <div class="container">
           <div class="row g-5">
             <div class="col-lg-6 pt-4" style="min-height: 400px">
               <div class="position-relative h-100 wow fadeIn" data-wow-delay="0.1s">
-                <img class="position-absolute img-fluid w-100 h-100" src="../images/aboutSlider/privacy.jpg" style="object-fit: cover" alt="" />
+                <img class="position-absolute img-fluid w-100 h-100" src="/client/images/products/ADAS & Camera systems/Fleet Management 25.png" style="object-fit: cover" alt="" />
               </div>
             </div>
             <div class="col-lg-6">
@@ -358,7 +463,6 @@
                   </div>
                 </div>
               </div>
-              <a href="" class="btn btn-primary py-3 px-5">Read More<i class="fa fa-arrow-right ms-3"></i></a>
             </div>
           </div>
         </div>
@@ -367,162 +471,11 @@
     <!-- About End -->
      
     <!-- Service Start -->
-    <section id="section4" style="margin-top: 10%;">
-  <div class="container-xxl service py-5">
-    <div class="container">
-      <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-        <h6 class="text-primary text-uppercase"></h6>
-        <h1 class="mb-5">Enhanced Safety and Collision Avoidance</h1>
-      </div>
-      <div class="row g-4 wow fadeInUp" data-wow-delay="0.3s">
-        <div class="col-lg-4">
-          <div class="nav w-100 nav-pills me-4">
-            <button
-              class="nav-link w-100 d-flex align-items-center text-start p-4 mb-4 active"
-              data-bs-toggle="pill"
-              data-bs-target="#tab-pane-7"
-              type="button"
-            >
-            <i class="fa fa-tachometer-alt fa-2x me-3"></i>
-              <h4 class="m-0">Adaptive Cruise Control (ACC)</h4>
-            </button>
-            <button
-              class="nav-link w-100 d-flex align-items-center text-start p-4 mb-4"
-              data-bs-toggle="pill"
-              data-bs-target="#tab-pane-8"
-              type="button"
-            >
-            <i class="fa fa-bell fa-2x me-3"></i>
-              <h4 class="m-0">Automatic Emergency Braking (AEB)</h4>
-            </button>
-            <button
-              class="nav-link w-100 d-flex align-items-center text-start p-4 mb-4"
-              data-bs-toggle="pill"
-              data-bs-target="#tab-pane-9"
-              type="button"
-            >
-            <i class="fa fa-road fa-2x me-3"></i>
-              <h4 class="m-0">Lane Departure Warning (LDW)</h4>
-            </button>
-          </div>
-        </div>
-        <div class="col-lg-8">
-          <div class="tab-content w-100">
-            <div class="tab-pane fade show active" id="tab-pane-7">
-              <div class="row g-4">
-                <div class="col-md-6" style="min-height: 350px">
-                  <div class="position-relative h-100">
-                    <img
-                      class="position-absolute img-fluid w-100 h-100"
-                      src="../images/aboutSlider/cameraHardware.png"
-                      style="object-fit: cover"
-                      alt=""
-                    />
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <h3 class="mb-3">Intelligent Speed Management</h3>
-                  <p class="mb-4">
-                    ACC maintains a set speed while automatically adjusting to the speed of the vehicle ahead, enhancing safety and convenience.
-                  </p>
-                  <p>
-                    <i class="fa fa-check text-success me-3"></i>
-                    Adjusts speed with traffic
-                  </p>
-                  <p>
-                    <i class="fa fa-check text-success me-3"></i>Minimizes manual adjustments
-                   
-                  </p>
-                  <p>
-                    <i class="fa fa-check text-success me-3"></i>
-                    Prevents rear-end crashes
-                  </p>
-                  <a href="" class="btn btn-primary py-3 px-5 mt-3"
-                    >Read More<i class="fa fa-arrow-right ms-3"></i
-                  ></a>
-                </div>
-              </div>
-            </div>
-            <div class="tab-pane fade" id="tab-pane-8">
-              <div class="row g-4">
-                <div class="col-md-6" style="min-height: 350px">
-                  <div class="position-relative h-100">
-                    <img
-                      class="position-absolute img-fluid w-100 h-100"
-                      src="../images/aboutSlider/infrastructure.png"
-                      style="object-fit: cover"
-                      alt=""
-                    />
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <h3 class="mb-3"> Immediate Response to Impending Collisions</h3>
-                  <p class="mb-4">
-                    AEB systems detect potential collisions and apply the brakes automatically to reduce the severity of impacts or avoid accidents.
-
-                  </p>
-                  <p>
-                    <i class="fa fa-check text-success me-3"></i>
-                    Activates on imminent collision
-                  </p>
-                  <p>
-                    <i class="fa fa-check text-success me-3"></i>
-                    Reduces impact and injury risk
-                  </p>
-                  <p>
-                    <i class="fa fa-check text-success me-3"></i>
-                    Effective in various conditions
-                  </p>
-                  <a href="" class="btn btn-primary py-3 px-5 mt-3"
-                    >Read More<i class="fa fa-arrow-right ms-3"></i
-                  ></a>
-                </div>
-              </div>
-            </div>
-            <div class="tab-pane fade" id="tab-pane-9">
-              <div class="row g-4">
-                <div class="col-md-6" style="min-height: 350px">
-                  <div class="position-relative h-100">
-                    <img
-                      class="position-absolute img-fluid w-100 h-100"
-                      src="../images/aboutSlider/dataStorage.png"
-                      style="object-fit: cover"
-                      alt=""
-                    />
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <h3 class="mb-3">Preventing Unintended Lane Drift</h3>
-                  <p class="mb-4">
-                    LDW alerts the driver when the vehicle unintentionally drifts out of its lane, helping to prevent accidental lane departures.
-                  </p>
-                  <p>
-                    <i class="fa fa-check text-success me-3"></i>
-                    Provides visual and audible alerts
-                  </p>
-                  <p>
-                    <i class="fa fa-check text-success me-3"></i>Enhances driver awareness
-                  </p>
-                  <p>
-                    <i class="fa fa-check text-success me-3"></i>
-                    Reduces side collision risk
-                  </p>
-                  <a href="" class="btn btn-primary py-3 px-5 mt-3"
-                    >Read More<i class="fa fa-arrow-right ms-3"></i
-                  ></a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+  
     <!-- Service End -->
 
     <!-- About Start -->
-    <section id="section4" style="margin-top: 10%;">
+    <section id="section4">
       <div class="container-xxl py-5">
         <div class="container">
           <div class="row g-5">
@@ -566,11 +519,10 @@
                   </div>
                 </div>
               </div>
-              <a href="" class="btn btn-primary py-3 px-5">Read More<i class="fa fa-arrow-right ms-3"></i></a>
             </div>
             <div class="col-lg-6 pt-4" style="min-height: 400px">
               <div class="position-relative h-100 wow fadeIn" data-wow-delay="0.1s">
-                <img class="position-absolute img-fluid w-100 h-100" src="../images/aboutSlider/dataAnalytics.png" style="object-fit: cover" alt="" />
+                <img class="position-absolute img-fluid w-100 h-100" src="/client/images/products/ADAS & Camera systems/Fleet Management 60.jpg" style="object-fit: cover" alt="" />
               </div>
             </div>
           </div>

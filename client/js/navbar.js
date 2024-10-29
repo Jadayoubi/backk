@@ -91,7 +91,7 @@ document.addEventListener('DOMContentLoaded', () => {
     closeSidebar.addEventListener('click', () => {
     overlay.style.display = 'none';
     navbarMenu.classList.remove('open');
-    hideAllDropdownContents();
+    // hideAllDropdownContents();
     removeActiveLink()
     });
     aboutLink.addEventListener('click', (e) => {

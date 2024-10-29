@@ -13,10 +13,10 @@
     />
 
     <!-- Title -->
-    <title>Fleet Management Page</title>
+    <title>Car Sharing</title>
 
     <!-- Favicon -->
-    <link rel="icon" href="img/favicon.png" />
+    <link href="/client/images/logo/logo.jpg" rel="icon">
 
     <link
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -110,7 +110,7 @@
     <link rel="stylesheet" href="../css/products/animate.min.css" />
     <!-- Magnific Popup CSS -->
     <link rel="stylesheet" href="../css/products/magnific-popup.css" />
-    <link rel="stylesheet" href="../css/products/normalize.css" />
+    <link rel="stylesheet" href="/client/css/animation.css" />
 
     <link rel="stylesheet" href="../css/products/responsive.css" />
     <link href="../css/products.css" rel="stylesheet" />
@@ -126,12 +126,43 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
       rel="stylesheet"
     />
+    <style>
+     
+      .carBack{
+        background: url('/client/images/products/carSharing/g-fleet.jpeg');
+        background-position:center 60%;
+        background-size: cover;
+        background-repeat:no-repeat;
+        height: 80vh;
+        animation: bounce-in-right  0.8s ease-in-out both;
+       
+      }
+      #section1{
+        background: url('/client/images/products/carSharing/96.png');
+        background-size: cover;
+        background-attachment: fixed;
+        background-repeat:no-repeat;
+        background-position: center;
+        object-fit: cover;
+        padding: 0;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+      }
+   
+      .carIcon{
+        width: 80px;
+        object-fit: contain;
+        padding-right: 10px;
+      }
+
+    </style>
   </head>
 
   <body>
-    <script defer src="../js/navbar.js"></script>
+    <script defer src="/client/js/navbar.js"></script>
     <div id="navbar-container"></div>
-    <img src="../images/products/fleet management1.jpg" />
+ <div class="carBack"></div>
     <!-- Start Schedule Area -->
 
     <section class="schedule" >
@@ -173,24 +204,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-lg-3 col-md-12 col-12">
-              <!-- single-schedule -->
-              <div class="single-schedule last">
-                <div class="inner">
-                  <div class="icon"></div>
-                  <div class="single-content">
-                    <span></span>
-                    <h4>Car and Mobility Solutions</h4>
-                    <p>
-                      Enhance your car-sharing service with our advanced telematics and analytics platform. Monitor your fleet in real-time, gain data-driven insights into vehicle usage and customer behavior, and optimize operations to deliver a seamless mobility experience for your users.
-                    </p>
-                    <a href="#section3"
-                      >LEARN MORE<i class="fa fa-long-arrow-right"></i
-                    ></a>
-                  </div>
-                </div>
-              </div>
-            </div>
+        
             <div class="col-lg-3 col-md-12 col-12">
               <!-- single-schedule -->
               <div class="single-schedule last">
@@ -220,12 +234,12 @@
     <!--/End Start schedule Area -->
 
     <!-- Service Start -->
-    <section id="section1" style="margin-top: 10%;">
+  <section id="section1">
       <div class="container-xxl service py-5">
         <div class="container">
           <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
             <h6 class="text-primary text-uppercase"></h6>
-            <h1 class="mb-5">Convenient Car Sharing</h1>
+            <h1 class="mb-5">Car Sharing and Mobility Solutions</h1>
           </div>
           <div class="row g-4 wow fadeInUp" data-wow-delay="0.3s">
             <div class="col-lg-4">
@@ -233,129 +247,141 @@
                 <button
                   class="nav-link w-100 d-flex align-items-center text-start p-4 mb-4 active"
                   data-bs-toggle="pill"
-                  data-bs-target="#tab-pane-1"
+                  data-bs-target="#tab-pane-4"
                   type="button"
                 >
-                  <i class="fa fa-car-side fa-2x me-3"></i>
-                  <h4 class="m-0">Vehicle Selection</h4>
+                  <img src="/client/images/products/icons/9.png" class="greenIcon">
+                  <h4 class="m-0">Car Sharing Platforms</h4>
                 </button>
                 <button
                   class="nav-link w-100 d-flex align-items-center text-start p-4 mb-4"
                   data-bs-toggle="pill"
-                  data-bs-target="#tab-pane-2"
+                  data-bs-target="#tab-pane-5"
                   type="button"
                 >
-                  <i class="fa fa-car-side fa-2x me-3"></i>
-                  <h4 class="m-0">Flexible Booking</h4>
+                <img src="/client/images/products/icons/carType.png" class="greenIcon">
+                  <h4 class="m-0">Multimodal Mobility Solutions</h4>
                 </button>
                 <button
                   class="nav-link w-100 d-flex align-items-center text-start p-4 mb-4"
                   data-bs-toggle="pill"
-                  data-bs-target="#tab-pane-3"
+                  data-bs-target="#tab-pane-6"
                   type="button"
                 >
-                  <i class="fa fa-car-side fa-2x me-3"></i>
-                  <h4 class="m-0">Cost-Effective Plans</h4>
+                <img src="/client/images/products/icons/onDemand.png" class="greenIcon">
+                  <h4 class="m-0">Ride-Hailing and On-Demand Services</h4>
                 </button>
               </div>
             </div>
             <div class="col-lg-8">
               <div class="tab-content w-100">
-                <div class="tab-pane fade show active" id="tab-pane-1">
+                <div class="tab-pane fade show active" id="tab-pane-4">
                   <div class="row g-4">
                     <div class="col-md-6" style="min-height: 350px">
                       <div class="position-relative h-100">
                         <img
                           class="position-absolute img-fluid w-100 h-100"
-                          src="../images/aboutSlider/AI.jpg"
+                          src="/client/images/products/carSharing/carSharingPlatform.png"
                           style="object-fit: cover"
                           alt=""
                         />
                       </div>
                     </div>
                     <div class="col-md-6">
-                      <h3 class="mb-3">Wide Vehicle Selection</h3>
-                                    <p class="mb-4">
-                                      Choose from a variety of vehicles to suit your needs, whether it's a compact car for city driving or an SUV for a weekend getaway.
-                                    </p>
-                      <p>
-                        <i class="fa fa-check text-success me-3"></i>Convenient Pickup/Dropoff
-                      </p>
-                      <p>
-                        <i class="fa fa-check text-success me-3"></i>24/7 Access
-                      </p>
-                      <p>
-                        <i class="fa fa-check text-success me-3"></i
-                        >Vehicle Insurance Included
-                      </p>
-                      <a href="" class="btn btn-primary py-3 px-5 mt-3"
-                        >Read More<i class="fa fa-arrow-right ms-3"></i
-                      ></a>
-                    </div>
-                  </div>
-                </div>
-                <div class="tab-pane fade" id="tab-pane-2">
-                  <div class="row g-4">
-                    <div class="col-md-6" style="min-height: 350px">
-                      <div class="position-relative h-100">
-                        <img
-                          class="position-absolute img-fluid w-100 h-100"
-                          src="../images/aboutSlider/carFleet.png"
-                          style="object-fit: cover"
-                          alt=""
-                        />
-                      </div>
-                    </div>
-                    <div class="col-md-6">
-                      <h3 class="mb-3">Flexible Booking Options</h3>
-                      <p class="mb-4">Book a car on the go through our app or website, with options for hourly, daily, or long-term rentals.
-                      </p>
-                      <p>
-                        <i class="fa fa-check text-success me-3"></i>Instant Confirmation
-                  
-                      </p>
-                      <p>
-                        <i class="fa fa-check text-success me-3"></i>Cancel Anytime
-                      </p>
-                      <p>
-                        <i class="fa fa-check text-success me-3"></i
-                        >Cutting-Edge Tools and Technology
-                      </p>
-                      <a href="" class="btn btn-primary py-3 px-5 mt-3"
-                        >Read More<i class="fa fa-arrow-right ms-3"></i
-                      ></a>
-                    </div>
-                  </div>
-                </div>
-                <div class="tab-pane fade" id="tab-pane-3">
-                  <div class="row g-4">
-                    <div class="col-md-6" style="min-height: 350px">
-                      <div class="position-relative h-100">
-                        <img
-                          class="position-absolute img-fluid w-100 h-100"
-                          src="../images/aboutSlider/camera.jpg"
-                          style="object-fit: cover"
-                          alt=""
-                        />
-                      </div>
-                    </div>
-                    <div class="col-md-6">
-                      <h3 class="mb-3">Cost-Effective Plans</h3>
+                      <h3 class="mb-3">
+                        Convenient and Accessible Car Sharing.
+                      </h3>
                       <p class="mb-4">
-                        Explore our range of cost-effective plans designed to suit your budget and travel needs.
+                        Our car sharing platform provides on-demand access to a
+                    diverse fleet of vehicles, making it easier for people to
+                    get around without the hassle of owning a car.
                       </p>
                       <p>
-                        <i class="fa fa-check text-success me-3"></i>No Hidden Fees
+                        <i class="fa fa-check text-success me-3"></i
+                        >Flexible Rental Options
                       </p>
                       <p>
-                        <i class="fa fa-check text-success me-3"></i>Flexible Payment Options
+                        <i class="fa fa-check text-success me-3"></i>Smartphone
+                        Integration
                       </p>
                       <p>
-                        <i class="fa fa-check text-success me-3"></i>Discounts for Regular Users
+                        <i class="fa fa-check text-success me-3"></i>Reduced
+                        Environmental Impact
                       </p>
-                      <a href="" class="btn btn-primary py-3 px-5 mt-3"
-                        >Read More<i class="fa fa-arrow-right ms-3"></i
-                      ></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="tab-pane-5">
+                  <div class="row g-4">
+                    <div class="col-md-6" style="min-height: 350px">
+                      <div class="position-relative h-100">
+                        <img
+                          class="position-absolute img-fluid w-100 h-100"
+                          src="/client/images/products/carSharing/bikeSharing.png"
+                          style="object-fit: cover"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <h3 class="mb-3">
+                        Integrated Mobility Solutions.
+                      </h3>
+                      <p class="mb-4">
+                        We offer a comprehensive suite of mobility solutions,
+                        combining car sharing, public transportation, and other
+                        modes of travel to provide a seamless and efficient
+                        experience.
+                      </p>
+                      <p>
+                        <i class="fa fa-check text-success me-3"></i>Multimodal
+                        Integration
+                      </p>
+                      <p>
+                        <i class="fa fa-check text-success me-3"></i
+                        >Enhanced
+                        Connectivity
+                      </p>
+                      <p>
+                        <i class="fa fa-check text-success me-3"></i>Reduced
+                        Congestion
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="tab-pane-6">
+                  <div class="row g-4">
+                    <div class="col-md-6" style="min-height: 350px">
+                      <div class="position-relative h-100">
+                        <img
+                          class="position-absolute img-fluid w-100 h-100"
+                          src="/client/images/products/carSharing/carSharingBack.png"
+                          style="object-fit: cover"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <h3 class="mb-3">
+                        On-Demand Mobility Services.
+                      </h3>
+                      <p class="mb-4">
+                        Our ride-hailing and on-demand transportation services
+                    provide a convenient and flexible way for people to get
+                    around, without the need for personal vehicle ownership.
+                      </p>
+                      <p>
+                        <i class="fa fa-check text-success me-3"></i>Reliable
+                        On-Demand Rides
+                      </p>
+                      <p>
+                        <i class="fa fa-check text-success me-3"></i>Affordable
+                        Pricing
+                      </p>
+                      <p>
+                        <i class="fa fa-check text-success me-3"></i>Environmentally
+                        Friendly Options
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -367,7 +393,7 @@
     </section>
     <!-- Service End -->
     <!-- About Start -->
-    <section id="section2" style="margin-top: 10%;">
+    <section id="section2" >
       <div class="container-xxl py-5">
         <div class="container">
           <div class="row g-5">
@@ -378,7 +404,7 @@
               >
                 <img
                   class="position-absolute img-fluid w-100 h-100"
-                  src="../images/aboutSlider/eco.jpg"
+                  src="/client/images/products/carSharing/truckSharing.png"
                   style="object-fit: cover"
                   alt=""
                 />
@@ -438,9 +464,6 @@
                   </div>
                 </div>
               </div>
-              <a href="" class="btn btn-primary py-3 px-5"
-                >Read More<i class="fa fa-arrow-right ms-3"></i
-              ></a>
             </div>
           </div>
         </div>
@@ -448,176 +471,11 @@
     </section>
     <!-- About End -->
     <!-- Service Start -->
-    <section id="section3" style="margin-top: 10%;">
-      <div class="container-xxl service py-5">
-        <div class="container">
-          <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-            <h6 class="text-primary text-uppercase"></h6>
-            <h1 class="mb-5">Car Sharing and Mobility Solutions</h1>
-          </div>
-          <div class="row g-4 wow fadeInUp" data-wow-delay="0.3s">
-            <div class="col-lg-4">
-              <div class="nav w-100 nav-pills me-4">
-                <button
-                  class="nav-link w-100 d-flex align-items-center text-start p-4 mb-4 active"
-                  data-bs-toggle="pill"
-                  data-bs-target="#tab-pane-4"
-                  type="button"
-                >
-                  <i class="fa fa-car-side fa-2x me-3"></i>
-                  <h4 class="m-0">Car Sharing Platforms</h4>
-                </button>
-                <button
-                  class="nav-link w-100 d-flex align-items-center text-start p-4 mb-4"
-                  data-bs-toggle="pill"
-                  data-bs-target="#tab-pane-5"
-                  type="button"
-                >
-                  <i class="fa fa-car-side fa-2x me-3"></i>
-                  <h4 class="m-0">Multimodal Mobility Solutions</h4>
-                </button>
-                <button
-                  class="nav-link w-100 d-flex align-items-center text-start p-4 mb-4"
-                  data-bs-toggle="pill"
-                  data-bs-target="#tab-pane-6"
-                  type="button"
-                >
-                  <i class="fa fa-car-side fa-2x me-3"></i>
-                  <h4 class="m-0">Ride-Hailing and On-Demand Services</h4>
-                </button>
-              </div>
-            </div>
-            <div class="col-lg-8">
-              <div class="tab-content w-100">
-                <div class="tab-pane fade show active" id="tab-pane-4">
-                  <div class="row g-4">
-                    <div class="col-md-6" style="min-height: 350px">
-                      <div class="position-relative h-100">
-                        <img
-                          class="position-absolute img-fluid w-100 h-100"
-                          src="../images/aboutSlider/truckFleet.png"
-                          style="object-fit: cover"
-                          alt=""
-                        />
-                      </div>
-                    </div>
-                    <div class="col-md-6">
-                      <h3 class="mb-3">
-                        Convenient and Accessible Car Sharing.
-                      </h3>
-                      <p class="mb-4">
-                        Our car sharing platform provides on-demand access to a
-                    diverse fleet of vehicles, making it easier for people to
-                    get around without the hassle of owning a car.
-                      </p>
-                      <p>
-                        <i class="fa fa-check text-success me-3"></i
-                        >Flexible Rental Options
-                      </p>
-                      <p>
-                        <i class="fa fa-check text-success me-3"></i>Smartphone
-                        Integration
-                      </p>
-                      <p>
-                        <i class="fa fa-check text-success me-3"></i>Reduced
-                        Environmental Impact
-                      </p>
-                      <a href="" class="btn btn-primary py-3 px-5 mt-3"
-                        >Read More<i class="fa fa-arrow-right ms-3"></i
-                      ></a>
-                    </div>
-                  </div>
-                </div>
-                <div class="tab-pane fade" id="tab-pane-5">
-                  <div class="row g-4">
-                    <div class="col-md-6" style="min-height: 350px">
-                      <div class="position-relative h-100">
-                        <img
-                          class="position-absolute img-fluid w-100 h-100"
-                          src="img/service-2.jpg"
-                          style="object-fit: cover"
-                          alt=""
-                        />
-                      </div>
-                    </div>
-                    <div class="col-md-6">
-                      <h3 class="mb-3">
-                        Integrated Mobility Solutions.
-                      </h3>
-                      <p class="mb-4">
-                        We offer a comprehensive suite of mobility solutions,
-                        combining car sharing, public transportation, and other
-                        modes of travel to provide a seamless and efficient
-                        experience.
-                      </p>
-                      <p>
-                        <i class="fa fa-check text-success me-3"></i>Multimodal
-                        Integration
-                      </p>
-                      <p>
-                        <i class="fa fa-check text-success me-3"></i
-                        >Enhanced
-                        Connectivity
-                      </p>
-                      <p>
-                        <i class="fa fa-check text-success me-3"></i>Reduced
-                        Congestion
-                      </p>
-                      <a href="" class="btn btn-primary py-3 px-5 mt-3"
-                        >Read More<i class="fa fa-arrow-right ms-3"></i
-                      ></a>
-                    </div>
-                  </div>
-                </div>
-                <div class="tab-pane fade" id="tab-pane-6">
-                  <div class="row g-4">
-                    <div class="col-md-6" style="min-height: 350px">
-                      <div class="position-relative h-100">
-                        <img
-                          class="position-absolute img-fluid w-100 h-100"
-                          src="img/service-3.jpg"
-                          style="object-fit: cover"
-                          alt=""
-                        />
-                      </div>
-                    </div>
-                    <div class="col-md-6">
-                      <h3 class="mb-3">
-                        On-Demand Mobility Services.
-                      </h3>
-                      <p class="mb-4">
-                        Our ride-hailing and on-demand transportation services
-                    provide a convenient and flexible way for people to get
-                    around, without the need for personal vehicle ownership.
-                      </p>
-                      <p>
-                        <i class="fa fa-check text-success me-3"></i>Reliable
-                        On-Demand Rides
-                      </p>
-                      <p>
-                        <i class="fa fa-check text-success me-3"></i>Affordable
-                        Pricing
-                      </p>
-                      <p>
-                        <i class="fa fa-check text-success me-3"></i>Environmentally
-                        Friendly Options
-                      </p>
-                      <a href="" class="btn btn-primary py-3 px-5 mt-3"
-                        >Read More<i class="fa fa-arrow-right ms-3"></i
-                      ></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+  
     <!-- Service End -->
 
     <!-- About Start -->
-    <section id="section4" style="margin-top: 10%;">
+    <section id="section4">
       <div class="container-xxl py-5">
         <div class="container">
           <div class="row g-5">
@@ -676,9 +534,6 @@
                   </div>
                 </div>
               </div>
-              <a href="" class="btn btn-primary py-3 px-5"
-                >Read More<i class="fa fa-arrow-right ms-3"></i
-              ></a>
             </div>
             <div class="col-lg-6 pt-4" style="min-height: 400px">
               <div
@@ -687,7 +542,7 @@
               >
                 <img
                   class="position-absolute img-fluid w-100 h-100"
-                  src="../images/aboutSlider/truckFleet.png"
+                  src="/client/images/products/carSharing/49.png"
                   style="object-fit: cover"
                   alt=""
                 />
