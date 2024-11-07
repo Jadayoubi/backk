@@ -5,26 +5,32 @@ let interval;
 function changeContent(section) {
     const image = document.getElementById('image');
     const text = document.getElementById('text');
+    const screenWidth=window.screen.width;
+    console.log(screenWidth);
+    
+    const content = document.getElementById('content');
 
-    const content = document.getElementById('content'); // The content wrapper
+    if(screenWidth>=768){
 
-    // Remove previous animation class if any
+    
     content.classList.remove('bounce-in-right');
     
-    // Trigger reflow to restart the animation
+
     void content.offsetWidth;
 
-    // Add the animation class again
+   
     content.classList.add('bounce-in-right');
     document.querySelectorAll('.navbarabout a').forEach(link => {
         link.classList.remove('active1');
     });
-
+}
     let activeLink;
     switch (section) {
-        case 'security':
-            image.src = '/client/images/aboutSlider/camera.jpg';
+        case 'security':    
+            image.src = '/client/images/aboutSlider/distracted.jpg';
             image.style.borderRadius='15px';
+            image.style.width='35%';
+            image.style.height='35%';
             text.innerHTML = `
             Utilizes AI to enhance fleet security, detecting threats and ensuring safety. Continuously monitors data to prevent breaches and respond to incidents.    
             <br> 
@@ -53,6 +59,8 @@ function changeContent(section) {
         case 'workflow':
             image.src = '/client/images/aboutSlider/truckFleetC.png';
             image.style.borderRadius='15px';
+            image.style.width='35%';
+            image.style.height='35%';
             text.innerHTML = `
             Automates tasks and provides comprehensive reporting, optimizing daily operations and tracking performance metrics.    
             <br>
@@ -79,8 +87,10 @@ function changeContent(section) {
             currentIndex = 3;
             break;
         default:
-            image.src = '/client/images/aboutSlider/AI.jpg';
+            image.src = '/client/images/aboutSlider/distracted.jpg';
             image.style.borderRadius='15px';
+            image.style.width='35%';
+            image.style.height='35%';
             text.innerHTML = `
                 Use AI-powered video technology to protect your most important assets, your employees. Capture and manage security risks in real time across your operations.
                 <br>

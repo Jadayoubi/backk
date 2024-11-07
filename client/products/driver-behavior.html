@@ -140,12 +140,15 @@
         justify-content: center;
         display: flex;
       }
-      .vehicleBackVd{
-  object-fit: cover;
-  background-position: center;
-  width: 100%;
-  
-}
+      .driverBack{
+        background: url('/client/images/products/Driver\ Management/drifting.png');
+        background-position:center 55%;
+        background-size: cover;
+        background-repeat:no-repeat;
+        height: 80vh;
+        animation: bounce-in-right  0.8s ease-in-out both;
+       
+      }
     @media (min-width:768px) {
       .vehicleBackVd{
         height: 80vh;
@@ -157,10 +160,7 @@
   <body class>
     <script defer src="../js/navbar.js"></script>
     <div id="navbar-container"></div>
-    <video class="vehicleBackVd"  muted autoplay loop>
-      <source src="/client/images/products/Driver Management/acc.mp4" type="video/mp4"/>  
-               
-  </video>    
+ <div class="driverBack"></div>
 
     <!-- Start Schedule Area -->
 
@@ -247,7 +247,7 @@
                   data-bs-target="#tab-pane-1"
                   type="button"
                 >
-                  <i class="fa fa-car-side fa-2x me-3"></i>
+                  <img class="greenIcon" src="/client/images/products/icons/speed.png"/>
                   <h4 class="m-0">Speed Monitoring</h4>
                 </button>
                 <button
@@ -256,7 +256,7 @@
                   data-bs-target="#tab-pane-2"
                   type="button"
                 >
-                  <i class="fa fa-car-side fa-2x me-3"></i>
+                <img class="greenIcon" src="/client/images/products/icons/brakingPattern.png"/>
                   <h4 class="m-0">Braking Patterns</h4>
                 </button>
                 <button
