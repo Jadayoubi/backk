@@ -48,7 +48,11 @@
     <link href="../css/index.css" rel="stylesheet">
     <link href="/client/css/quote.css" rel="stylesheet">
     <style>
-             
+             .quoteIcon{
+                width: 70px;
+                height: 70px;
+                object-fit: contain;
+             }
     </style>
 </head>
 
@@ -109,20 +113,22 @@
             <h1>Select a Service</h1>
         </div>
         <div class="service bounce-top" id="fleet-service" onclick="showFleetQuestions('fleet')">
-            <div><img src="../images/quote/fleet-management.png" style="width: 60px;"></div>
+            <div><img src="/client/images/icons/fleet-management.png" class="serviceCard"></div>
             Fleet Management
         </div>
         <div class="service bounce-top" id="web-service" onclick="showWebQuestions('webDev')">
-            <div><i class="fa-solid fa-laptop-code" style="font-size: 50px;"></i></div>
+            <div>
+                <img src="/client/images/icons/services/web2.png" class="serviceCard"/>
+            </div>
             Web Development
         </div>
         <div class="service bounce-top" id="app-service" onclick="showAppQuestions('appDev')">
-            <div><i class="fa-solid fa-laptop-code" style="font-size: 50px;"></i></div>
+            <div> <img src="/client/images/icons/services/appDev.png" class="serviceCard"/></div>
             App Development
         </div>
         <div class="service bounce-top" id="consulting-service" onclick="showConsultingQuestions('consulting')">
             <div>
-                <span class="material-symbols-outlined" style="font-size: 50px;">travel_explore</span>
+                <img src="/client/images/icons/services/consulting2.png" class="serviceCard"/>
             </div>
             Consulting
         </div>
@@ -164,7 +170,7 @@
                     <p>Semi-trailers</p>
                 </div>
                 <div class="fleet-question-card question-card" data-answer="logistics">
-                   <img src="/client/images/icons/quote/logistic.png" alt="Logistic vehicles tracking" style="width: 60px;"/>
+                   <img src="/client/images/icons/logistic.png" alt="Logistic vehicles tracking" style="width: 60px;"/>
                     <p>Logistics</p>
                 </div>
                 <div class="fleet-question-card question-card" data-answer="boats">
@@ -181,7 +187,7 @@
                     <p>Moto & ATV</p>
                 </div>
                 <div class="fleet-question-card question-card" data-answer="others">
-                    <img src="/client/images/quote/other.png" alt="Fleet tracking" style="width:  60px;"/>
+                    <img src="/client/images/icons/other.png" alt="Fleet tracking" style="width:  60px;"/>
                     <p>Others</p>
                 </div>
             </div>
@@ -217,67 +223,65 @@
             <div class="question" id="question-3" style="display: none;">
                 <h2 class="text-center">What features are you interested in?</h2>
                 <div class="fleet-question-card question-card" data-answer="gps">
-                    <i class="fa-solid fa-map-location"aria-hidden="true" style="font-size: 40px;"></i>
+                    <img class="quoteIcon" src="/client/images/icons/data-mappingIcon.png" alt="gps tracking"/>
                     <p>GPS Tracking</p>
                 </div>
                 <div class="fleet-question-card question-card" data-answer="eld">
-                    <span class="material-symbols-outlined" style="font-size: 35px;">
-                        browse_activity
-                    </span>
+                    <img class="quoteIcon" src="/client/images/icons/eld.png" alt="gps tracking"/>
                     <p>ELD</p>
                 </div>
                 <div class="fleet-question-card question-card cam" data-answer="cam">
-                    <i class="bi bi-webcam-fill" style="font-size: 28px;"></i>
+                    <img class="quoteIcon" src="/client/images/icons/dashcam.png" alt="Dash Camera"/>
                     <p>Dash Cams</p>
                 </div>
                 <div class="fleet-question-card question-card cam" data-answer="cam">
-                    <i class="bi bi-webcam-fill" style="font-size: 28px;"></i>
+                    <img class="quoteIcon" src="/client/images/icons/adas.png" alt="adas and camera systems"/>
                     <p>ADAS & Cams</p>
                 </div>
                 <div class="fleet-question-card question-card" data-answer="maintenance">
-                    <i class="fa-solid fa-oil-can" style="font-size:40px;"></i>
+                    <img class="quoteIcon" src="/client/images/icons/worktime.png" alt="work time"/>
                     <p>Work Time</p>
                 </div>
                 <div class="fleet-question-card question-card" data-answer="maintenance">
-                    <i class="fa-solid fa-oil-can" style="font-size:40px;"></i>
+                    <img class="quoteIcon" src="/client/images/icons/efficiency.png" alt="work time"/>
                     <p>Fleet Efficiency</p>
                 </div>
                 <div class="fleet-question-card question-card" data-answer="maintenance">
-                    <i class="fa-solid fa-oil-can" style="font-size:40px;"></i>
+                    <img class="quoteIcon" src="/client/images/icons/digital-reports.png" alt="work time"/>
                     <p>Digital Reports</p>
                 </div>
                 <div class="fleet-question-card question-card" data-answer="maintenance">
-                    <i class="fa-solid fa-oil-can" style="font-size:40px;"></i>
+                    <img class="quoteIcon" src="/client/images/icons/sensor.png" alt="Sensor Monitoring"/>
                     <p>Sensor Monitoring</p>
                 </div>
                 <div class="fleet-question-card question-card" data-answer="maintenance">
-                    <i class="fa-solid fa-oil-can" style="font-size:40px;"></i>
-                    <p>Driver Behaviour Tracking</p>
+                    <img class="quoteIcon" src="/client/images/icons/driver-behavior.png" alt="Sensor Monitoring"/>
+                    <p>Driver Behaviour</p>
+                
                 </div>
                 <div class="fleet-question-card question-card" data-answer="maintenance">
-                    <i class="fa-solid fa-oil-can" style="font-size:40px;"></i>
-                    <p>Vehicle Inspection</p>
+                    <img class="quoteIcon" src="/client/images/icons/car-inspection.png" alt="Dash Camera"/>
+                    <p>Vehicle</p>
                 </div>
                 <div class="fleet-question-card question-card" data-answer="maintenance">
-                    <i class="fa-solid fa-oil-can" style="font-size:40px;"></i>
+                    <img class="quoteIcon" src="/client/images/icons/api.png" alt="Dash Camera"/>
                     <p>API Integration</p>
+                   
                 </div>
                 <div class="fleet-question-card question-card" data-answer="maintenance">
-                    <i class="fa-solid fa-oil-can" style="font-size:40px;"></i>
+                    <img class="quoteIcon" src="/client/images/icons/asset-tracking.png" alt="Dash Camera"/>
                     <p>Asset Tracking</p>
                 </div>
                 <div class="fleet-question-card question-card" data-answer="maintenance">
-                    <i class="fa-solid fa-oil-can" style="font-size:40px;"></i>
+                    <img class="quoteIcon" src="/client/images/icons/maint.png" alt="Dash Camera"/>
                     <p>Maintenance</p>
                 </div>
                 <div class="fleet-question-card question-card" data-answer="maintenance">
-                    <i class="fa-solid fa-route" style="font-size: 40px;"></i>
+                    <img class="quoteIcon" src="/client/images/icons/route-planning.png" alt="Dash Camera"/>
                     <p>Route Planning</p>
                 </div>
                 <div class="fleet-question-card question-card" data-answer="others">
-                    <span class="material-symbols-outlined" style="font-size: 36px;">
-                        front_loader
-                    </span>
+                    <img class="quoteIcon" src="/client/images/icons/other.png" alt="Dash Camera"/>
                     <p>Others</p>
                 </div>
             </div>
@@ -285,15 +289,22 @@
                 <h2 class="text-center">
                     What is your email address?<br> This is the address to which we will send you all the information.
                 </h2>
-                <label class="emailLabel">Email:</label><br>
-                <input type="email" id="email" class="email" placeholder="Enter your email" required><br>
+                <div class="form-group">
+                    <label for="email" class="emailLabel">Email:</label>
+                    <input type="email" id="email" class="email" placeholder="Enter your email" required>
+                </div>
+                
                 <span class="error" id="EmailError" style="color: red; font-size: large; display: none;">Please enter a valid email address.</span>
-                <br><br>
-                <label class="phoneLabel">Phone Number:</label><br>
-                <input type="tel" id="fleetphone" name="phone" class="phone" placeholder="Enter your phone number" required><br><br>
-            
-                <label class="companyLabel">Company Name:</label><br>
-                <input type="text" id="fleetcompany" name="company" class="company" placeholder="Enter your company name" required><br><br>
+             
+                <div class="form-group">
+                    <label for="fleetphone" class="phoneLabel">Phone Number:</label>
+                    <input type="tel" id="fleetphone" name="phone" class="phone" placeholder="Enter your phone number" required>
+                </div>
+              
+    <div class="form-group">
+        <label for="fleetcompany" class="companyLabel">Company Name:</label>
+        <input type="text" id="fleetcompany" name="company" class="company" placeholder="Enter your company name" required>
+    </div>
             </div>
         </div>
         <section id="fleetbuttons">
