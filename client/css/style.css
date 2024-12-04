@@ -452,22 +452,21 @@ h6,
         position: relative;
         margin-top: 0%;
           z-index: 2;
-        height: 0vh;
+      
     }
-    .facts .container-fluid{
-        height: 0vh;
-    }
-   .facts .container{
-        margin-top: -15%;
+
+   .facts .row{
+    display: flex;
+    flex-direction: column;
+      
     }
     .facts .bg-primary, .facts .bg-light{
         background-color: #091E3E !important;
         color: white;
     }
-    .facts .box {
-        width: fit-content;
-        margin-right: 30px;
-      border-radius: 10px;
+    .facts .box, .facts .col-sm-4 {
+    width: 100% !important;
+    border-radius: 10px;
     }
     .facts img{
         width: 60px !important;
