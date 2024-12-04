@@ -6,7 +6,7 @@ let IcurrentIndex = 0;
 let IslidesToShow = getSlidesToShow();
 const ItotalSlides = Islides.length;
 let autoSlideInterval; 
-console.log("total slides", ItotalSlides);
+
 
 function getSlidesToShow() {
     const width = window.innerWidth;

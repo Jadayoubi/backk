@@ -6,7 +6,7 @@ function changeContent(section) {
     const image = document.getElementById('image');
     const text = document.getElementById('text');
     const screenWidth=window.screen.width;
-    console.log(screenWidth);
+    
     
     const content = document.getElementById('content');
 
