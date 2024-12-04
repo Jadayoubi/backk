@@ -52,6 +52,26 @@ document.addEventListener('DOMContentLoaded', () => {
                     showOverlayContent(aboutDropdownContent);
                 });
             }
+            if (productsLink && productsDropdownContent) {
+                productsLink.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    showOverlayContent(productsDropdownContent);
+                });
+            }
+            
+            if (servicesLink && servicesDropdownContent) {
+                servicesLink.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    showOverlayContent(servicesDropdownContent);
+                });
+            }
+            
+            if (industriesLink && industriesDropdownContent) {
+                industriesLink.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    showOverlayContent(industriesDropdownContent);
+                });
+            }
 
             function showOverlayContent(content) {
                 overlay.style.display = 'flex';
