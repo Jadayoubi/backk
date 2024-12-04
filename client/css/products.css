@@ -8,7 +8,7 @@ body{
 .btn{
     color: white;
   }
-.tab-pane{
+.transBack{
     background-color: rgba(39, 39, 39, 0.211);
     border-radius: 10px;
   }
@@ -21,8 +21,8 @@ body{
   .mb-4,#section1 .d-flex,#section2 .d-flex,#section3 .d-flex, #section4 .d-flex{
     padding-top: 30px;
   }
- @media (max-width:768px) {
-    #section1{
+ @media (max-width:991px) {
+    #section1, #section3{
         height: fit-content;
 
     }
@@ -31,10 +31,11 @@ body{
   }
 
  }
- @media(min-width:768px){
-    #section1{
-        height: 100vh;
+ @media(min-width:992px){
+    #section1, #section3{
+        height: 110vh;
     }
+  
  }
 
 
@@ -248,19 +249,21 @@ background-color: #091E3E;
 
 .schedule .row {
     display: flex;
+    justify-content: space-evenly;
     flex-wrap: wrap;
-    justify-content: space-between;
+    margin-top: -30px;
+   
 }
 
 .schedule .col-lg-3 {
     display: flex;
-    margin-bottom: 30px;
-	padding: 0 15px;
+    justify-content: center;
+  
 }
 
 .schedule .schedule-inner {
 	position: relative;
-	transform: translateY(-50%);
+	transform: translateY(-55%);
 	z-index:9;
 }
 

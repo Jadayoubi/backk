@@ -4,7 +4,7 @@
 
 .contacts-banner {
     /* background: url('/client/images/testing/bulding3.png') no-repeat center 70%; */
-    background: url('/client/images/contact/canva.png') no-repeat center;
+    background: url('https://i.ibb.co/6P2B5Xk/canva.png') no-repeat center;
     height: 80vh;
     background-size: cover;
     display: flex;
@@ -35,7 +35,7 @@ height: 90vh;
 }
 
 .map {
-    background: url('/client/images/contact/baabda.png') no-repeat center center/cover;
+    background: url('https://i.ibb.co/kXFjrn7/baabda.png') no-repeat center center/cover;
     height: 100%;
     width: 100%;
     background-attachment: fixed;

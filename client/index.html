@@ -51,15 +51,27 @@
         overflow-x: hidden;
         background-color: #081f3e !important;
     }
-
         .service-item{
             overflow-y: hidden;
         }
-    
+
+        .Features .row{       
+            margin-top: 10px !important;
+        }
+        .leftRow{
+            display: flex;
+            flex-direction: column;
+        }
+    @media (max-width:768px) {
+        .Features{
+            height: fit-content !important;
+        }
+    }
         .Features {
-    position: relative;
-    overflow: hidden;
-}
+            height: 100vh;
+            position: relative;
+            overflow: hidden;
+        }
 
 #featuresVideo {
     position: absolute;
@@ -120,10 +132,21 @@
         <!--slider-->   
         <div id="header-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">        
             <div class="carousel-inner">
+                
                 <div class="carousel-item active" style="z-index: -1;">
-                    <video class="d-block w-100 sliderVd" muted width="900px" autoplay loop>
-                        <source src="/client/images/slider.mp4" type="video/mp4"/>                    
-                    </video>     
+                 
+                    <div style="padding:51.37% 0 0 0;position:relative;">
+                        
+                        <iframe 
+        src="https://player.vimeo.com/video/1034891698?h=63ae6d4ee6&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;autoplay=1&amp;muted=1&amp;loop=1&amp;controls=0" 
+        frameborder="0" 
+        allow="autoplay; fullscreen; picture-in-picture; clipboard-write" 
+        style="position:absolute;top:0;left:0;width:100%;height:100%;" 
+        title="slider">
+    </iframe>
+                    
+                        
+                        </div><script src="https://player.vimeo.com/api/player.js"></script>
                 </div>
             </div>
         </div>
@@ -177,9 +200,9 @@
                 Your browser does not support the video tag.
             </video>
         </div>
-        <div class="who-we-are-content bounce-in-right ">
-            <h2 class="who-we-are-title">WHO WE ARE</h2>
-            <h1 class="mb-0" style="color: #06a3da;">The best fleet management and maintenance software</h1>
+        <div class="who-we-are-content ">
+            <h1 class="who-we-are-title" style="text-transform: uppercase;">Leading with knowledge, Driven by results</h1>
+            <h3 class="mb-0" style="color: #06a3da;">Probably the best fleet management and maintenance software</h3>
             <div class="who-we-are-description-wrapper">
                 <p class="who-we-are-description">
                     At SecuFleet IoT Group, our mission is to forge an interconnected ecosystem that seamlessly adapts your business to the dynamic realities of a rapidly expanding network of intelligent devices. By leveraging cutting-edge embedded systems and sensors, we facilitate real-time data collection and exchange. Our commitment to understanding client needs ensures the delivery of tailored solutions that foster a proactive and efficient environment.
@@ -190,19 +213,19 @@
     
     <section class="industrySlider"  style="background-color: #081f3e; padding-bottom: 3%;">
     <div class="expertise-section">
-        <h1 class="Ih1">Expertise & OEM Compatibility</h1>
+        <h1 class="Ih1">Bridging the Gap between trusted partners & leading OEMs compatibilities</h1>
         <div class="expertise-points">
             <div class="expertise-point">
-                <img src="/client/images/industrySlider/number1.png">
-                <p class="Ifeature-text">Gain up to 40% efficiency with route optimization</p>
+                <img src="https://i.ibb.co/cLyzWcd/number1.png">
+                <p class="Ifeature-text">Drive success with AI-enabled Fleet solutions gaining up to 40% in productivity</p>
             </div>
             <div class="expertise-point">
-                <img src="/client/images/industrySlider/number2.png">
-                <p>Simplify driver onboarding</p>
+                <img src="https://i.ibb.co/pKF5H8V/number2.png">
+                <p>Aligning industry leaders with OEM Perfection</p>
             </div>
             <div class="expertise-point">
-                <img src="/client/images/industrySlider/number3.png">
-                <p class="Ifeature-text">Provide clients real-time updates on all deliveries</p>
+                <img src="https://i.ibb.co/k9c6gGL/number3.png">
+                <p class="Ifeature-text">Harnessing data analytics for a greener sustainable future</p>
             </div>
         </div>
     </div>
@@ -213,7 +236,7 @@
 
         <div class="Islider">
             <div class="Islide">
-                <img src="/client/images/industrySlider/car.png" alt="Car Tracking">
+                <img src="https://i.ibb.co/88tc88W/car.png" alt="Car Tracking">
                 <div class="Islide-caption"><b>Car Tracking</b></div>
             </div>
             <div class="Islide">
@@ -225,39 +248,39 @@
                 <div class="Islide-caption"><b>RESTAURANTS</b></div>
             </div> -->
             <div class="Islide">
-                <img src="/client/images/industrySlider/motor.png" alt="Motor Tracking">
+                <img src="https://i.ibb.co/hcMPhtP/motor.png" alt="Motor Tracking">
                 <div class="Islide-caption"><b>Moto</b></div>
             </div>
             <div class="Islide">
-                <img src="/client/images/industrySlider/drifting.png" alt="Photo 5">
+                <img src="https://i.ibb.co/fktQhZz/drifting.png" alt="Photo 5">
                 <div class="Islide-caption"><b>Driver Behaviour</b></div>
             </div>
             <div class="Islide">
-                <img src="/client/images/industrySlider/shipping.png" alt="Shipping Tracking">
+                <img src="https://i.ibb.co/G0sRGJd/shipping.png" alt="Shipping Tracking">
                 <div class="Islide-caption"><b>Shipping</b></div>
             </div>
             <div class="Islide">
-                <img src="/client/images/industrySlider/cruise.png" alt="Cruise Ship">
+                <img src="https://i.ibb.co/vZ3Fhx8/cruise.png" alt="Cruise Ship">
                 <div class="Islide-caption"><b>Cruise Ship</b></div>
             </div>
             <div class="Islide">
-                <img src="/client/images/industrySlider/airplane.png" alt="Photo 7">
+                <img src="https://i.ibb.co/bFhjgJD/airplane.png" alt="Photo 7">
                 <div class="Islide-caption"><b>Logistics</b></div>
             </div>
             <div class="Islide">
-                <img src="/client/images/industrySlider/taxi.png" alt="Photo 7">
+                <img src="https://i.ibb.co/4WgGSDF/taxi.png" alt="Photo 7">
                 <div class="Islide-caption"><b>Rental & taxi</b></div>
             </div>
             <div class="Islide">
-                <img src="/client/images/industrySlider/emergency.png" alt="Photo 7">
+                <img src="https://i.ibb.co/hcydsdk/emergency.png" alt="Photo 7">
                 <div class="Islide-caption"><b>Emergency Vehicles</b></div>
             </div>
             <div class="Islide">
-                <img src="/client/images/industrySlider/construction.png" alt="Photo 7">
+                <img src="https://i.ibb.co/VD6S0Fm/construction.png" alt="Photo 7">
                 <div class="Islide-caption"><b>Construction Site</b></div>
             </div>
             <div class="Islide">
-                <img src="/client/images/industrySlider/agriculture.png" alt="Photo 7">
+                <img src="https://i.ibb.co/HFPpSX3/agriculture.png" alt="Photo 7">
                 <div class="Islide-caption"><b>Agriculture</b></div>
             </div>
         </div>
@@ -323,15 +346,25 @@
 </div>
 </div> -->
 <!--onfleet End-->
-
-    <video class="section-4-vd bounce-in-right" autoplay loop muted >
+<!-- 
+    <video class="section-4-vd" autoplay loop muted >
         <source src="./images/vd.mp4" type="video/mp4">
 
         Your browser does not support the video tag.
-    </video>
-
+    </video> -->
+    <div class="section-4-vd">
+    <iframe 
+    src="https://player.vimeo.com/video/1034893137?h=e580dc3479&autoplay=1&muted=1&loop=1&controls=0&title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58479"
+    frameborder="0"
+ 
+    allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
+    title="vd">
+</iframe>
+</div>
     <!-- About Start -->
      <section class="aboutSlider-section" style="margin-top: -5px;">
+  
+   
     <div class="aboutSlider" id="aboutSlider">
         <h1 class="aboutSliderh1" style="color: white;">Transformation through intelligent operations</h1>
         <nav class="navbarabout">
@@ -353,7 +386,7 @@
         </div>
         <div id="content">
             <p id="text" class="text"></p>
-            <img id="image" src="./images/aboutSlider/AI.jpg" alt="Ecosystem Image">
+            <img id="image" src="https://i.ibb.co/Zh4ncPd/distracted.jpg" alt="Ecosystem Image">
         </div>
     </div>
 </section>
@@ -363,8 +396,8 @@
             <source src="/client/images/testing/bckvds/canva.mp4"  type="video/mp4">
             Your browser does not support the video tag.
         </video>
-    <div class="container-fluid py-5 wow fadeInUp feature" data-wow-delay="0.1s"">
-        <div class="container py-5" style="background-color: #00000015; border-radius: 15%;">
+    <div class="container-fluid  wow fadeInUp feature" data-wow-delay="0.1s"">
+        <div class="container" style="background-color: #00000015; border-radius: 15%; padding-top: 5px;">
             <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
                 <h5 class="fw-bold text-primary text-uppercase">Why Choose Us</h5>
                 <h1 class="mb-0">We Are Here to Grow Your Business Exponentially</h1>
@@ -372,18 +405,18 @@
             <div class="row g-5">
                 <div class="col-lg-4">
                     <div class="row g-5">
-                        <div class="col-12 wow zoomIn" data-wow-delay="0.2s">
+                        <div class="col-12 wow zoomIn"  data-wow-delay="0.2s">
                             <div class="d-flex align-items-center">
                             <div class="bg-primary rounded d-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
                                 <i class="fa fa-cog w3-margin-bottom w3-xxlarge"></i>
                             </div>
                             <h4 style="margin-left: 10px;">Support</h4>
                             </div>
-                            <p class="mb-0"> <span class="material-symbols-outlined">support_agent</span>   We take care of everything</p>
+                            <p class="mb-0"> <span class="material-symbols-outlined">support_agent</span>   We take care of everything <br></p>
                             <p class="mb-0"> <span class="material-symbols-outlined"> local_shipping</span>   Streamline workflows and make data-driven decisions</p>
 
                         </div>
-                        <div class="col-12 wow zoomIn" data-wow-delay="0.6s">
+                        <div class="col-12 wow zoomIn scndRow" data-wow-delay="0.6s" style="margin-top: 3">
                             <div class="d-flex align-items-center">
                             <div class="bg-primary rounded d-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
                                
@@ -397,9 +430,6 @@
                     </div>
                 </div>
                 <div class="col-lg-4  wow zoomIn picture" data-wow-delay="0.9s" >
-                    <!-- <div class="position-relative h-100">
-                        <img class="position-absolute w-100 h-100 rounded wow zoomIn" data-wow-delay="0.1s" src="./images/works/4.png" style="object-fit: cover; border-radius: 20px; height: 100%;">
-                    </div> -->
                 </div>
                 <div class="col-lg-4">
                     <div class="row g-5">
@@ -413,11 +443,11 @@
                             </span>
                             <h4 style="margin-left: 10px;">Save Fleet Cost</h4>
                         </div>
-                            <p class="mb-0"> <span class="material-symbols-outlined">point_scan</span>   Monitor and secure your Assets Utilization in Reel Time all over the Globe</p>
+                            <p class="mb-0"> <span class="material-symbols-outlined">point_scan</span>   Monitor and secure your Assets in Real Time</p>
                             <p class="mb-0"> <span class="material-symbols-outlined"> savings </span>   Analyze Cost-of-use and Cost-of-ownership</p>
                          
                         </div>
-                        <div class="col-12 wow zoomIn" data-wow-delay="0.8s">
+                        <div class="col-12 wow zoomIn scndRow" data-wow-delay="0.8s">
                             <div class="d-flex align-items-center">
                             <div class="bg-primary rounded d-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
                                 <span class="material-symbols-outlined w3-xxlarge" >
@@ -559,7 +589,12 @@
 
 
     <!-- Quote Start -->
-    <section class="quote bounce-in-right">
+    <section class="quote">
+        <div class="quoteVideo">
+            <video autoplay loop muted>
+                <source src="/client/images/products/Driver Management/acc.mp4" type="video/mp4">
+            </video>
+        </div>
 <div class="container-fluid py-5">
    <div class="container py-5">
         <div class="row text-center">
@@ -716,7 +751,7 @@
     <script src="./lib/owlcarousel/owl.carousel.min.js"></script>
 
     <!-- Template Javascript -->
-
+      <script src="/client/js/faq.js"></script>
     <script src="/client/js/main.js"></script>
     <script src="/client/js/aboutSlider.js"></script>
     <script src="/client/js/industrySlider.js"></script>

@@ -1,5 +1,5 @@
 .consultBack{
-    background-image: url('/client/images/consulting/test/best.jpg');
+    background-image: url('https://i.ibb.co/23kNLr2/best.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center 45%;
@@ -24,7 +24,7 @@ background-color: rgba(0, 0, 0, 0.12);
 border-radius: 10px;
 }
 .contain .box{
-background-image: url('/client/images/consulting/test/Designer\ \(17\).jpeg');
+background-image: url('https://i.ibb.co/gymrq6n/Designer-17.jpg');
     background-size: cover;
     background-position: center 45%;
     color: white;
@@ -53,7 +53,7 @@ margin-top: 40px;
     font-size:1.1em;
 }
 .containerBack {
-    background: url('/client/images/works/consulting/dubai-s-stunning-skyline-wallpaper.jpg') no-repeat center center/cover;
+    background: url('https://i.ibb.co/M6jg3Vx/dubai-s-stunning-skyline-wallpaper.jpg') no-repeat center center/cover;
     height: 50vh;
     display: flex;
     justify-content: center;
@@ -151,7 +151,7 @@ color: white;
     background-color: #1a2942;
     color: white;
     padding: 20px;
-    background: url('/client/images/works/consulting/Untitled-10-11.png') no-repeat center center/cover;
+    background: url('https://i.ibb.co/g3cLNBK/Untitled-10-11.png') no-repeat center center/cover;
     /* width: 90%; */
     /* margin-left: 5%; */
 }

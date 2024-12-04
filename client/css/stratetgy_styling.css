@@ -88,6 +88,7 @@ td {
     
    text-align: left;
     line-height: 2rem;
+   
     width: 40%;
     margin-left: 55%;
 }
@@ -95,7 +96,7 @@ td {
 .container_three {
     display: flex;
     flex-wrap: wrap;
-    margin: 0 15px; 
+    margin: 0 5%; 
     justify-content: space-between;
 }
 
@@ -137,7 +138,8 @@ td {
 }
 .container_four {
     display: flex;
-    margin: 0 50px; 
+    margin: 0  0 0 10% ; 
+    padding-top:10%;
     justify-content: space-between;
     flex-wrap: wrap;
 }
@@ -151,6 +153,7 @@ td {
 
 .container_four .side_two {
     flex: 1;
+    display: flex;
 }
 
 .container_four .side_two img {
@@ -279,9 +282,10 @@ td {
 .boxes {
     display: flex;
     flex-wrap: wrap;
-    margin: 0 50px;
+
+    padding-top: 10%;
     background-color: #091E3E;
-    border-radius: 15px;
+
     justify-content: space-between;
 }
 
@@ -291,7 +295,7 @@ td {
     text-align: center;
     margin: 20px;
     padding: 20px;
-    height: 20rem;
+
     border-radius: 10px;
     flex-basis: calc(25% - 40px); /* Adjust width for 2 per row */
     justify-content: space-between;
