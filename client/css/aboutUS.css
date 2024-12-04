@@ -51,13 +51,13 @@ body {
 }
 
 .about-section {
-    background-image: url("/client/images/aboutUs/Untitled-16-01.png");
+    background-image: url("https://i.ibb.co/PZcy56h/Untitled-16-01.png");
     background-size: cover;
     background-position: center
     /* height: 1300px; */
 }
 .part2{
-    background-image: url("/client/images/testing/bulding5.png");
+    background-image: url("https://i.ibb.co/JnLtV2z/bulding5.png");
     background-size: cover;
     /* background-position: center; */
 }

@@ -127,10 +127,22 @@
 }
 
   /****** who we are*****/
-.section-4-vd{
-  width: 100%;
-  height: 50%;
-}
+  .section-4-vd {
+    position: relative;
+    width: 100%; /* Full width */
+    height: 60vh;
+    padding-top: 56.25%; 
+    overflow: hidden;
+  }
+  
+  .section-4-vd iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
 @media (min-width:768px) {
   .who-we-are-content, .section-4-vd, .aboutSliderVideo, .quote{
     animation:  bounce-in-right 1s ease-in;

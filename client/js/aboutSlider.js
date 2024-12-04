@@ -27,7 +27,7 @@ function changeContent(section) {
     let activeLink;
     switch (section) {
         case 'security':    
-            image.src = '/client/images/aboutSlider/distracted.jpg';
+            image.src = 'https://i.ibb.co/Zh4ncPd/distracted.jpg';
             image.style.borderRadius='15px';
             image.style.width='35%';
             image.style.height='35%';
@@ -42,7 +42,7 @@ function changeContent(section) {
             currentIndex = 0;
             break;
         case 'ecosystem':
-            image.src = '/client/images/aboutSlider/track.png';
+            image.src = 'https://i.ibb.co/BwtQ56B/Track.png';
             image.style.borderRadius='15px';
             image.style.width='35%';
             image.style.height='35%';
@@ -57,7 +57,7 @@ function changeContent(section) {
             currentIndex = 1;
             break;  
         case 'workflow':
-            image.src = '/client/images/aboutSlider/truckFleetC.png';
+            image.src = 'https://i.ibb.co/BBpx9Nk/truck-Fleet-C.png';
             image.style.borderRadius='15px';
             image.style.width='35%';
             image.style.height='35%';
@@ -72,7 +72,7 @@ function changeContent(section) {
             currentIndex = 2;
             break;
         case 'visibility':
-            image.src = '/client/images/aboutSlider/Fleet-Management.jpg';
+            image.src = 'https://i.ibb.co/ygWm38S/Fleet-Management.jpg';
             image.style.width='35%';
             image.style.height='35%';
             image.style.borderRadius='15px';
@@ -87,7 +87,7 @@ function changeContent(section) {
             currentIndex = 3;
             break;
         default:
-            image.src = '/client/images/aboutSlider/distracted.jpg';
+            image.src = 'https://i.ibb.co/Zh4ncPd/distracted.jpg';
             image.style.borderRadius='15px';
             image.style.width='35%';
             image.style.height='35%';
